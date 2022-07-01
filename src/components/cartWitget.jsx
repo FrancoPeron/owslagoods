@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ItemCount from "./itemCount.js";
+import ItemCount from "./itemCount.jsx";
 
 const product01 = require('../assets/img/owslagoods/product01.jpg');
 const product02 = require('../assets/img/owslagoods/product02.jpg');
@@ -79,11 +79,9 @@ const CartWidget = ()=>{
                                     <p className="bag-product__title">{item.name}</p>
                                     <p className="bag-product__price">$ {item.price}</p>
                                     <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id}/>
-
                                 </div>
                             ))
                         }
-
                     </div>
                     <div className="bag__total">
                         <p className="bag__total-price mb-0">Total price: $ {totalPrice}</p>
