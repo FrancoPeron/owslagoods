@@ -207,7 +207,7 @@
         bottom: -8px;
         left: 0;
         width: 100%;
-        height: 1px;
+        height: 2px;
         border-radius: 4px;
         transition: all .5s;
         background-color: transparent; 
@@ -284,36 +284,52 @@
     text-align: center; 
   }
 
-  .bag {
+  .btn_bag{
+    cursor: pointer;
+  }
+
+  .offcanvas-background{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    
+  }
+  .offcanvas-background--active {
+
+    opacity: .5;
+    transition: all .5s ease-in-out;
+  }
+
+  .bag{
     position: fixed;
     top: 0;
     right: 0;
-    border-left: 1px solid rgba(0,0,0,.2);
     bottom: 0;
-    z-index: 1045;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    /* visibility: hidden; */
-    background-color: #fff;
     background-clip: padding-box;
-    outline: 0;
-    transition: transform .3s ease-in-out;
+    background-color: #fff;
     width: 600px;
+    max-width: 100%;
+    border-left: 1px solid rgba(0,0,0,.2);
+    outline: 0;
     z-index: 2000;
+    transition: all .5s ease-in-out;
+    transform: translateX(100%);
+  }
+  .offcanvas--active {
+    transition: all .5s ease-in-out;
+    transform: none;
 
   }
 
-    .offcanvas-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #000;
-      opacity: .5;
-      z-index: 1000;
-    }
 
     .bag__header{
       display: flex;
@@ -526,3 +542,58 @@
 
 
   
+
+
+
+
+/*========================================================*/
+
+
+
+
+.item-skeleton{
+  width: 100%;
+  height: 100%;
+  min-height: 548px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+  .item-skeleton__img{
+    width: 100%;
+    height: 450px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+
+  }
+
+  .item-skeleton__item-name{
+    width: 100%;
+    height: 48px;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  
+  }
+
+  .item-skeleton__item-price{
+    width: 130px;
+    height: 28px;
+    border-radius: 2px;
+  
+  }
+
+  .item-skeleton__img, .item-skeleton__item-name, .item-skeleton__item-price{
+    background-color: #e5e5e5;
+      background: linear-gradient(110deg , #e5e5e5 15%, #f2f2f2 25%, #e5e5e5 35%);
+      background-size: 200% 100%;
+      animation: loopBg 2s linear infinite;
+  }
+
+  @keyframes loopBg {
+    to {
+      background-position-x: -200%;
+    }
+}
