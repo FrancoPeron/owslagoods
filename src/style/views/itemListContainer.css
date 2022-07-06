@@ -1,0 +1,15 @@
+.main-merch__list {
+    background: #ffffff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem; 
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .main-merch__list  {
+      width: 80%;
+      min-width: 1440px; 
+    } 
+  }

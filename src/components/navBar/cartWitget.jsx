@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
-import ItemCount from "./itemCount.jsx";
+import ItemCount from "../itemCount/itemCount.jsx";
 
-const product01 = require('../assets/img/owslagoods/product01.jpg');
-const product02 = require('../assets/img/owslagoods/product02.jpg');
+import '../../style/components/cartWitget.css'
+
+const product01 = require('../../assets/img/owslagoods/product01.jpg');
+const product02 = require('../../assets/img/owslagoods/product02.jpg');
 
 
 const CartWidget = ()=>{

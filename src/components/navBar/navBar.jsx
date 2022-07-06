@@ -1,4 +1,8 @@
+import {Link, NavLink }  from 'react-router-dom'
+
+import '../../style/components/navBar.css'
 import CartWidget from './cartWitget.jsx'
+
 
 const NavBar = ()=>{
     return(
@@ -7,7 +11,7 @@ const NavBar = ()=>{
 
                 <div className="header__logo">
                     <p className="header__logo-text">OWSLA</p>
-                    <a href=""><img className="header__logo-img" alt="OWSLA Logo" /></a>
+                    <Link to="/"><img className="header__logo-img" alt="OWSLA Logo" /></Link>
                     <p className="header__logo-text">GOODS</p>
                 </div>
                 <div className="header__nav">
@@ -25,31 +29,31 @@ const NavBar = ()=>{
 
                         <ul className="nav__list">
                             <li className="nav__item nav__item--active">
-                                <a className="nav__link--black" href="">all</a>
+                                <NavLink to="/" className="nav__link--black" href="">all</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Tops</a>
+                                <NavLink to="/category/tops" className="nav__link--black" href="">Tops</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Bottoms</a>
+                                <NavLink to="/category/bottoms" className="nav__link--black" href="">Bottoms</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Jackets</a>
+                                <NavLink to="/category/jackets" className="nav__link--black" href="">Jackets</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Accessories</a>
+                                <NavLink to="/category/accessories" className="nav__link--black" href="">Accessories</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Artists Apparel</a>
+                                <NavLink to="/category/artists Apparel" className="nav__link--black" href="">Artists Apparel</NavLink>
                             </li>
                             <li className="nav__item">
-                                <a className="nav__link--black" href="">Music</a>
+                                <NavLink to="/category/music" className="nav__link--black" href="">Music</NavLink>
                             </li>
                         </ul>
 
                     </nav>
 
-                    <CartWidget />
+                    <Link to="/cart"><CartWidget /></Link>
 
                 </div>
 

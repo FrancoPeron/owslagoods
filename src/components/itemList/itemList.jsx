@@ -1,8 +1,9 @@
 import React, {useState, useEffect } from 'react'
 
 import Item from "./item.jsx";
-import SkeletonItem from "./skeleton-loading/skeleton-item.jsx"
+import SkeletonItem from "./itemSkeleton.jsx"
 
+import '../../style/components/itemList.css'
 
 const ItemList = ({items})=>{
 

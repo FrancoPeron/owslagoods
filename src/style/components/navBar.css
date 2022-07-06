@@ -1,0 +1,241 @@
+/* -------------------- Header -------------------- */
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  
+  }
+  
+    .header__logo{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 2rem 1rem;
+      width: 100%;
+  
+      background: rgba(0, 0, 0, 0.15);
+      border-width: 0px 3px 3px 3px;
+      border-style: solid;
+      border-color: #FFFFFF;
+      backdrop-filter: blur(5px);
+    }
+  
+      .header__logo-text{
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 96px;
+        line-height: 115px;
+        text-align: center;
+        color: #FFFFFF;
+  
+      }
+  
+      .header__logo-img {
+        max-height: 100px;
+        content: url(../../assets/img/owslaLogo.svg); 
+      }
+  
+    .header__nav{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background-color: #fff;
+      width: 100%;
+      min-height: 60px;
+    }
+  
+    /*-----------------------------*/
+  
+  #burger {
+    display: none;
+  }
+    #burger:checked + .burger-btn > .burger {
+      height: 0; 
+    }
+    #burger:checked + .burger-btn > .burger::before {
+      top: 0;
+      width: 34px;
+      transform: rotate(-45deg);
+      transition: all .5s; 
+    }
+    #burger:checked + .burger-btn > .burger::after {
+      top: 0;
+      width: 34px;
+      transform: rotate(45deg);
+      transition: all .5s; 
+    }
+    #burger:checked ~ .nav {
+      min-height: calc(100vh - 252px);
+      transition: all 1s; 
+    }
+  
+  /*-----------------------------*/
+  
+  .burger-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 34px;
+    width: 34px;
+    cursor: pointer; 
+  }
+    .burger {
+      position: relative;
+      width: 34px; 
+    }
+      .burger::before {
+        top: -10px;
+        width: 22px;
+        transition: all .5s; 
+      }
+      .burger::after {
+        top: 10px;
+        width: 28px;
+        transition: all .5s; 
+      }
+  
+    .burger,
+    .burger::before,
+    .burger::after {
+      height: 3px;
+      border-radius: 5px;
+      background-color: #000000; 
+    }
+    .burger::before,
+    .burger::after {
+      content: "";
+      position: absolute;
+      left: 0; 
+    }
+  
+/* ---------- Navbar ---------- */
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    z-index: 1000;
+    transition: all 1s;
+    overflow: hidden; 
+}
+.nav--column {
+    flex-direction: column;
+    align-items: flex-start; 
+}
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    gap: 1.5rem;
+}
+.nav__item {
+    display: flex;
+    width: auto;
+    
+}
+.nav__link--black {
+    position: relative;
+    color: #000000;
+    font-size: .95rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    line-height: calc(150%);
+    -webkit-text-stroke: 0; 
+}
+.nav__link--black::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    transition: all .5s;
+    background-color: transparent; 
+}
+.nav__item--active .nav__link--black::after{
+    background-color: #3c3c3c;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+
+  /* -------------------- Header / Navbar -------------------- */
+
+  .header__nav{
+    min-height: 80px;
+  }
+    .burger {
+      display: none; 
+    }
+      .header__logo-img {
+        max-height: 100px;
+        /* content: url(./assets/image/owslaLogo.svg); */
+      }
+      .burger-btn {
+        display: none; 
+      }
+    
+  /* ---------- Navbar ---------- */
+  .nav {
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    max-height: 100%;
+  }
+    .nav--column {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav__list {
+      flex-direction: row;
+      width: fit-content;
+    }
+      .nav__item{
+        background-color: transparent; 
+      } 
+        
+      .nav__link {
+        padding: 0;
+        color: #ffffff;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+      .nav__link::after {
+        bottom: -8px;
+      }
+
+      .nav__link--black:hover::after {
+        background-color: #3c3c3c; 
+      } 
+
+}
+
+
+@media screen and (min-width: 1440px) {
+  .header {
+    width: 80%;
+    min-width: 1440px; 
+  } 
+}

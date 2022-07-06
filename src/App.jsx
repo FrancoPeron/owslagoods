@@ -1,26 +1,33 @@
 import './App.css';
 
-import NavBar from './components/navBar.jsx'
-import ItemListContainer from './components/itemListContainer.jsx'
+import NavBar from './components/navBar/navBar.jsx'
+import ItemListContainer from './views/itemListContainer.jsx'
+import ItemDetailContainer from './views/itemDetailContainer.jsx'
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+          <span className="main-merch__background"></span>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:categoryName" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={ <ItemDetailContainer />} />
+            <Route path="/cart" element={ <ItemDetailContainer />} />
 
-        <span className="main-merch__background"></span>
-        <NavBar />
-        <ItemListContainer />
+          </Routes>
+        
+        </div>
+    </Router>
 
-    </div>
   );
 }
 
 export default App;
-
-
-/* import { useState } from 'react'
-const [count, setCount] = useState(0)
-
-<button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button> */

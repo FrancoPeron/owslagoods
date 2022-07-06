@@ -1,0 +1,53 @@
+
+.product-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.product-detail__img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    transition: ease-in-out .45s;
+}
+
+.product-detail__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.product-detail__name{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.product-detail__price{
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.product-detail__btn{
+    font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+    font-size: .8rem;
+    color: #ffffff;
+    line-height: calc(150%);
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-text-stroke: thin;
+    background: #000000;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
