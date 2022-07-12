@@ -50,6 +50,8 @@ const ItemCount = ({stock, initial, onAdd, countId})=>{
                 <button ref={removeBtn} type="button" className="cant-product__btn" onClick={removeProduct}>-</button>
                 <p className="cant-product__num">{contador}</p>
                 <button ref={addBtn} type="button" className="cant-product__btn" onClick={addProduct}>+</button>
+
+                {/* <button>agregar al carrito</button> */}
             </div>
         </>
     )

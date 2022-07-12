@@ -22,7 +22,7 @@ const ItemDetail = ({item})=>{
 
                     <div className='product-detail__info'>
 
-                        {/* <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id} /> */}
+                        <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id} />
 
                         <p className="product-detail__name">{item[0].name}</p>
                         <p className="product-detail__price">{item[0].price}</p>
