@@ -1,4 +1,6 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
+
+import {Link}  from 'react-router-dom'
 
 import '../../style/components/itemDetail.css'
 import '../../style/components/itemCount.css'
@@ -9,6 +11,16 @@ import ItemCount from "../itemCount/itemCount.jsx"
 
 
 const ItemDetail = ({item})=>{
+
+    const [cant,setCant] = useState([])
+    const [show,setShow] = useState([true])
+    
+
+    const onAdd = (data)=>{
+        console.log(data)
+        setCant(data)
+        setShow(false)
+    }
 
     return(
         <>
@@ -22,12 +34,17 @@ const ItemDetail = ({item})=>{
 
                     <div className='product-detail__info'>
 
-                        <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id} />
 
                         <p className="product-detail__name">{item[0].name}</p>
                         <p className="product-detail__price">{item[0].price}</p>
 
-                        <button className='product-detail__btn'>Add to bag</button>
+                        {
+                            show?
+                            <ItemCount stock={6} initial={1} onAdd={onAdd} />
+                            :
+                            <Link to="/cart" className='product-detail__btn'>Add to bag</Link>
+                        }
+
                     </div>
 
                     </div>

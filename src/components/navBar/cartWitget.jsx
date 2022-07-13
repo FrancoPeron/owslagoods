@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ItemCount from "../itemCount/itemCount.jsx";
+// import ItemCount from "../itemCount/itemCount.jsx";
 
 import '../../style/components/cartWitget.css'
 
@@ -28,26 +28,26 @@ const CartWidget = ()=>{
     
     const [totalPrice, setTotalPrice] = useState(arrayProductsBag.map(item => parseFloat(item.price)).reduce((prev, curr) => prev + curr, 0))
 
-    const onAdd = (data,countId) => {
+    // const onAdd = (data) => {
 
-        arrayProductsBag.forEach(item => {
-            if (item.id === countId) {
-                item.cant = data;
+    //     arrayProductsBag.forEach(item => {
+    //         if (item.id === countId) {
+    //             item.cant = data;
             
-            }
-        });
+    //         }
+    //     });
 
-        let k = arrayProductsBag.map(item => parseFloat(item.price))
-        let j = arrayProductsBag.map(item => parseInt(item.cant))
+    //     let k = arrayProductsBag.map(item => parseFloat(item.price))
+    //     let j = arrayProductsBag.map(item => parseInt(item.cant))
 
-        for (let index = 0; index < k.length; index++) {
-            k[index] = k[index] * j[index];
+    //     for (let index = 0; index < k.length; index++) {
+    //         k[index] = k[index] * j[index];
             
-        }
+    //     }
 
-        setTotalPrice(k.reduce((prev, curr) => prev + curr, 0))
+    //     setTotalPrice(k.reduce((prev, curr) => prev + curr, 0))
 
-    };
+    // };
 
     
     const checkout = ()=> {
@@ -103,7 +103,7 @@ const CartWidget = ()=>{
                                             <img className="bag-product__img" src={item.img} alt=""/>
                                             <p className="bag-product__title">{item.name}</p>
                                             <p className="bag-product__price">$ {item.price}</p>
-                                            <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id}/>
+                                            {/* <ItemCount stock={6} initial={1} onAdd={onAdd}/> */}
                                         </div>
                                     ))
                                 }

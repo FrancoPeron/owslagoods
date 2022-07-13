@@ -44,7 +44,7 @@ const NavBar = ()=>{
                                 <NavLink to="/category/accessories" className="nav__link--black" href="">Accessories</NavLink>
                             </li>
                             <li className="nav__item">
-                                <NavLink to="/category/artists Apparel" className="nav__link--black" href="">Artists Apparel</NavLink>
+                                <NavLink to="/category/artists-apparel" className="nav__link--black" href="">Artists Apparel</NavLink>
                             </li>
                             <li className="nav__item">
                                 <NavLink to="/category/music" className="nav__link--black" href="">Music</NavLink>

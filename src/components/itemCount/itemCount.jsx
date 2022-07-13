@@ -3,13 +3,15 @@ import React, {useState, useRef, useEffect} from 'react'
 
 import '../../style/components/itemCount.css'
 
-const ItemCount = ({stock, initial, onAdd, countId})=>{
+const ItemCount = ({stock, initial, onAdd})=>{
 
     const [contador, setContador] = useState(initial)
 
     const removeBtn = useRef(null)
     const addBtn = useRef(null)
+    
     useEffect(() => {
+        console.log(2,contador)
         if((contador <= initial)){
             removeBtn.current.setAttribute('disabled','')
         }
@@ -25,12 +27,9 @@ const ItemCount = ({stock, initial, onAdd, countId})=>{
             addBtn.current.setAttribute('disabled','')
         }
 
-        onAdd(contador + 1,countId)
-
     }
 
     const removeProduct = ()=>{
-        //console.log(3)
 
         if (contador> initial) {
             setContador(contador - 1)
@@ -40,7 +39,6 @@ const ItemCount = ({stock, initial, onAdd, countId})=>{
             removeBtn.current.setAttribute('disabled','')
         }
 
-        onAdd(contador - 1,countId)
     }
 
 
@@ -51,7 +49,7 @@ const ItemCount = ({stock, initial, onAdd, countId})=>{
                 <p className="cant-product__num">{contador}</p>
                 <button ref={addBtn} type="button" className="cant-product__btn" onClick={addProduct}>+</button>
 
-                {/* <button>agregar al carrito</button> */}
+                <button onClick={()=> onAdd(contador)}>agregar al carrito</button>
             </div>
         </>
     )

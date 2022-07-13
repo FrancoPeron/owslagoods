@@ -20,7 +20,7 @@ const ItemListContainer = ()=>{
 
         promesa.then((data)=>{
 
-            let newData = categoryName ? data.filter(data => data.category == categoryName): data;
+            let newData = categoryName ? data.filter(data => data.category == categoryName) : data;
             setProducts(newData)
             
             console.log("!! DATA !!")
