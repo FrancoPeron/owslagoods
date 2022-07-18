@@ -1,0 +1,111 @@
+.bag{
+
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+    .bag__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+    }
+        .bag__header-title{
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            line-height: calc(120%);
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            color: #000000;
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+
+        }
+        .btn-close {
+            box-sizing: content-box;
+            width: 1rem;
+            height: 1rem;
+            color: #000;
+            background: transparent url("./assets/img/btn-clouse.svg") center/1.3rem auto no-repeat;
+        }
+
+    .bag__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 1rem 1rem;
+        overflow-y: auto;
+
+    }
+
+    .bag-product {
+        display: grid;
+        grid-template-areas:'img title title'
+                            'img price cant'
+                            'img space space';
+        column-gap: 2rem;
+        row-gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+        .bag-product__img {
+            grid-area: img;
+            width: clamp(100px, 30vw, 200px);
+            height: 190px;
+            border-radius: 0.25rem;
+            object-fit: cover; 
+        }
+        .bag-product__title {
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            font-size: clamp(1rem, 3.75vw, 1.125rem);
+            line-height: calc(140%);
+            font-weight: 500;
+            letter-spacing: 0.05rem;
+            color: #000000;
+            grid-area: title;
+            margin: 1rem 0 .5rem 0; 
+        }
+        .bag-product__price {
+            grid-area: price;
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            font-size: 1.1rem;
+            align-self: center; 
+        }
+
+
+        
+    .bag__total{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-top: 1px solid #212529;
+
+    }
+        .bag__total-price{
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            font-size: clamp(1rem, 3.75vw, 1.125rem);
+            line-height: calc(140%);
+            font-weight: 500;
+            letter-spacing: 0.05rem;
+            color: #000000;
+        }
+        .bag__total-btn{
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            font-size: 1rem;
+            line-height: calc(150%);
+            letter-spacing: 0.2rem;
+            font-weight: 300;
+            white-space: nowrap;
+            text-transform: uppercase;
+            -webkit-text-stroke: thin;
+            width: fit-content;
+            cursor: pointer;
+            transition: ease-in-out .3s;
+            padding: 1rem 1.5rem;
+            color: #ffffff;
+            background: #000000;
+        }

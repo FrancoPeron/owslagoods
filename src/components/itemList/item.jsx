@@ -8,11 +8,11 @@ const Item = ({item})=>{
     return(
         <div className="product">
             <div className="position-relative overflow-hidden w-100">
-                <img img="product.img" className="product__img mb-2" src={item.img} alt="jacket black" />
-                <Link to={`item/${item.id}`} className="product__btn">Details</Link>
+                <img className="product__img mb-2" src={item.img} alt={item.name} />
+                <Link to={`/item/${item.id}`} className="product__btn">View More</Link>
             </div>
-            <p data="product.name" className="product__item-name">{item.name}</p>
-            <p data="product.price" className="product__item-price">{item.price}</p>
+            <p className="product__item-name">{item.name}</p>
+            <p className="product__item-price">{item.price}</p>
         </div>
     )
 }

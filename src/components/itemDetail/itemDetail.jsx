@@ -1,14 +1,30 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState, useContext} from 'react'
+
+import {Link}  from 'react-router-dom'
 
 import '../../style/components/itemDetail.css'
-import '../../style/components/itemCount.css'
 
 import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
 import ItemCount from "../itemCount/itemCount.jsx"
 
 
+import {cartContexto} from "../context/cartContext";
 
 const ItemDetail = ({item})=>{
+
+    const {addItem} = useContext(cartContexto);
+    
+    const [cant,setCant] = useState([])
+    const [show,setShow] = useState([true])
+    
+
+    const onAdd = (cant)=>{
+
+        //console.log(data)
+        addItem({...item, quantity: cant})
+        setCant(cant)
+        setShow(false)
+    }
 
     return(
         <>
@@ -20,15 +36,20 @@ const ItemDetail = ({item})=>{
                             <img className="product-detail__img mb-2" src={item[0].img} alt="jacket black" />
                         </div>  
 
-                    <div className='product-detail__info'>
+                        <div className='product-detail__info'>
 
-                        {/* <ItemCount stock={6} initial={1} onAdd={onAdd} countId={item.id} /> */}
 
-                        <p className="product-detail__name">{item[0].name}</p>
-                        <p className="product-detail__price">{item[0].price}</p>
+                            <p className="product-detail__name">{item[0].name}</p>
+                            <p className="product-detail__price">{item[0].price}</p>
 
-                        <button className='product-detail__btn'>Add to bag</button>
-                    </div>
+                            {
+                                show?
+                                <ItemCount stock={6} initial={1} onAdd={onAdd} />
+                                :
+                                <Link to="/cart" className='product-detail__btn'>Add to bag</Link>
+                            }
+
+                        </div>
 
                     </div>
                 : <SkeletonItemDetail />

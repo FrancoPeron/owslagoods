@@ -1,6 +1,3 @@
-
-
-
 const product01 = require('./assets/img/owslagoods/product01.jpg');
 const product02 = require('./assets/img/owslagoods/product02.jpg');
 const product03 = require('./assets/img/owslagoods/product03.jpg');
@@ -15,14 +12,14 @@ const getProducts = () => {
             id: 1,
             img: product01,
             name: "LONG CLOTHING x OWSLA MA1 BOMBER JACKET // UNISEX",
-            price: "$ 210.00",
+            price: "210.00",
             category: "tops"
         },
         {
             id: 2,
             img: product02,
             name: "'FISHTAIL' CANVAS JACKET BLACK // UNISEX",
-            price: "$ 165.00",
+            price: "165.00",
             category: "jackets"
         },
         {
@@ -37,21 +34,21 @@ const getProducts = () => {
             
             img: product04,
             name: "GARMENT DYE OWSLA HOODIE APRICOT // UNISEX",
-            price: "$ 95.00",
+            price: "95.00",
             category: "jackets"
         },
         {
             id: 5,
             img: product05,
             name: "GARMENT DYE OWSLA HOODIE PINK // UNISEX",
-            price: "$ 95.00",
+            price: "95.00",
             category: "bottoms"
         },
         {
             id: 6,
             img: product06,
             name: "'OWSLA FLOCK LOGO' CLASSIC HOODIE BLACK // UNISEX",
-            price: "$ 82.00",
+            price: "82.00",
             category: "accessories"
         }
     ]
