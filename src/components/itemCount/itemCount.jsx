@@ -3,7 +3,6 @@ import React, {useState, useRef, useEffect} from 'react'
 
 import '../../style/components/itemCount.css'
 
-
 const ItemCount = ({stock, initial, onAdd})=>{
 
     const [contador, setContador] = useState(initial)
