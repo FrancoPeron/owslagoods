@@ -11,7 +11,7 @@ const ItemCount = ({stock, initial, onAdd})=>{
     const addBtn = useRef(null)
     
     useEffect(() => {
-        //console.log(2,contador)
+        
         if((contador <= initial)){
             removeBtn.current.setAttribute('disabled','')
         }
@@ -49,7 +49,7 @@ const ItemCount = ({stock, initial, onAdd})=>{
                 <p className="cant-product__num">{contador}</p>
                 <button ref={addBtn} type="button" className="cant-product__btn" onClick={addProduct}>+</button>
 
-                <button onClick={()=> onAdd(contador)}>agregar al carrito</button>
+                <button className='product-detail__btn' onClick={()=> onAdd(contador)}>agregar al carrito</button>
             </div>
         </>
     )

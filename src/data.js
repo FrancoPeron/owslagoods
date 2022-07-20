@@ -10,46 +10,51 @@ const getProducts = () => {
     const arrayProducts = [
         {
             id: 1,
-            img: product01,
+            category: "tops",
             name: "LONG CLOTHING x OWSLA MA1 BOMBER JACKET // UNISEX",
-            price: "210.00",
-            category: "tops"
+            img: product01,
+            price: 210.00,
+            stock: 15
         },
         {
             id: 2,
-            img: product02,
+            category: "jackets",
             name: "'FISHTAIL' CANVAS JACKET BLACK // UNISEX",
-            price: "165.00",
-            category: "jackets"
+            img: product02,
+            price: 165.00,
+            stock: 15
         },
         {
             id: 3,
-            img: product03,
+            category: "jackets",
             name: "SPECTRUM HOODIE // UNISEX",
-            price: "$ 95.00",
-            category: "jackets"
+            img: product03,
+            price: 95.50,
+            stock: 15
         },
         {
             id: 4,
-            
-            img: product04,
+            category: "jackets",
             name: "GARMENT DYE OWSLA HOODIE APRICOT // UNISEX",
-            price: "95.00",
-            category: "jackets"
+            img: product04,
+            price: 95.00,
+            stock: 15
         },
         {
             id: 5,
-            img: product05,
+            category: "bottoms",
             name: "GARMENT DYE OWSLA HOODIE PINK // UNISEX",
-            price: "95.00",
-            category: "bottoms"
+            img: product05,
+            price: 95.00,
+            stock: 15
         },
         {
             id: 6,
-            img: product06,
+            category: "accessories",
             name: "'OWSLA FLOCK LOGO' CLASSIC HOODIE BLACK // UNISEX",
-            price: "82.00",
-            category: "accessories"
+            img: product06,
+            price: 82.00,
+            stock: 15
         }
     ]
 

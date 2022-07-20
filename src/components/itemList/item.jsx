@@ -12,7 +12,7 @@ const Item = ({item})=>{
                 <Link to={`/item/${item.id}`} className="product__btn">View More</Link>
             </div>
             <p className="product__item-name">{item.name}</p>
-            <p className="product__item-price">{item.price}</p>
+            <p className="product__item-price">$ {item.price}</p>
         </div>
     )
 }

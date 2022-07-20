@@ -12,18 +12,22 @@ import {cartContexto} from "../context/cartContext";
 
 const ItemDetail = ({item})=>{
 
-    const {addItem} = useContext(cartContexto);
+    const {addItem,isInCart,updateItemCant} = useContext(cartContexto);
     
-    const [cant,setCant] = useState([])
     const [show,setShow] = useState([true])
     
 
     const onAdd = (cant)=>{
 
-        //console.log(data)
-        addItem({...item, quantity: cant})
-        setCant(cant)
+        if (isInCart(item[0].id)) {
+            updateItemCant({...item, quantity: cant})
+        }else{
+            addItem({...item, quantity: cant})
+        }
+        
         setShow(false)
+
+        
     }
 
     return(
