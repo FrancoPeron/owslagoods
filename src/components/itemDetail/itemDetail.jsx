@@ -8,7 +8,7 @@ import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
 import ItemCount from "../itemCount/itemCount.jsx"
 
 
-import {cartContexto} from "../context/cartContext";
+import {cartContexto} from "../../context/cartContext";
 
 const ItemDetail = ({item})=>{
 
@@ -19,16 +19,16 @@ const ItemDetail = ({item})=>{
 
     const onAdd = (cant)=>{
 
-        if (isInCart(item[0].id)) {
+        if (isInCart(item.id)) {
             updateItemCant({...item, quantity: cant})
         }else{
             addItem({...item, quantity: cant})
         }
-        
         setShow(false)
-
         
     }
+
+    console.log(item)
 
     return(
         <>
@@ -37,14 +37,14 @@ const ItemDetail = ({item})=>{
                 ? 
                     <div className='product-detail'>
                         <div className='product-detail__imgs'>
-                            <img className="product-detail__img mb-2" src={item[0].img} alt="jacket black" />
+                            <img className="product-detail__img mb-2" src={item.img} alt="jacket black" />
                         </div>  
 
                         <div className='product-detail__info'>
 
 
-                            <p className="product-detail__name">{item[0].name}</p>
-                            <p className="product-detail__price">{item[0].price}</p>
+                            <p className="product-detail__name">{item.name}</p>
+                            <p className="product-detail__price">{item.price}</p>
 
                             {
                                 show?

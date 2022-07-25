@@ -1,5 +1,5 @@
 import React, {useState, useEffect , useContext } from 'react'
-import {cartContexto} from "../components/context/cartContext";
+import {cartContexto} from "../context/cartContext";
 import {Link}  from 'react-router-dom'
 import '../style/views/cartContainer.css'
 
@@ -24,12 +24,12 @@ const cartContainer = ()=>{
                     (items.length !== 0) 
                     ?
                     items.map( (item) => (
-                        <div key={item[0].id} id={item.id} className="bag-product">
-                            <img className="bag-product__img" src={item[0].img} alt=""/>
-                            <p className="bag-product__title">{item[0].name}</p>
-                            <p className="bag-product__price">$ {item[0].price.toFixed(2)} x {item.quantity}</p>
+                        <div key={item.id} id={item.id} className="bag-product">
+                            <img className="bag-product__img" src={item.img} alt=""/>
+                            <p className="bag-product__title">{item.name}</p>
+                            <p className="bag-product__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
                             {/* <ItemCount stock={6} initial={1} onAdd={onAdd}/> */}
-                            <button onClick={()=>{removeItem(item[0].id)}}>clear</button>
+                            <button onClick={()=>{removeItem(item.id)}}>clear</button>
                         </div>
                     ))
                     :

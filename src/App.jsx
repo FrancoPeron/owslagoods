@@ -5,7 +5,7 @@ import ItemListContainer from './views/itemListContainer.jsx'
 import ItemDetailContainer from './views/itemDetailContainer.jsx'
 import CartContainer from './views/cartContainer'
 
-import CartContext from "./components/context/cartContext.jsx";
+import CartContext from "./context/cartContext";
 
 import {
   BrowserRouter as Router,

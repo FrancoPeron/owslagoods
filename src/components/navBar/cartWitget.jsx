@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 // import ItemCount from "../itemCount/itemCount.jsx";
-import {cartContexto} from "../context/cartContext";
+import {cartContexto} from "../../context/cartContext";
 
 import '../../style/components/cartWitget.css'
 

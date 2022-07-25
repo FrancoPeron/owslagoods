@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext} from 'react'
-import Item from '../itemList/item';
+import Item from '../components/itemList/item';
 
 export const cartContexto = createContext()
 const { Provider } = cartContexto;
@@ -11,7 +11,7 @@ const CartContext = ({children})=>{
     
     useEffect(() => {
         console.log(items)
-        setTotalPrice(items.map(item => item[0].price.toFixed(2) * item.quantity).reduce((prev, curr) => prev + curr, 0))
+        setTotalPrice(items.map(item => item.price.toFixed(2) * item.quantity).reduce((prev, curr) => prev + curr, 0))
     
     },[items])
     
@@ -20,18 +20,18 @@ const CartContext = ({children})=>{
     }
 
     const removeItem = (id) =>{
-        setItems(items.filter(item => item[0].id !== id))
+        setItems(items.filter(item => item.id !== id))
     }
 
     const isInCart = (id) => {
-        return items.findIndex((item) => item[0].id === id) !== -1;
+        return items.findIndex((item) => item.id === id) !== -1;
 
     };
     const updateItemCant = (item) => {
 
         setItems(items => 
             items.map(obj => {
-                if (obj[0].id === item[0].id) {
+                if (obj.id === item.id) {
                     return {...obj, quantity: obj.quantity + item.quantity};
                 }
                 return obj;
