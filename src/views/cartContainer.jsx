@@ -27,7 +27,7 @@ const cartContainer = ()=>{
                         <div key={item.id} id={item.id} className="bag-product">
                             <img className="bag-product__img" src={item.img} alt=""/>
                             <p className="bag-product__title">{item.name}</p>
-                            <p className="bag-product__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
+                            <p className="bag-product__price">$ {item.price} x {item.quantity}</p>
                             {/* <ItemCount stock={6} initial={1} onAdd={onAdd}/> */}
                             <button onClick={()=>{removeItem(item.id)}}>clear</button>
                         </div>

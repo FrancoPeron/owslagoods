@@ -31,6 +31,7 @@ const ItemListContainer = ()=>{
                 }
             })
             setProducts(products)
+            console.log(products)
         })
         .catch(error => console.log(error))
 

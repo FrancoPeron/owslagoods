@@ -11,7 +11,8 @@ const CartContext = ({children})=>{
     
     useEffect(() => {
         console.log(items)
-        setTotalPrice(items.map(item => item.price.toFixed(2) * item.quantity).reduce((prev, curr) => prev + curr, 0))
+        items.map(item => console.log(item.price))
+        setTotalPrice(items.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0))
     
     },[items])
     
