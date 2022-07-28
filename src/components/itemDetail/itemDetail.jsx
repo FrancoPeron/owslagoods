@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState,useEffect, useContext} from 'react'
 
 import {Link}  from 'react-router-dom'
 
@@ -6,6 +6,9 @@ import '../../style/components/itemDetail.css'
 
 import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
 import ItemCount from "../itemCount/itemCount.jsx"
+
+import {collection, doc, onSnapshot} from 'firebase/firestore'
+import {db} from '../../firebase/firebase.config'
 
 
 import {cartContexto} from "../../context/cartContext";
@@ -15,9 +18,22 @@ const ItemDetail = ({item})=>{
     const {addItem,isInCart,updateItemCant} = useContext(cartContexto);
     
     const [show,setShow] = useState([true])
+
+    useEffect(() => {
+
+        console.log(item.id)
+        
+    
+    }, [item])
+    
     
 
     const onAdd = (cant)=>{
+
+        onSnapshot(doc(collection(db, 'products'), item.id), (i) => {
+            console.log(i.data().stock)
+        })
+    
 
         if (isInCart(item.id)) {
             updateItemCant({...item, quantity: cant})
@@ -28,7 +44,7 @@ const ItemDetail = ({item})=>{
         
     }
 
-    console.log(item)
+    //console.log(item)
 
     return(
         <>
@@ -48,7 +64,7 @@ const ItemDetail = ({item})=>{
 
                             {
                                 show?
-                                <ItemCount stock={6} initial={1} onAdd={onAdd} />
+                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                                 :
                                 <Link to="/cart" className='product-detail__btn'>Add to bag</Link>
                             }

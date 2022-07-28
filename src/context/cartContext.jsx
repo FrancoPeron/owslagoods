@@ -11,7 +11,7 @@ const CartContext = ({children})=>{
     
     useEffect(() => {
         console.log(items)
-        items.map(item => console.log(item.price))
+        //items.map(item => console.log(item.price))
         setTotalPrice(items.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0))
     
     },[items])
@@ -26,8 +26,12 @@ const CartContext = ({children})=>{
 
     const isInCart = (id) => {
         return items.findIndex((item) => item.id === id) !== -1;
-
     };
+
+    const getStock = (id) => {
+        return items.map( (item) => {item.stock})
+    }
+
     const updateItemCant = (item) => {
 
         setItems(items => 
@@ -46,7 +50,7 @@ const CartContext = ({children})=>{
     }
     
     return(
-        <Provider value={{items,totalPrice,addItem,removeItem,isInCart,clear,updateItemCant}}>
+        <Provider value={{items,addItem,removeItem,totalPrice,getStock,isInCart,clear,updateItemCant}}>
             {children}
         </Provider>
     )

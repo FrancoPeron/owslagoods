@@ -21,7 +21,7 @@ const ItemListContainer = ()=>{
 
     useEffect(()=>{
 
-        const productsCollection = collection(db,'Products');
+        const productsCollection = collection(db,'products');
         getDocs(categoryName ? query(productsCollection, where('category', '==', categoryName)): productsCollection)
         .then(result => {
             const products = result.docs.map(doc => {
@@ -31,7 +31,6 @@ const ItemListContainer = ()=>{
                 }
             })
             setProducts(products)
-            console.log(products)
         })
         .catch(error => console.log(error))
 

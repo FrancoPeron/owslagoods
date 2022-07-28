@@ -7,6 +7,8 @@ import '../../style/components/itemList.css'
 
 const ItemList = ({items})=>{
 
+    items.sort((a, b)=>{return a.date - b.date})
+    
     return(
         <>
             {
