@@ -28,8 +28,8 @@ const NavBar = ()=>{
                     <nav className="nav">
 
                         <ul className="nav__list">
-                            <li className="nav__item nav__item--active">
-                                <NavLink to="/" className="nav__link--black" href="">all</NavLink>
+                            <li className="nav__item">
+                                <NavLink to="/all" className="nav__link--black" href="">all</NavLink>
                             </li>
                             <li className="nav__item">
                                 <NavLink to="/category/tops" className="nav__link--black" href="">Tops</NavLink>

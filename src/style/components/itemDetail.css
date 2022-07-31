@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
     background: #FFFFFF;
 }
 
 .product-detail__img{
-    width: 700px;
-    height: 850px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
     transition: ease-in-out .45s;
 }
@@ -18,24 +18,38 @@
 .product-detail__info{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    align-items: flex-start;
+    padding: 1.5rem 0;
     
 }
 
 .product-detail__name{
-    text-align: center;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin-bottom: 2rem;
 }
 
 .product-detail__price{
-    text-align: center;
     font-size: 1.25rem;
-    margin: 1rem 0;
+    margin-bottom: 4rem;
 }
 
 .product-detail__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    background: #000000;
+    width: fit-content;
+    padding: 1.2rem 2rem;
+    margin-bottom: 4rem;
+
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+
+.product-detail__btn-title{
     font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1rem;
     color: #ffffff;
@@ -43,11 +57,33 @@
     letter-spacing: 0.2rem;
     font-weight: 300;
     white-space: nowrap;
-    text-transform: uppercase;
     -webkit-text-stroke: thin;
-    background: #000000;
-    width: 100%;
-    padding: 1.5rem;
-    cursor: pointer;
-    transition: ease-in-out .5s;
+    text-transform: uppercase;
+    margin-top: .2rem;
 }
+
+.product-detail__item-count{
+    margin-bottom: 4rem;
+}
+
+.product-detail__description{
+    font-family: 'MonumentExtended';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.product-detail__text{
+    font-family: 'MonumentExtended';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #3F3F3F;
+
+}
+

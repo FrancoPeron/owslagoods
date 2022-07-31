@@ -4,52 +4,53 @@
     flex-direction: column;
     background: #ffffff;
     padding: 2rem;
-    margin-top: 2rem;
+    margin: 3rem 0;
     width: 100%;
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.14);
 }
 
-    .bag__header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 1rem;
-    }
-        .bag__header-title{
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            line-height: calc(120%);
-            font-weight: 500;
-            letter-spacing: 0.1rem;
-            color: #000000;
-            text-align: center;
-            font-size: clamp(1.5rem, 4vw, 2rem);
+    .bag__header-title{
+        font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: calc(150%);
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        color: #000000;
+        text-align: start;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        white-space: nowrap;
+        letter-spacing: 0.2rem;
 
-        }
-        .btn-close {
-            box-sizing: content-box;
-            width: 1rem;
-            height: 1rem;
-            color: #000;
-            background: transparent url("./assets/img/btn-clouse.svg") center/1.3rem auto no-repeat;
-        }
+
+    }
 
     .bag__body {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        padding: 1rem 1rem;
-        overflow-y: auto;
 
     }
 
     .bag-product {
         display: grid;
-        grid-template-areas:'img title title'
-                            'img price cant'
-                            'img space space';
+        grid-template-areas:'img title'
+                            'img price'
+                            'img hr'
+                            'img trash';
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto 1fr auto;
         column-gap: 2rem;
         row-gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
+
+        .hr{
+            border-top: 2px solid #4d4d4d;
+            height: 1px;
+            width: 5%;
+            align-self: center;
+        }
 
         .bag-product__img {
             grid-area: img;
@@ -59,21 +60,67 @@
             object-fit: cover; 
         }
         .bag-product__title {
+            grid-area: title;
             font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
             font-size: clamp(1rem, 3.75vw, 1.125rem);
             line-height: calc(140%);
             font-weight: 500;
             letter-spacing: 0.05rem;
             color: #000000;
-            grid-area: title;
             margin: 1rem 0 .5rem 0; 
         }
         .bag-product__price {
             grid-area: price;
             font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
             font-size: 1.1rem;
-            align-self: center; 
+            align-self: center;
         }
+
+        .trash__btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .8rem;
+            align-self: end;
+
+
+            background: #ffffff;
+            border: solid #353535 2px ;
+            width: fit-content;
+            padding: .6rem .8rem;
+            cursor: pointer;
+            transition: ease-in-out .5s;
+            margin-bottom: .2rem;
+        }
+
+        .trash__btn-title{
+            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+            font-size: .8rem;
+            color: #000000;
+            line-height: calc(100%);
+            letter-spacing: 0.05rem;
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: capitalize ;
+            /* text-decoration: underline; */
+            margin-top: .2rem;
+        }
+        
+        .trash__ico {
+            grid-area: trash;
+            height: 19px;
+            width: 19px;
+            cursor: pointer;
+        }
+
+            .trash__ico-a, .trash__ico-b {
+                stroke-width: 3px;
+                fill: none;
+                stroke: rgb(58, 58, 58);
+            }
+            .trash__ico-a {
+                stroke-width: 2px;
+            }
 
 
         
@@ -81,8 +128,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
-        border-top: 1px solid #212529;
+        padding: 2rem 0 0 0;
+        border-top: 2px solid #4d4d4d;
 
     }
         .bag__total-price{
@@ -109,3 +156,13 @@
             color: #ffffff;
             background: #000000;
         }
+
+
+
+@media screen and (min-width: 1440px) {
+    .bag  {
+        width: 80%;
+        min-width: 1440px; 
+    } 
+}
+        

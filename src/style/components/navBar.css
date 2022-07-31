@@ -17,11 +17,11 @@
       padding: 2rem 1rem;
       width: 100%;
   
-      background: rgba(0, 0, 0, 0.15);
+      /* background: rgba(0, 0, 0, 0.15);
       border-width: 0px 3px 3px 3px;
       border-style: solid;
       border-color: #FFFFFF;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px); */
     }
   
       .header__logo-text{
@@ -230,12 +230,4 @@
         background-color: #3c3c3c; 
       } 
 
-}
-
-
-@media screen and (min-width: 1440px) {
-  .header {
-    width: 80%;
-    min-width: 1440px; 
-  } 
 }

@@ -1,13 +1,15 @@
 import React, {useState, useEffect } from 'react'
 import '../style/views/itemDetailContainer.css'
 
-//Data Base
-import {getDoc, collection, doc} from 'firebase/firestore'
-import {db} from '../firebase/firebase.config'
-
-import ItemDetail from "../components/itemDetail/itemDetail.jsx";
-
+// Router
 import { useParams } from "react-router-dom";
+
+// Data Base
+import {db} from '../firebase/firebase.config'
+import {getDoc, collection, doc} from 'firebase/firestore'
+
+// Components
+import ItemDetail from "../components/itemDetail/itemDetail.jsx";
 
 const ItemDetailContainer = ()=>{
 

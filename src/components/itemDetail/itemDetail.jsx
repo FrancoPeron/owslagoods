@@ -58,16 +58,29 @@ const ItemDetail = ({item})=>{
 
                         <div className='product-detail__info'>
 
-
+                            
                             <p className="product-detail__name">{item.name}</p>
-                            <p className="product-detail__price">{item.price}</p>
-
+                            <p className="product-detail__price">$ {item.price.toFixed(2)}</p>
+                            
+ 
                             {
                                 show?
-                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                                <ItemCount className='product-detail__item-count' stock={item.stock} initial={1} onAdd={onAdd} />
                                 :
-                                <Link to="/cart" className='product-detail__btn'>Add to bag</Link>
+                                <Link to="/cart" className='product-detail__btn'>
+                                    <p className='product-detail__btn-title'>Go to Bag</p>
+                                    <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M38 11L0.999998 11" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M38 11L28 21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M38 11L28 1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </Link>
                             }
+
+                            
+                            <p className='product-detail__description'>Description</p>
+                            <p className='product-detail__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+                        
 
                         </div>
 

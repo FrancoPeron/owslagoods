@@ -11,7 +11,8 @@ import {getDocs, collection, query, where} from 'firebase/firestore'
 // Components
 import ItemList from "../components/itemList/itemList.jsx";
 
-const ItemListContainer = ()=>{
+
+const HomeContainer = () => {
 
     const {categoryName} = useParams();
     const [products,setProducts] = useState([])
@@ -34,12 +35,14 @@ const ItemListContainer = ()=>{
 
 
     return(
-        <section className="main-merch__list">
+        <>
 
-            <ItemList items={products}/>
-
+        <section>
+            sdasd
         </section>
+        
+        </>
     )
 }
 
-export default ItemListContainer
+export default HomeContainer
