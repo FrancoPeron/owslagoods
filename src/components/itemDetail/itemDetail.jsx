@@ -53,7 +53,7 @@ const ItemDetail = ({item})=>{
                 ? 
                     <div className='product-detail'>
                         <div className='product-detail__imgs'>
-                            <img className="product-detail__img mb-2" src={item.img} alt="jacket black" />
+                            <img className="product-detail__img mb-2" src={item.imgs} alt="jacket black" />
                         </div>  
 
                         <div className='product-detail__info'>

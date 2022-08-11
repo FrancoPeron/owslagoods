@@ -24,10 +24,10 @@
   left: 0;
   z-index: -1;
   width: 100%; 
-  background: url(./assets/img/main-list.png);
+  background: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/backgrounds%2FFondo%201.webp?alt=media&token=efeb3060-63ad-40dd-aa1c-aa30b0761ff5);
   background-size: cover;
-  background-position: center;
-  height: 800px; 
+  background-position: top;
+  height: 1250px; 
 }
 
   .main-merch .main-merch__background::after {
@@ -38,6 +38,25 @@
   background: linear-gradient(black, transparent);
 }
 
+
+/*========================================================*/
+
+.btn{
+
+}
+
+
+
+
+
+
+.box-title{
+  
+}
+
+.box-title-sm{
+
+}
 
 
 /*========================================================*/
