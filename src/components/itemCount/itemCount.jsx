@@ -48,10 +48,9 @@ const ItemCount = ({stock, initial, onAdd})=>{
                 <button ref={removeBtn} type="button" className="item-count__btn" onClick={removeProduct}>-</button>
                 <p className="item-count__num">{contador}</p>
                 <button ref={addBtn} type="button" className="item-count__btn" onClick={addProduct}>+</button>
-
             </div>
 
-            <button className='add-cant__btn' onClick={()=> onAdd(contador)}>add to bag</button>
+            <button className='btn-ows' onClick={()=> onAdd(contador)}><p className='btn-text'>add to bag</p></button>
         </div>
     )
 }

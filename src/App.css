@@ -1,3 +1,7 @@
+:root{
+  --default-background: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-4.webp?alt=media&token=67f88ba8-6d1c-4d8d-a769-8a5b64b26d3b);
+}
+
 
 .App{
   position: relative;
@@ -18,43 +22,87 @@
 
 /* -------------------- Background -------------------- */
 
-.main-merch__background {
+.default-background {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100%; 
-  background: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/backgrounds%2FFondo%201.webp?alt=media&token=efeb3060-63ad-40dd-aa1c-aa30b0761ff5);
+  width: 100%;
   background-size: cover;
   background-position: top;
-  height: 1250px; 
-}
-
-  .main-merch .main-merch__background::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(black, transparent);
+  background-image: var(--default-background);
+  height: 1000px;
 }
 
 
 /*========================================================*/
 
-.btn{
 
+.btn-sbb,.btn-swb,.btn-sbs,.btn-sws,
+.btn-obb,.btn-owb,.btn-obs,.btn-ows{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  gap: 24px;
 }
 
 
+.btn-obb,.btn-obs{  border: solid 2px #ffffff;}
+.btn-owb,.btn-ows{  border: solid 2px #000000;}
 
+.btn-sbb,.btn-sbs,.btn-obb,.btn-obs{  background: #000000;}
+.btn-swb,.btn-sws,.btn-owb,.btn-ows{  background: #ffffff;}
 
+.btn-sbb,.btn-swb,.btn-obb,.btn-owb{  height: 54px; padding: 0px 32px 0px;}
+.btn-sbs,.btn-sws,.btn-obs,.btn-ows{  height: 42px; padding: 0px 24px 0px;}
 
+.btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #000000;}
+.btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #ffffff;}
 
-.box-title{
-  
+.btn-text{
+  font-family: 'MonumentExtended';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 4px;
 }
 
-.box-title-sm{
+
+/*-----------------*/
+
+
+.box-title-black, .box-title-white{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  gap: 32px;
+  height: 72px;
+}
+
+.box-title-black{  background: #000000; color: #FFFFFF;}
+.box-title-white{  background: #ffffff; color: #000000;}
+
+
+.box-title-black line {  stroke: #ffffff;}
+.box-title-white line {  stroke: #000000;}
+
+.box-title-text{
+  font-family: 'MonumentExtended';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  text-transform: capitalize;
 
 }
 
@@ -65,7 +113,6 @@
 .item-skeleton{
   width: 100%;
   height: 100%;
-  min-height: 548px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +121,7 @@
 
   .item-skeleton__img{
     width: 100%;
-    height: 450px;
+    height: 350px;
     border-radius: 6px;
     margin-bottom: 1rem;
 
@@ -107,4 +154,27 @@
     to {
       background-position-x: -200%;
     }
+}
+
+
+.items-list-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 48px;
+  width: 100%;
+}
+
+.items-list-box__title{
+  font-family: 'MonumentExtended';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
 }

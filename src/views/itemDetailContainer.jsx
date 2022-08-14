@@ -33,7 +33,7 @@ const ItemDetailContainer = ()=>{
 
 
     return(
-        <section className="main-merch__detail">
+        <section className="items-detail-container">
 
             <ItemDetail item={product}/>
             

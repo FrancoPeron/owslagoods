@@ -1,5 +1,4 @@
 import React, { useState, useEffect, createContext} from 'react'
-import Item from '../components/itemList/item';
 
 export const cartContexto = createContext()
 const { Provider } = cartContexto;
@@ -10,7 +9,7 @@ const CartContext = ({children})=>{
     const [totalPrice, setTotalPrice] = useState(0)
     
     useEffect(() => {
-        console.log(items)
+        //console.log(items)
         //items.map(item => console.log(item.price))
         setTotalPrice(items.map(item => item.price * item.quantity).reduce((prev, curr) => prev + curr, 0))
     

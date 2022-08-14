@@ -1,16 +1,17 @@
 import React, {useState,useEffect, useContext} from 'react'
+import '../../style/components/itemDetail.css'
 
 import {Link}  from 'react-router-dom'
 
-import '../../style/components/itemDetail.css'
-
+// Components
 import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
 import ItemCount from "../itemCount/itemCount.jsx"
 
-import {collection, doc, onSnapshot} from 'firebase/firestore'
+// Data Base
 import {db} from '../../firebase/firebase.config'
+import {collection, doc, onSnapshot} from 'firebase/firestore'
 
-
+//Context
 import {cartContexto} from "../../context/cartContext";
 
 const ItemDetail = ({item})=>{
@@ -22,17 +23,14 @@ const ItemDetail = ({item})=>{
     useEffect(() => {
 
         console.log(item.id)
-        
     
     }, [item])
-    
-    
 
     const onAdd = (cant)=>{
 
-        onSnapshot(doc(collection(db, 'products'), item.id), (i) => {
+       /*  onSnapshot(doc(collection(db, 'products'), item.id), (i) => {
             console.log(i.data().stock)
-        })
+        }) */
     
 
         if (isInCart(item.id)) {
@@ -50,42 +48,40 @@ const ItemDetail = ({item})=>{
         <>
             {
                 (item.length != 0)
-                ? 
-                    <div className='product-detail'>
+                ?   <div className='product-detail'>
                         <div className='product-detail__imgs'>
-                            <img className="product-detail__img mb-2" src={item.imgs} alt="jacket black" />
+                            <img className="product-detail__img mb-2" src={item.imgs} alt={item.name} />
                         </div>  
 
                         <div className='product-detail__info'>
-
-                            
-                            <p className="product-detail__name">{item.name}</p>
-                            <p className="product-detail__price">$ {item.price.toFixed(2)}</p>
-                            
- 
+                            <div className="product-detail__box">
+                                <p className="product-detail__name">{item.name}</p>
+                                <p className="product-detail__price">$ {item.price.toFixed(2)}</p>
+                            </div>
                             {
-                                show?
-                                <ItemCount className='product-detail__item-count' stock={item.stock} initial={1} onAdd={onAdd} />
-                                :
-                                <Link to="/cart" className='product-detail__btn'>
-                                    <p className='product-detail__btn-title'>Go to Bag</p>
-                                    <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M38 11L0.999998 11" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M38 11L28 21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M38 11L28 1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </Link>
+                                show
+                                ?   <ItemCount className='product-detail__item-count' stock={item.stock} initial={1} onAdd={onAdd} />
+                                :   <Link to="/cart" className='btn-sbb'>
+                                        <p className='btn-text'>Go to Bag</p>
+                                        <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M38 11L0.999998 11" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M38 11L28 21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M38 11L28 1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </Link>
                             }
 
-                            
-                            <p className='product-detail__description'>Description</p>
-                            <p className='product-detail__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+                            <div className='product-detail__description'>
+                                <p className='product-detail__title'>Description</p>
+                                <p className='product-detail__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.</p>
+                            </div>
                         
 
                         </div>
 
                     </div>
-                : <SkeletonItemDetail />
+
+                :   <SkeletonItemDetail />
 
             }
         

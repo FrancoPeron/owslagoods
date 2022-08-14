@@ -9,7 +9,7 @@ const Item = ({item})=>{
         <div className="product">
             <div className="position-relative overflow-hidden w-100">
                 <img className="product__img mb-2" src={item.imgs[0]} alt={item.name} />
-                <Link to={`/item/${item.id}`} className="product__btn">View More</Link>
+                <Link to={`/item/${item.id}`} className="product__btn btn-sbb">View More</Link>
             </div>
             <p className="product__item-name">{item.name}</p>
             <p className="product__item-price">$ {item.price.toFixed(2)}</p>

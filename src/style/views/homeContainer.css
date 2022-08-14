@@ -1,26 +1,47 @@
-.main{
+.home{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1440px;
+    gap: 160px;
+    margin-bottom: 120px;
+}
+
+/*============================ Background ============================*/
+:root{
+    --home-background__1: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-1.webp?alt=media&token=5e08d56b-612d-4a14-8dee-0e1add2e6057);
+    --home-background__2: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-2.webp?alt=media&token=0b7bd60f-f84a-4b79-93fc-c934d2a89f2f);
+    --home-background__3: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-3.webp?alt=media&token=da292b82-ba49-4fa5-9fa5-aacc58d591fa);
+}
+
+.home-background__1,.home-background__2, .home-background__3{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+}
+.home-background__1{
+    top: 0;
+    height: 1250px; 
+    background-image: var(--home-background__1);
+}
+.home-background__2{
+    top: 30%;
+    height: 1000px; 
+    background-image:  var(--home-background__2);
+}
+.home-background__3{
+    bottom: 0;
+    height: 1000px; 
+    background-image:  var(--home-background__3);
 }
 
 
-.background__2{
-    position: absolute;
-    top: 30%;
-    left: 0;
-    z-index: -1;
-    width: 100%; 
-    background: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/backgrounds%2FFondo%202.webp?alt=media&token=047459c8-65b7-47ba-9a42-f9e9fb892dcb);
-    background-size: cover;
-    background-position: top;
-    height: 1000px; 
-  }
 
-
-/*========================================================*/
+/*====================================================================*/
 
 .banner{
     display: flex;
@@ -32,7 +53,7 @@
 
     width: 740px;
     margin-top: 70px;
-    margin-bottom: 268px;
+    margin-bottom: 108px;
 }
 
 .banner__box1{
@@ -40,25 +61,23 @@
     border-left:solid 4px #fff;
 }
 
-.banner__title{
+.banner__title, .banner__subtitle{
     font-family: 'MonumentExtended';
     font-style: normal;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.banner__title{
     font-weight: 400;
     font-size: 68px;
     line-height: 86px;
-    text-transform: uppercase;
-    color: #FFFFFF;
 }
 
 .banner__subtitle{
-
-    font-family: 'MonumentExtended';
-    font-style: normal;
     font-weight: 300;
     font-size: 40px;
     line-height: 150%;
-    color: #FFFFFF;
-
 }
 
 .banner__imgs{
@@ -76,18 +95,36 @@
     border: 4px solid #FFFFFF;
 }
 
-
-/*========================================================*/
+/*====================================================================*/
 
 .artists-apparel{
     display: grid;
     grid-template-areas:'title img1 img2 btn'
                         'title img1 img2 img3';
-                        gap: auto;
+    grid-template-rows: min-content 1fr;
+    width: 100%;
+    gap: 52px;
 }
 
-.artists-apparel .box-title{
+.artists-apparel .box-title-white{
     grid-area: title;
+}
+
+.artists-apparel .vertical{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    height: fit-content;
+    width: 72px;
+}
+
+.artists-apparel .vertical svg{
+    writing-mode: horizontal-tb;
+    transform: rotate(90deg);
+}
+
+.artists-apparel .btn-swb{
+    grid-area: btn;
+    justify-self: flex-end;
 }
 
 .artists-apparel img{
@@ -102,6 +139,7 @@
 }
 
 .artists-apparel img:nth-child(3){
+    margin-top: 52px;
     grid-area: img2;
     width: 300px;
     height: 430px;
@@ -113,59 +151,57 @@
     height: 500px;
 }
 
-/*========================================================*/
+
+/*====================================================================*/
 
 .collection{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 62px;
+    width: 100%;
 }
 
-.collection-box1{
-
+.collection-box1 .box-title-black,
+.collection-box2 .box-title-black{
+    position: absolute;
+    top: 48px;
+}
+.collection-box1 .box-title-black{
+    left: 0px;
+}
+.collection-box2 .box-title-black{
+    right: 0px;
 }
 
-.collection-box2{
-
+.collection-box1, .collection-box2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 78px;
 }
+
+.collection-box1{   justify-content: flex-end;}
+.collection-box2{   justify-content: flex-start;}
 
 .collection-box1 img, .collection-box2 img{
     width: 350px;
     height: 500px;
+    object-fit: cover;
 }
 
 
-/*========================================================*/
+/*====================================================================*/
 
-.items-list{
+
+.footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 22px;
-
-    width: 100%;
-}
-
-.items-list__title{
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 35px;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    color: #000000;
-}
-
-.items-list__container{
-    background: #ffffff;
-    padding: 2rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-    box-shadow: 0px 0px 80px rgb(0 0 0 / 14%);
+    padding: 42px 52px;
+    width: 1440px;
+    height: 354px;
+    background: rgba(50, 50, 50, 0.64);
+    border: 4px solid #FFFFFF;
+    backdrop-filter: blur(5px);
 }

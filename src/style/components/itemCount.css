@@ -1,14 +1,13 @@
 .item-count{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
+    gap: 4rem;
 }
 
 .item-count__box{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 4rem;
 }
     .item-count__btn {
         font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
@@ -46,26 +45,3 @@
         width: 55px;
         text-align: center;
     }
-
-.add-cant__btn{
-    font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    color: #000000;
-    line-height: calc(100%);
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    white-space: nowrap;
-    text-transform: uppercase;
-    background: #ffffff;
-    border: solid #000000 2px ;
-    width: fit-content;
-    padding: 1.2rem 2rem;
-    cursor: pointer;
-    transition: ease-in-out .5s;
-}
-
-.add-cant__btn:hover{
-    color: #ffffff;
-    background: #000000;
-    transition: ease-in-out .5s;
-}

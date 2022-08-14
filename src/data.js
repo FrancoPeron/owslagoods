@@ -1,51 +1,542 @@
 
-const getProducts = () => {
-    const arrayProducts = [
-        {   
-            collection: "OWSLA Clasics",
-            category: "Tops",
-            name: "OWSLA FLAG CREWNECK // UNISEX",
-            description: "Eu in sint excepteur enim non anim ex ex deserunt. Veniam dolore in fugiat esse ullamco nostrud anim. Ea consequat aute sit adipisicing consequat sit Lorem nostrud in.",
-            price: 210.00,
-            stock: 15,
-            imgs:[
-                "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/Products%2Fproduct01.jpg?alt=media&token=207171d4-4e02-49eb-a1a0-992d5cb6bc13"
-            ]
-        }
-    ]
+export const Accessories = [
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA LOGO' CLEAR UMBRELLA",
+        description: "Nulla enim laborum pariatur ex eiusmod nisi duis velit ut adipisicing pariatur. Laboris exercitation nisi sit qui ad cupidatat deserunt qui elit laborum nisi. Tempor quis ex ut reprehenderit veniam non ullamco consectetur ea laborum in occaecat enim id. Ex voluptate ex nulla laborum fugiat culpa mollit. Aute dolore adipisicing magna veniam. Nulla ad ex est et sunt ex esse.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_001.webp?alt=media&token=4b068a86-9633-431d-b6c1-4ef4790a3af6",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_002.webp?alt=media&token=55ae85a0-3129-4c71-94f5-71c8b4bb4059",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'JUNGLE' PHONE CASE",
+        description: "Nulla enim laborum pariatur ex eiusmod nisi duis velit ut adipisicing pariatur. Laboris exercitation nisi sit qui ad cupidatat deserunt qui elit laborum nisi. Tempor quis ex ut reprehenderit veniam non ullamco consectetur ea laborum in occaecat enim id. Ex voluptate ex nulla laborum fugiat culpa mollit. Aute dolore adipisicing magna veniam. Nulla ad ex est et sunt ex esse.",
+        price: 12.50,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_003.webp?alt=media&token=8cc51198-b961-4a3a-bf2b-b5d13fbfbeaa",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_004.webp?alt=media&token=77a3613b-29c1-4f58-994f-0f24f6911283",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'BALLOON' PHONE CASE",
+        description: "Nulla enim laborum pariatur ex eiusmod nisi duis velit ut adipisicing pariatur. Laboris exercitation nisi sit qui ad cupidatat deserunt qui elit laborum nisi. Tempor quis ex ut reprehenderit veniam non ullamco consectetur ea laborum in occaecat enim id. Ex voluptate ex nulla laborum fugiat culpa mollit. Aute dolore adipisicing magna veniam. Nulla ad ex est et sunt ex esse.",
+        price: 12.50,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_005.webp?alt=media&token=28e64554-2f52-482c-96c3-f5e10f622b61",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_006.webp?alt=media&token=fb853885-4b87-4366-9064-b224e1b04b83",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' LOGO TOTE BAG // APRICOT",
+        description: "Sunt sunt sint adipisicing sunt. Adipisicing tempor aliqua aliquip ullamco. Reprehenderit reprehenderit esse adipisicing in labore proident cillum nulla. Irure nulla cupidatat deserunt id occaecat esse laborum consectetur enim officia cillum consequat labore tempor.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_007.webp?alt=media&token=e66b00d2-c3a3-4081-bd87-7a8f11d6c776",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_008.webp?alt=media&token=5650c313-ba69-46a8-984c-bfaaf2b0b184",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' LOGO TOTE BAG // RED",
+        description: "Culpa sit id reprehenderit exercitation sunt laboris cupidatat eiusmod esse. Incididunt commodo incididunt proident do elit voluptate magna fugiat sit aliqua Lorem sit occaecat qui. Sunt id id culpa ea dolore eu culpa ex laborum commodo eu eiusmod Lorem. Aliquip laboris aliqua velit ullamco aliqua ullamco dolor aliqua proident. Proident incididunt anim sint dolore pariatur in nulla minim officia cillum. In minim minim enim ea occaecat ex mollit ipsum tempor minim adipisicing.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_009.webp?alt=media&token=b6ca9a74-ccf0-410c-b0a2-83ac7d810cd8",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_010.webp?alt=media&token=ed701d58-0f1a-400a-bc4e-6c41817226fd",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' LOGO TOTE BAG // SAND",
+        description: "Aliquip laboris consequat dolore nisi fugiat laboris et occaecat enim elit. Consequat cupidatat commodo ea sint amet anim voluptate culpa ad veniam eu ea laborum. Lorem Lorem ut cillum laboris nisi amet ad sunt nisi. Do est quis laboris esse dolor veniam incididunt aliqua eu nulla amet ut minim qui. Fugiat laboris consectetur reprehenderit eiusmod duis ex nisi.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_011.webp?alt=media&token=060217be-0bdb-47c7-8190-ba9b47a19595",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_012.webp?alt=media&token=72733baa-8b89-470a-917e-b598b2e9b1b7",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' LOGO TOTE BAG // MUSTARD",
+        description: "Et tempor non quis amet fugiat mollit elit Lorem nostrud velit eu id do. Ut consequat magna eu commodo proident dolore amet cupidatat deserunt occaecat ex reprehenderit. Incididunt exercitation aliquip reprehenderit aliquip deserunt velit amet Lorem Lorem. In ullamco aliqua laborum voluptate irure qui adipisicing deserunt nostrud nulla ex anim. Duis laborum incididunt anim laborum excepteur fugiat incididunt voluptate. Voluptate amet aute eu elit ea enim aliqua tempor enim minim consectetur velit.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_013.webp?alt=media&token=d0ed6a38-7578-4981-a3d2-bb3af5ef5d62",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_014.webp?alt=media&token=4affd16b-3043-4e69-b284-9ba781ed9cf6",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' LOGO TOTE BAG // BLUE",
+        description: "Fugiat consequat consequat dolore nostrud elit sunt exercitation aliqua sint do aliqua sit dolor qui. Eiusmod duis elit laborum reprehenderit aliqua aliqua velit quis culpa. Qui consectetur laboris sunt occaecat. Ex nisi mollit nisi irure non culpa laborum reprehenderit elit cupidatat laborum labore est tempor. Eu proident dolore tempor aliquip Lorem aliqua reprehenderit. Aliquip nostrud sit eu cupidatat ut eu sunt eu ad incididunt non. Irure quis officia incididunt ut dolore laboris id quis fugiat magna anim labore id esse.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_015.webp?alt=media&token=7b03a9cd-3dd4-4b23-93ad-ff15f515ec69",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_016.webp?alt=media&token=7505e0c8-79fd-4372-8cdf-e479f5b2d9d1",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA LOGO' FLAG // BLACK",
+        description: "Voluptate ex est elit quis Lorem commodo laboris. Cupidatat nulla commodo et eu duis consectetur mollit nulla adipisicing. Occaecat laborum eiusmod quis velit cillum anim veniam. Qui est elit aliqua consequat. Id Lorem quis laborum do voluptate consectetur labore ex elit tempor consectetur.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_017.webp?alt=media&token=d8f0677b-28b5-4cae-98ae-3a78ac0ee9fa",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_018.webp?alt=media&token=c712c553-2550-4e71-adca-a4d8b7d40fc5",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA LOGO' FLAG // WHITE",
+        description: "Eu aliquip occaecat aliquip consequat ad id ipsum est exercitation. Amet eiusmod irure anim fugiat. Non minim ex sunt ex occaecat ea nulla laborum ea consectetur deserunt aliquip deserunt. Lorem fugiat laborum dolore eiusmod laborum voluptate consectetur elit aliquip.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_019.webp?alt=media&token=48dc1426-8567-47f1-b88e-1334322bf3d4",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_020.webp?alt=media&token=7b28d006-504b-4c86-b16f-5d7257d3251d",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA SPECTRUM LOGO' FLAG // BLACK",
+        description: "Eu aliquip occaecat aliquip consequat ad id ipsum est exercitation. Amet eiusmod irure anim fugiat. Non minim ex sunt ex occaecat ea nulla laborum ea consectetur deserunt aliquip deserunt. Lorem fugiat laborum dolore eiusmod laborum voluptate consectetur elit aliquip.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_021.webp?alt=media&token=fd189e9f-6f9a-43cb-86ea-7e0f22627025",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_022.webp?alt=media&token=f472d213-8e4c-4e37-af6c-40a15eda4361",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA CRACKED LOGO' FLAG // BLACK",
+        description: "Eu aliquip occaecat aliquip consequat ad id ipsum est exercitation. Amet eiusmod irure anim fugiat. Non minim ex sunt ex occaecat ea nulla laborum ea consectetur deserunt aliquip deserunt. Lorem fugiat laborum dolore eiusmod laborum voluptate consectetur elit aliquip.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_023.webp?alt=media&token=5c0c3307-fd39-4180-a06a-b886f73fd5b3",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "SKRILLEX 2019 YEARBOOK",
+        description: "Sint aute cupidatat cillum Lorem Lorem culpa est. In eu cupidatat adipisicing et minim mollit quis non quis deserunt enim consequat aliqua. Non magna officia officia proident. Eu deserunt ad amet cupidatat magna sunt ut.",
+        price: 50.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_024.webp?alt=media&token=8516b6db-0444-4fe2-84e3-2ec082754ac8",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_025.webp?alt=media&token=18598eb8-a571-412e-9aa7-a8c65fcde9d9",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'FREEWAY' POSTER",
+        description: "Sint aute cupidatat cillum Lorem Lorem culpa est. In eu cupidatat adipisicing et minim mollit quis non quis deserunt enim consequat aliqua. Non magna officia officia proident. Eu deserunt ad amet cupidatat magna sunt ut.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_026.webp?alt=media&token=56a32958-e4ef-4eb9-998f-4b7def1af610",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "PATCH PACK - LARGE VARSITY PATCH,",
+        description: "Lorem in do deserunt mollit commodo ea voluptate laboris tempor esse aliquip duis. Cupidatat cillum mollit elit in cupidatat amet. Consequat fugiat magna enim excepteur dolore aute excepteur amet mollit aliqua ullamco cupidatat cillum. Ipsum sit labore non eiusmod excepteur et. Sint consectetur ea cillum consequat.",
+        price: 35.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_027.webp?alt=media&token=8c85d5fd-95a6-4f45-a533-365c8d85c9b8",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "PATCH PACK - FLAME LOGO / SPIDER / GPGT / GOLD,",
+        description: "Officia enim nostrud nisi dolor tempor commodo aliquip minim amet labore irure id aliquip ad. Ullamco reprehenderit mollit incididunt in ut. Deserunt ea reprehenderit non velit. Velit eiusmod dolore eu quis id. Cupidatat mollit amet incididunt tempor irure ex proident cupidatat. Quis et eu amet quis elit in anim. Eu voluptate enim commodo est nostrud mollit esse consectetur reprehenderit anim Lorem adipisicing.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_028.webp?alt=media&token=eaa3297d-5708-4768-a1c4-5a4cf5c3e23b",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "PATCH PACK - LARGE WHITE LOGO,",
+        description: "In commodo velit elit voluptate veniam magna elit sit. Non Lorem duis ipsum cillum esse nostrud cupidatat cupidatat consequat occaecat in. Id ad culpa mollit ut laborum aliquip laboris minim sunt officia. Proident nostrud labore ipsum occaecat nisi elit. Eu mollit exercitation amet esse elit magna ex. Laboris veniam cupidatat laborum qui ea est nisi veniam esse ad.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_029.webp?alt=media&token=58ddc801-d03a-4ece-9952-d939f357a5b9",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "PATCH PACK - SKRILLEX,",
+        description: "Dolor dolore adipisicing reprehenderit labore. Enim consectetur ea sunt laboris deserunt culpa ex. Ipsum velit cillum labore aliquip aliqua Lorem fugiat. In culpa non incididunt labore non exercitation pariatur laborum laborum duis consectetur enim. Elit veniam excepteur magna quis ut. Deserunt ad quis est ad ullamco aute officia eu in aliqua nostrud reprehenderit. In dolor laboris magna veniam amet velit quis aliqua veniam proident incididunt magna amet incididunt.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_030.webp?alt=media&token=f29483cf-e44e-41ff-86c1-3d6b00c1bbff",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "'OWSLA' RED CANVAS KEYCHAIN",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 10.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_031.webp?alt=media&token=fc40cd22-ff3a-481d-b02e-0e424d178b14",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_032.webp?alt=media&token=9147d5a1-db1e-4a6b-afcd-a12220edf450",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA BIC LIGHTER // RED",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 6.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_033.webp?alt=media&token=ba130cf3-883f-4b90-8daa-a240ea73ec6c",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_034.webp?alt=media&token=68c29e12-0c10-490b-b279-c328067fa52f",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA BIC LIGHTER // BLACK",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 6.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_035.webp?alt=media&token=b0ba58e8-c044-45db-be78-8984fae60487",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_036.webp?alt=media&token=bd9fe110-8c49-47af-bf6a-804880d023c2",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA BIC LIGHTER // LIME GREEN",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 6.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_037.webp?alt=media&token=6f54b22d-7ccc-40b3-a3d0-2e0a3d2ef9ff",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_038.webp?alt=media&token=4ccc43af-6976-4068-afd7-e20d0dff8594",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA BIC LIGHTER // ORANGE",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 6.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_039.webp?alt=media&token=08eb0822-2dd2-45e8-ab5c-0d2fe4a64ec6",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_040.webp?alt=media&token=76af7dba-411d-4cf8-a6d3-f59d3d2c8bc3",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA BALL CHAIN STAINLESS STEEL NECKLACE // SILVER",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 30.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_041.webp?alt=media&token=2383309d-408a-4bdf-87e7-e4daf7333d5d",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_042.webp?alt=media&token=1e4566b8-441b-40ae-aabe-dace97053e1c",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA SOFT ENAMEL PIN // SILVER",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 12.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_043.webp?alt=media&token=416e6f50-c128-4ec1-96db-60f8a4e5e003",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_044.webp?alt=media&token=62ec3293-53b3-4476-87a4-d4e3407d239c",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "accessories",
+        name: "OWSLA SOFT ENAMEL PIN // BLACK",
+        description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
+        price: 12.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_045.webp?alt=media&token=f04cc4c3-ba71-43d8-a2c0-30dcc7c4649d",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Faccessories%2Faccessorie_046.webp?alt=media&token=f03857eb-1a62-4369-a222-4426248c7b20"
+        ]
+    }
+]
 
-    return (
-        new Promise((res,rej) => {
-            setTimeout(()=>{
-                res(arrayProducts)
-            },2000)
-        })
-    )
-}
+export const Bottoms = [
+    {
+        collection: "owsla-clasics",
+        category: "bottoms",
+        name: "'ALL-OVER LOGO' SWIM SHORTS // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 50.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_001.webp?alt=media&token=2db27f68-f921-4232-a3b8-f31c60be9cab",
+        "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_002.webp?alt=media&token=22125631-1319-49b9-8fa8-085896800f2e",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "bottoms",
+        name: "'EMBROIDERED LOGO' SWIM SHORTS // UNISEX",
+        description: "Tempor nulla esse eiusmod ut ex aute nulla duis excepteur. Nostrud est id ad do excepteur. Reprehenderit fugiat id consectetur Lorem reprehenderit tempor veniam consequat. Non commodo laboris reprehenderit do amet fugiat do minim dolor consequat.",
+        price: 50.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_003.webp?alt=media&token=7958b651-5dbc-401b-813d-9e418101c440",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_004.webp?alt=media&token=f251731b-76c6-433d-af4e-6799dae684d7",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "bottoms",
+        name: "'PATCH LOGO' FLEECE SWEATPANT",
+        description: "Tempor nulla esse eiusmod ut ex aute nulla duis excepteur. Nostrud est id ad do excepteur. Reprehenderit fugiat id consectetur Lorem reprehenderit tempor veniam consequat. Non commodo laboris reprehenderit do amet fugiat do minim dolor consequat.",
+        price: 55.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_005.webp?alt=media&token=ce5676e0-d279-4289-a8b3-ad5ed9994ca0",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_006.webp?alt=media&token=625270de-ffd5-415b-b0ea-4b535557225e",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "bottoms",
+        name: "NEMESIS' FLEECE SWEATPANT",
+        description: "Tempor nulla esse eiusmod ut ex aute nulla duis excepteur. Nostrud est id ad do excepteur. Reprehenderit fugiat id consectetur Lorem reprehenderit tempor veniam consequat. Non commodo laboris reprehenderit do amet fugiat do minim dolor consequat.",
+        price: 55.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_007.webp?alt=media&token=5df15ca2-1117-494a-abf5-72770f31e7cd",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fbottoms%2Fbottom_008.webp?alt=media&token=c8df957e-a66e-4219-93b6-09811308da46"
+        ]
+    }
+]
 
-export default getProducts
-
-/*
-  {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "JAS DAVIS - 'NIGHT SHOW' LONG TAIL EXCLUSIVE T-SHIRT // UNISEX",
-        description: "Irure ex laboris ad amet nisi officia deserunt id laboris qui occaecat id. Exercitation adipisicing cupidatat et sint adipisicing eiusmod cupidatat ut ipsum id. Non dolore Lorem minim enim cupidatat laboris elit deserunt labore ullamco eu voluptate culpa nulla. Ullamco sunt ipsum ullamco sint eiusmod ex do. Sunt sunt tempor eu eu sunt. Est nisi exercitation esse cillum dolore sit culpa ipsum nulla pariatur veniam ad labore. Tempor voluptate adipisicing dolore pariatur incididunt cupidatat adipisicing nostrud reprehenderit duis exercitation magna id excepteur.",
+export const Headwear = [
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "OWSLA LOGO 5-PANEL CAMPER // BLACK,",
+        description: "Veniam voluptate officia quis aute adipisicing quis enim laborum ullamco labore veniam pariatur non labore. Cillum excepteur do eiusmod ullamco excepteur eiusmod. Aliquip laboris et ullamco exercitation incididunt sint occaecat aliqua ea est occaecat. Enim esse consequat aliquip culpa. Do consectetur reprehenderit mollit sunt amet ullamco consectetur sint voluptate excepteur consectetur nulla aute aute. Id occaecat anim exercitation commodo excepteur.",
         price: 45.00,
         stock: 10,
         imgs:[
-            "",
-            ""
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_001.jpg?alt=media&token=9f4124a5-e9d3-4d03-9e21-b7eec80c8bb1",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_002.jpg?alt=media&token=9b576ea3-90ae-48cf-a08e-bc597fd885b2",
         ]
     },
-*/
-
-
-
-const Tops = [
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "'OWSLA' UNSTRUCTURED HAT // TAN WITH GOLD PIN,",
+        description: "Fugiat veniam fugiat do deserunt aute occaecat mollit elit eiusmod nisi. Officia elit tempor consectetur ut reprehenderit ad. Velit non consequat minim duis adipisicing consequat irure. Sit anim ut id enim nulla fugiat ad ea. Sit nisi dolore deserunt veniam adipisicing dolore excepteur ex. Amet minim nulla aute sit fugiat proident elit ut qui tempor pariatur deserunt. Aute excepteur amet ad exercitation laborum aliqua ea.",
+        price: 45.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_003.jpg?alt=media&token=d483c574-ceea-4f3a-9cbb-44d60695ffa3",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_004.jpg?alt=media&token=82e37076-e2c3-4b73-aed4-acceaf57a705",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "'OWSLA' UNSTRUCTURED HAT // GREY WITH SILVER PIN,",
+        description: "Esse duis dolor ad dolore laborum est quis dolor ipsum et. Eiusmod magna eu tempor pariatur magna commodo adipisicing non magna aute. Duis ut aliquip aliquip nostrud ipsum est aliqua do nulla id cillum commodo cillum. Fugiat officia et officia dolor pariatur ullamco est do veniam commodo velit cupidatat. Commodo pariatur ipsum officia Lorem esse deserunt et nostrud.",
+        price: 45.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_005.jpg?alt=media&token=f781763a-f8a1-452a-9f32-5611d359177b",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_006.jpg?alt=media&token=a7990aaf-1dab-43e1-b4a3-0af98bd81ee1",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "OWSLA BOX LOGO BEANIE // GOLD,",
+        description: "Non aute exercitation ex ipsum minim eiusmod. Cillum deserunt non do aliqua eiusmod commodo laboris mollit sit. Consectetur nostrud fugiat veniam dolore non aliquip duis laboris. Nostrud dolore aute pariatur enim culpa cupidatat aliqua sint amet. Qui elit aliqua reprehenderit et sit cillum Lorem adipisicing sit pariatur amet pariatur duis consectetur. Tempor consequat dolor in nisi enim laboris qui occaecat occaecat dolore ut. Ut anim deserunt ex proident laborum anim nostrud culpa sunt ex.",
+        price: 25.00,
+        stock: 10,
+        imgs:[ 
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_007.jpg?alt=media&token=0f34c823-1d4b-46ac-b949-d631197bdff8",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_008.jpg?alt=media&token=e7524a13-49c2-46fd-b04b-b54407009d02",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "'OWSLA LOGO' BEANIE // WHITE & BLACK,",
+        description: "Velit duis eu labore ea commodo cupidatat ipsum voluptate. Labore incididunt aliqua proident reprehenderit nulla ut enim. Lorem anim duis commodo sunt tempor ea.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_009.jpg?alt=media&token=d9e3194f-65af-45e2-ae21-7bb0e3b6b1af",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_010.jpg?alt=media&token=9088dbe7-aae2-4952-a52a-f9003bbcc2a3",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "'OWSLA LOGO' BEANIE // GOLD & WHITE LOGO,",
+        description: "Ipsum ut veniam mollit in ea occaecat. Et fugiat reprehenderit aliquip mollit aute cupidatat cupidatat. Excepteur eiusmod esse ex est ipsum et in sunt officia mollit eiusmod. Ea enim ullamco do est amet ullamco voluptate exercitation.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_011.jpg?alt=media&token=3da7e35a-021c-4029-a736-b93dcd3e6693",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_012.jpg?alt=media&token=a254454c-8e52-46d0-8492-bc9fcbe9a57f",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "'COLOR BARS' BEANIE,",
+        description: "Id dolore ad enim incididunt consectetur. Labore est esse minim pariatur sit occaecat qui. Duis voluptate enim est ullamco.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_013.jpg?alt=media&token=83bd8010-8e6c-476a-95c4-cba76b43dbdc",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_014.jpg?alt=media&token=f1930939-7ee2-42ec-a791-c7aedfc5772f",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "headwear",
+        name: "SKRILLEX 'ILL' RED LOGO BEANIE // BLACK,",
+        description: "Aliquip quis sit voluptate aliqua. Duis ad non commodo nostrud exercitation reprehenderit officia incididunt nulla. Irure amet voluptate officia esse veniam fugiat occaecat deserunt deserunt occaecat esse labore. Elit pariatur eu est culpa consequat incididunt exercitation eu. Ut adipisicing proident ea nostrud ullamco reprehenderit occaecat officia dolor eiusmod ea cupidatat aliqua. Et veniam Lorem adipisicing pariatur eu aliqua Lorem in consectetur deserunt. Tempor labore consectetur id et est et Lorem ullamco.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_015.jpg?alt=media&token=1a2274b1-0cdb-4578-8542-e7448d04cc7b",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear%2Fheadwear_016.jpg?alt=media&token=e014daec-9baf-490f-bbd9-d7bbf8219005"
+        ]
+    }
+]
+
+export const Socks = [
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' WHITE KNEE HIGH SOCKS // UNISEX",
+        description: "Enim consectetur qui qui eu occaecat labore in officia nulla labore sint dolor est. In eiusmod aute dolore exercitation culpa. Aliqua nulla exercitation nisi nisi laborum ipsum culpa deserunt in cupidatat incididunt. Incididunt irure pariatur laboris enim reprehenderit dolore. Dolore eiusmod occaecat ipsum commodo laborum dolore voluptate.",
+        price: 22.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_001.webp?alt=media&token=51ee8314-8a11-4138-8ff6-7e1407d504ab",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_002.webp?alt=media&token=b4c0cd8e-301d-4e62-ae43-cf8cf9f4da70",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' BLACK KNEE HIGH SOCKS // UNISEX",
+        description: "Veniam aliqua nisi elit velit qui aute cupidatat pariatur cupidatat tempor velit eiusmod. Ex sit id occaecat id velit nisi culpa. Dolore consectetur fugiat dolor eiusmod adipisicing aute esse nulla aute occaecat. Nulla nostrud consequat ea mollit aliquip eiusmod ad sit aliqua qui consectetur Lorem.",
+        price: 22.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_003.webp?alt=media&token=d19c5c99-4d06-441c-b86a-03c63a8bd5c5",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_004.webp?alt=media&token=06087775-abbe-4fbb-afa7-ef04bd7c5621",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' GREEN MUSTARD SOCKS // UNISEX",
+        description: "Nostrud reprehenderit dolore esse labore eu Lorem ex id non aliqua cupidatat. Excepteur veniam enim commodo est non excepteur cupidatat nisi reprehenderit veniam quis. Ad dolor excepteur adipisicing id ad non irure proident. Laboris reprehenderit ad proident irure consectetur.",
+        price: 20.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_005.webp?alt=media&token=a4ab8f2b-b69d-4020-8338-745b1c18479f",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_006.webp?alt=media&token=0cb6a45e-05e7-470b-b878-e6b2aa5d9459",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' WHITE RED BLACK SOCKS // UNISEX",
+        description: "Eiusmod eiusmod velit nostrud sit. Qui ut pariatur ipsum pariatur consectetur Lorem esse nulla sit. Ex minim mollit reprehenderit fugiat aliquip consequat. Velit officia ex adipisicing in.",
+        price: 20.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_007.webp?alt=media&token=6c4abc5f-7e83-4ab8-b325-bdb02888dd4e",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_008.webp?alt=media&token=18e3fc80-01f6-4911-bfea-7341ac8f686d",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' WHITE GREY BLACK SOCKS // UNISEX",
+        description: "Eu magna dolore magna aliquip consequat officia magna deserunt officia veniam. In nostrud eiusmod nostrud commodo. Adipisicing qui Lorem quis est cupidatat commodo laboris officia sunt pariatur commodo ipsum. Laborum occaecat et ullamco pariatur sit. Deserunt do sint ullamco aliquip pariatur qui deserunt esse culpa officia labore velit. Exercitation dolore aliqua exercitation minim cillum do incididunt veniam.",
+        price: 20.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_009.webp?alt=media&token=9c40bf3b-6b28-478a-86fd-947a19098c1a",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_010.webp?alt=media&token=320ebd88-84bf-44c3-9520-54bc3fc1cc9e",
+        ]
+    },
+    {
+        collection: "owsla-clasics",
+        category: "socks",
+        name: "'OWSLA' BLACK WHITE GREY SOCKS // UNISEX",
+        description: "Pariatur minim eu exercitation ex fugiat. Est et laborum excepteur consectetur commodo sint magna eiusmod do amet et minim nisi anim. Officia ex proident excepteur do excepteur dolore in esse occaecat officia fugiat labore ex.",
+        price: 20.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_011.webp?alt=media&token=95735201-f080-4b42-bb4c-85fbad27a8b0",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsocks%2Fsock_012.webp?alt=media&token=dbf56c2b-d3c6-492f-b222-c22bd83f3734"            
+        ]
+    }
+]
+
+export const Tops = [
+    {
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'GOLD OWSLA LOGO' FRENCH TERRY POCKET CREW BLACK // UNISEX",
         description: "Id velit cupidatat ea dolor voluptate fugiat Lorem sit in. Voluptate aliqua id consectetur amet ullamco incididunt nisi officia culpa cupidatat Lorem deserunt Lorem. Ipsum ipsum excepteur enim magna ex nisi qui incididunt. Anim pariatur amet quis adipisicing sunt incididunt cillum cupidatat elit ut eu. Eiusmod labore quis irure eiusmod aute aute ipsum anim pariatur laboris occaecat proident aute.",
         price: 95.00,
@@ -56,8 +547,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA FLOCK LOGO' CLASSIC HOODIE BLACK // UNISEX",
         description: "Quis nostrud irure esse duis adipisicing esse ex ex dolor occaecat. Nisi id labore consectetur consequat ipsum excepteur voluptate deserunt proident proident nulla irure duis eu. Proident et Lorem sint reprehenderit dolor laborum commodo consectetur deserunt sunt Lorem id ea. Commodo proident incididunt nostrud enim deserunt id fugiat do mollit ex. Ut tempor labore magna consectetur aliqua mollit cillum labore tempor reprehenderit irure sint consequat laborum.",
         price: 82.00,
@@ -68,8 +559,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' CLASSIC T-SHIRT // UNISEX",
         description: "Culpa eu anim mollit nulla commodo aliquip incididunt veniam. Aliquip quis eiusmod consequat pariatur sint proident id sit consectetur laborum non ad qui. Proident ullamco dolore fugiat nostrud nisi. Culpa dolore cupidatat irure anim. Nulla ipsum id nulla non et.",
         price: 40.00,
@@ -80,8 +571,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' FRENCH TERRY T-SHIRT BLACK // UNISEX",
         description: "Laboris aliquip consequat veniam tempor id nisi irure laboris. Quis excepteur deserunt ipsum amet officia anim qui occaecat. Nostrud dolore reprehenderit ullamco amet ut nisi quis nulla sint dolore tempor. Ad cillum magna velit enim quis aliqua consectetur minim cupidatat ut cupidatat mollit. Sunt non esse ipsum officia. Ad aliqua sunt do in eu pariatur aliquip aliquip sint aute laborum ipsum et cillum.",
         price: 48.75,
@@ -92,8 +583,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "‘OWSLA LOGO’ CLASSIC LONG SLEEVE SHIRT // UNISEX",
         description: "Velit do eu et mollit aliqua excepteur proident ullamco laboris est. Dolore cillum exercitation deserunt nostrud sit. Commodo occaecat reprehenderit dolore do do ex sit excepteur elit non culpa et aute aute. Culpa voluptate aliqua reprehenderit occaecat sint. Voluptate id irure minim incididunt excepteur. Magna fugiat duis labore et in incididunt ex veniam eu cupidatat est non. Duis cillum ut incididunt ipsum culpa dolore ad.",
         price: 50.00,
@@ -104,8 +595,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "GARMENT DYE OWSLA HOODIE PINK // UNISEX",
         description: "Cupidatat quis duis incididunt id proident proident minim culpa velit. Ipsum minim qui ex esse nulla aliquip ex dolor eu aliqua cupidatat quis enim veniam. Qui nulla amet ipsum proident adipisicing sint duis exercitation minim sint consectetur.",
         price: 95.00,
@@ -116,8 +607,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "GARMENT DYE OWSLA HOODIE APRICOT // UNISEX",
         description: "Est laboris quis amet qui in fugiat. Esse cillum ullamco ut officia irure esse et et deserunt officia deserunt fugiat. Ipsum qui reprehenderit deserunt officia voluptate amet cupidatat velit.",
         price: 95.00,
@@ -128,8 +619,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "RAW EDGE LOGO PATCH CREW // UNISEX",
         description: "Aute Lorem aliqua sint proident. Culpa magna non voluptate elit adipisicing. Et sit Lorem sit ut dolore ex dolore exercitation et cupidatat adipisicing exercitation aliqua. Excepteur occaecat fugiat velit ea ullamco esse nisi do. Qui esse veniam sit qui id incididunt sit deserunt ipsum tempor nisi voluptate. Ea ad ut esse eu cillum id eu culpa amet velit.",
         price: 75.00,
@@ -140,8 +631,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "GARMENT DYE OWSLA PATCH CREW // UNISEX",
         description: "Dolore laboris commodo laborum pariatur quis dolore dolore ad ipsum sint. Minim in sunt irure amet. Aliqua voluptate sunt quis deserunt nisi fugiat est. Sint voluptate incididunt quis do aliqua ullamco ullamco est. Ipsum qui duis nostrud nostrud incididunt dolore ipsum ea duis eu do tempor pariatur. Anim incididunt sit excepteur amet. Tempor id nulla elit reprehenderit ea eu voluptate id.",
         price: 80.00,
@@ -152,8 +643,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "GARMENT DYE OWLSA PATCH CREW MOSS // UNISEX",
         description: "Incididunt proident nisi mollit esse in tempor et quis. Nostrud ipsum consequat incididunt qui Lorem nulla labore quis anim adipisicing ullamco cupidatat. Non duis reprehenderit dolore in fugiat in in enim culpa dolore aliquip pariatur. Lorem Lorem velit dolor velit qui adipisicing magna laboris. Ad nulla magna veniam nisi ex officia id et quis laborum elit in amet nulla.",
         price: 85.00,
@@ -164,8 +655,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'SPECTRUM' CROP T-SHIRT // BLACK,",
         description: "Reprehenderit tempor aliqua mollit sit. Culpa deserunt mollit eiusmod voluptate eiusmod Lorem consectetur elit voluptate qui eiusmod et. Ea veniam do voluptate esse aliquip tempor proident magna dolor eu occaecat.",
         price: 30.00,
@@ -176,8 +667,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'GARMENT DYE PATCH LOGO' T-SHIRT // SILVER // UNISEX",
         description: "Voluptate dolore esse do culpa occaecat aute. Dolore veniam veniam cillum cillum elit amet. Qui ullamco in veniam ea. Aliquip cillum aliqua elit culpa elit eiusmod in ad ad nulla.",
         price: 45.00,
@@ -189,8 +680,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'GARMENT DYE PATCH LOGO' T-SHIRT // GOLD //  UNISEX",
         description: "Dolor dolore voluptate in aliquip do labore in minim quis qui amet consequat consectetur. Excepteur ut commodo cillum nostrud occaecat duis eu ad ad duis. Pariatur magna et ad reprehenderit culpa eu aliquip.",
         price: 45.00,
@@ -202,8 +693,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' SCALLOP TEE BLACK // UNISEX",
         description: "Cillum incididunt Lorem elit voluptate. Enim esse deserunt dolor dolor ex culpa aliqua cillum exercitation sunt non pariatur sunt quis. Fugiat ad magna id officia commodo deserunt duis mollit proident excepteur mollit veniam exercitation. Veniam magna amet ullamco in nisi aliqua dolor minim mollit est culpa sunt sint cillum. In velit Lorem dolor deserunt voluptate ad do quis elit amet laborum incididunt officia ut.",
         price: 40.00,
@@ -214,8 +705,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' SCALLOP LONG SLEEVE BLACK // UNISEX",
         description: "Lorem cupidatat magna non fugiat adipisicing eiusmod enim voluptate nostrud ipsum ut quis est aliqua. Proident ipsum adipisicing proident ullamco. Velit irure laboris exercitation qui commodo reprehenderit velit consectetur eiusmod anim id ut. Adipisicing non mollit sit minim.",
         price: 45.00,
@@ -226,8 +717,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'GARMENT DYE PATCH LOGO' T-SHIRT GREEN // UNISEX",
         description: "Consequat elit et cupidatat dolor proident magna labore sit sunt. Qui excepteur Lorem exercitation nisi laboris anim enim pariatur id minim id Lorem Lorem. Elit ullamco pariatur culpa ut veniam cupidatat Lorem do pariatur nostrud amet ad. Cillum consectetur minim proident consectetur in duis ullamco aute Lorem irure ex sunt. Qui nulla reprehenderit laborum dolor consequat consequat aliquip aliqua labore officia eiusmod proident eu. Ex occaecat veniam duis proident reprehenderit deserunt velit labore incididunt. Exercitation officia velit labore consequat minim ea cupidatat laborum dolor cupidatat velit ullamco.",
         price: 42.00,
@@ -238,8 +729,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'GARMENT DYE PATCH LOGO' T-SHIRT CEMENT // UNISEX",
         description: "Et cillum aliquip reprehenderit ad consequat deserunt eu cillum. Minim ut nostrud consectetur reprehenderit laborum officia. Dolore consectetur cupidatat consequat sint commodo. Laborum nulla Lorem voluptate minim id proident ullamco qui eu laborum ut tempor reprehenderit.",
         price: 25.00,
@@ -250,8 +741,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' SCALLOP LOGO LONG SLEEVE TEE BLACK // UNISEX",
         description: "Sint laboris tempor sit incididunt incididunt elit mollit. Anim laborum Lorem sit laboris dolore qui magna ipsum commodo nostrud velit occaecat et consequat. Ad amet ullamco esse amet voluptate nulla do qui laboris dolor. Aute occaecat velit est veniam duis aliqua cillum occaecat excepteur cillum. Voluptate pariatur sint amet pariatur nisi reprehenderit incididunt ipsum nulla eiusmod eiusmod commodo. Labore in excepteur ea sint dolor ullamco quis laboris. Labore consectetur anim aliquip anim deserunt consectetur enim voluptate deserunt culpa fugiat pariatur laboris.",
         price: 30.00,
@@ -262,8 +753,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "LONG CLOTHING x OWSLA MA1 BOMBER JACKET // UNISEX",
         description: "Consequat commodo magna Lorem ad non eiusmod labore eiusmod ullamco. Nisi consequat proident cillum occaecat et occaecat aute ea et eu. Lorem mollit commodo sit proident nostrud elit laboris ut reprehenderit quis aliqua quis est fugiat. Fugiat nostrud proident aute exercitation excepteur incididunt culpa anim eu. Do occaecat nostrud qui reprehenderit qui labore. Nisi mollit nostrud do officia aliqua.",
         price: 210.00,
@@ -274,8 +765,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FISHTAIL' CANVAS JACKET BLACK // UNISEX",
         description: "Proident deserunt qui adipisicing veniam cupidatat sit excepteur pariatur in enim id magna laborum. Nisi labore magna nisi nisi aliquip sunt magna nisi irure laborum veniam consectetur. Irure voluptate laboris aliquip minim proident fugiat aute ut ullamco irure consectetur qui. Ex id elit officia magna Lorem minim. Consectetur amet mollit consectetur proident cillum qui. Velit proident reprehenderit tempor consequat cillum aliquip magna mollit. Veniam pariatur sunt fugiat dolore officia labore magna sunt voluptate.",
         price: 165.00,
@@ -286,8 +777,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' RAW EDGE HOODIE // BLACK",
         description: "Ad quis velit ea nisi nostrud cupidatat. Aliquip exercitation sit aliqua qui duis eu cillum officia et do cillum Lorem. Adipisicing tempor est proident cillum in voluptate in fugiat culpa reprehenderit minim. Dolor ipsum irure nisi nisi excepteur veniam culpa laboris. Esse incididunt duis cupidatat ad. Veniam mollit voluptate nostrud sit consectetur magna nisi nulla esse pariatur aute magna amet.",
         price: 75.00,
@@ -301,8 +792,8 @@ const Tops = [
 
 
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "ALL DENIM JACKET BLACK // UNISEX",
         description: "Deserunt non magna aute duis laborum consectetur consectetur cillum consequat nulla. Mollit excepteur id excepteur pariatur tempor ad ut labore mollit elit dolore velit. Quis sit eu sint dolor ipsum cillum do.",
         price: 155.00,
@@ -313,8 +804,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'NEMESIS' FLEECE HOODIE BLACK // UNISEX",
         description: "Consequat laborum ipsum nulla magna qui consectetur ea reprehenderit cillum aute occaecat aliqua adipisicing cillum. Nisi non laborum veniam dolor proident ad proident. Voluptate non veniam duis do incididunt. Deserunt incididunt id minim consequat proident ut sit eu aliqua pariatur voluptate excepteur sit voluptate. Pariatur excepteur in commodo ipsum occaecat ea.",
         price: 80.00,
@@ -325,8 +816,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'TOKYO' FLEECE HOODIE BLACK // UNISEX",
         description: "Amet dolor labore labore commodo tempor cillum est. Occaecat esse nostrud dolor anim dolor velit mollit nulla velit cupidatat cupidatat irure. Nisi culpa duis est magna. Fugiat anim sunt officia magna sunt pariatur enim irure cupidatat magna sunt. Mollit incididunt elit adipisicing occaecat quis laborum tempor eu culpa dolor labore laboris in cupidatat. Proident ex ullamco veniam magna esse adipisicing reprehenderit fugiat esse minim quis cillum ex.",
         price: 80.00,
@@ -337,8 +828,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FRENCH TERRY PATCH LOGO' POCKET CREW BLACK // UNISEX",
         description: "Est et consequat sint excepteur velit amet esse anim anim. Nisi id sit laborum mollit nisi. Ex occaecat ipsum pariatur eiusmod ad est cupidatat laborum do pariatur amet pariatur. Tempor occaecat dolor voluptate commodo commodo dolore velit nostrud irure duis Lorem sint pariatur.",
         price: 80.00,
@@ -349,8 +840,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FRENCH TERRY PATCH LOGO' POCKET CREW GREEN // UNISEX",
         description: "Reprehenderit aliqua amet tempor non ullamco. Dolore adipisicing eu veniam nulla occaecat voluptate. Ullamco pariatur adipisicing ex incididunt ad incididunt adipisicing ut ut ullamco occaecat. Ut id ex sint sit nulla quis magna exercitation nostrud ut ut nostrud. Officia reprehenderit aliqua exercitation mollit velit duis consequat duis. Ad deserunt veniam id fugiat deserunt cillum. Velit Lorem cupidatat voluptate sit quis laboris sunt nostrud officia esse consequat laborum reprehenderit et.",
         price: 60.00,
@@ -361,8 +852,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA PATCH' CREW SWEATSHIRT BLACK // UNISEX",
         description: "Labore ad sunt officia sint cupidatat minim proident laboris veniam aliquip dolore pariatur ipsum. Pariatur deserunt fugiat esse eu pariatur. Incididunt do enim sint tempor in ex adipisicing pariatur nisi. Culpa consequat laborum officia tempor non cupidatat esse dolore nisi ex culpa irure excepteur. Anim in deserunt ex et elit ut pariatur sint reprehenderit aliqua aute enim.",
         price: 55.00,
@@ -373,8 +864,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FOREST PATCH' CREW SWEATSHIRT BLACK // UNISEX",
         description: "Commodo est anim ut proident exercitation aute occaecat enim occaecat cillum magna et sunt. Ad qui cupidatat sunt culpa. Consectetur mollit nulla duis excepteur quis. Aute eu labore tempor sunt eiusmod exercitation dolore eu. Quis voluptate deserunt labore ipsum Lorem. Fugiat aliqua sint amet irure sit. Sint nulla nostrud labore reprehenderit aute reprehenderit Lorem.",
         price: 65.00,
@@ -385,8 +876,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'NOT A TEST' CREWNECK // UNISEX",
         description: "Tempor sunt ea elit sunt. Veniam laboris exercitation adipisicing ea officia esse mollit laborum duis velit. Nisi consequat aliqua nisi dolore aute enim. Deserunt sit ullamco labore commodo occaecat.",
         price: 25.00,
@@ -397,8 +888,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' LONG SLEEVE THERMAL SHIRT CEMENT // UNISEX",
         description: "Proident laborum nulla cillum ad enim incididunt eiusmod. Veniam duis ut sunt consectetur consequat esse excepteur nostrud sit veniam. Dolore sunt adipisicing proident id labore culpa esse enim laborum officia duis labore non. Ad aliqua veniam do pariatur nisi do velit. Tempor enim nostrud velit esse et. Ut quis minim labore cillum ea fugiat velit aute cupidatat anim Lorem id. Consectetur sunt in nisi sit incididunt ex elit incididunt commodo.",
         price: 42.00,
@@ -409,8 +900,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'OWSLA LOGO' SHORT SLEEVE THERMAL SHIRT CEMENT // UNISEX",
         description: "Consectetur sunt nisi mollit cupidatat duis. Esse quis duis nostrud nostrud fugiat ipsum officia ut nulla proident et sunt consectetur proident. Dolor reprehenderit velit qui ex voluptate anim mollit nulla reprehenderit sit. Adipisicing anim Lorem esse ut nisi consequat officia laboris.",
         price: 40.00,
@@ -421,8 +912,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FRENCH TERRY PATCH LOGO' SHIRT CEMENT // UNISEX",
         description: "Lorem et adipisicing culpa dolor do enim id quis occaecat Lorem. Irure amet id incididunt laboris eiusmod ipsum non ullamco eu. Ut adipisicing ipsum ut tempor sunt aute ullamco veniam dolore consectetur. Aute ipsum eu consectetur dolor duis occaecat eu aliqua culpa ex.",
         price: 50.00,
@@ -433,8 +924,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'STREET PANIC' T-SHIRT BLACK // UNISEX",
         description: "Aliquip id irure fugiat nulla commodo enim consectetur nulla consectetur voluptate sit enim. Sunt voluptate incididunt commodo ipsum aliqua non. Voluptate cillum cupidatat aliquip occaecat irure quis. Ea consequat non velit sunt labore sit Lorem non. Qui laborum proident Lorem veniam elit laboris veniam officia. Amet dolor adipisicing sunt ipsum sit sunt.",
         price: 24.00,
@@ -445,8 +936,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'STREET PANIC' T-SHIRT CEMENT // UNISEX",
         description: "Non duis ea officia anim. Cillum enim excepteur do ut cupidatat consectetur eu laboris Lorem. Culpa do sunt culpa ipsum occaecat reprehenderit et adipisicing occaecat sint sint do sunt. Officia magna commodo velit enim laborum aliqua mollit exercitation commodo velit. Voluptate et dolore sit esse laboris elit excepteur dolore pariatur qui magna deserunt id.",
         price: 24.00,
@@ -457,8 +948,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FIGURE IT OUT' T-SHIRT BLACK // UNISEX",
         description: "Ullamco pariatur laboris esse occaecat cupidatat tempor dolore culpa aute proident aliqua qui magna et. Sint nisi sit duis exercitation magna quis nulla veniam labore. Do nisi consequat sunt sint duis minim adipisicing consectetur ea. Cillum dolore magna sint commodo anim dolore occaecat sint nulla non cupidatat anim exercitation. Aute minim ipsum do sint ullamco aliqua deserunt pariatur. Laboris culpa excepteur magna nisi deserunt officia dolore excepteur dolore.",
         price: 24.00,
@@ -469,8 +960,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'FIGURE IT OUT' T-SHIRT GREEN // UNISEX",
         description: "Lorem consectetur proident ea sunt officia Lorem dolore cupidatat. Non tempor esse qui et aliquip proident laboris reprehenderit voluptate consequat excepteur consectetur. In officia velit cupidatat velit aliqua duis elit occaecat reprehenderit.",
         price: 24.00,
@@ -481,8 +972,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'RED FLAMES' LONG SLEEVE SHIRT // UNISEX",
         description: "Eiusmod enim voluptate nisi pariatur culpa. Ea adipisicing et consequat id minim. Cupidatat fugiat officia ullamco occaecat ullamco ad in amet. Ipsum dolor culpa exercitation laboris culpa dolor ad.",
         price: 25.00,
@@ -493,8 +984,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'DISRUPTION' CREWNECK // UNISEX",
         description: "Cillum eiusmod proident ut consequat sunt occaecat officia in officia sint. Enim dolor consectetur incididunt officia officia excepteur enim ipsum anim. Amet ex ad excepteur laborum. Cupidatat laborum aliqua sit proident esse ipsum qui non cillum mollit ex ipsum. Occaecat irure aliqua eiusmod ullamco sunt sit aliqua do cillum dolor minim laborum minim. Culpa ipsum laborum commodo cupidatat fugiat duis do ea.",
         price: 25.00,
@@ -505,8 +996,8 @@ const Tops = [
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
+        collection: "owsla-clasics",
+        category: "tops",
         name: "'AIN'T YOUR GIRL' LONG SLEEVE BODYSUIT",
         description: "Excepteur id velit est sint minim. Veniam cillum aliquip est deserunt. Tempor sunt cupidatat occaecat labore eiusmod velit labore laboris culpa consectetur ex ipsum occaecat ad.",
         price: 22.00,
@@ -516,917 +1007,332 @@ const Tops = [
             "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftops%2Ftop_081.webp?alt=media&token=59f6c7c2-a9bc-4ed9-825f-a4b4eeee83fc"
         ]
     },
+    {
+        collection: "owsla-clasics",
+        category: "tops",
+        name: "'BUSTED' LONG SLEEVE T-SHIRT // UNISEX",
+        description: "Excepteur id velit est sint minim. Veniam cillum aliquip est deserunt. Tempor sunt cupidatat occaecat labore eiusmod velit labore laboris culpa consectetur ex ipsum occaecat ad.",
+        price: 60.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftops%2Ftop_082.webp?alt=media&token=862d3b46-7e6c-4afb-875d-7331dd4d1079",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftops%2Ftop_083.webp?alt=media&token=80798a9f-a1a5-4e1d-8223-bd687cf9776b"
+        ]
+    },
 
 ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-'PATCH LOGO' FLEECE SWEATPANT
-55.00
-
-'NEMESIS' FLEECE SWEATPANT
-55.00
-
-
-
-
-'JUNGLE' PHONE CASE
-12.50
-
-'BALLOON' PHONE CASE
-12.50
-
-
-
-WIWEK X SKRILLEX X ELLIPHANT 'KILLA (SLUSHII RMX)' T-SHIRT // UNISEX
-25.00
-
-SKRILLEX 'SKRILL' SHORT SLEEVE RAGLAN HOODIE // UNISEX
-55.00
-
-SKRILLEX 'ALIEN SUB' T-SHIRT // UNISEX
-24.50
-
-SKRILLEX 'SQUAD' T-SHIRT // UNISEX
-27.00
-
-SKRILLEX 'STAGESHOT' T-SHIRT // UNISEX
-25.00
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const Bottoms = [
+export const Artists = [
     {
-        collection: "OWSLA Clasics",
-        category: "Bottoms",
-        name: "'ALL-OVER LOGO' SWIM SHORTS // UNISEX",
+        collection: "artists",
+        artists: ["joyryde"],
+        category: "tops",
+        name: "JOYRYDE 'WAREHOUSE' TEE // CEMENT",
         description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
-        price: 65.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fbottom_001.webp?alt=media&token=29f47f23-f4ba-410d-9f31-7d7fa52f3180",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fbottom_002.webp?alt=media&token=1860ee17-4b36-40fa-a11d-a297bdd796a2",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Bottoms",
-        name: "'EMBROIDERED LOGO' SWIM SHORTS // UNISEX",
-        description: "Tempor nulla esse eiusmod ut ex aute nulla duis excepteur. Nostrud est id ad do excepteur. Reprehenderit fugiat id consectetur Lorem reprehenderit tempor veniam consequat. Non commodo laboris reprehenderit do amet fugiat do minim dolor consequat.",
-        price: 65.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fbottom_003.webp?alt=media&token=d2e220ac-cba0-411d-9a25-9338562ca16d",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fbottom_004.webp?alt=media&token=3977bfbe-5be5-4d3a-97af-22487649b38a",
-        ]
-    }
-]
-
-const Socks = [
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' WHITE KNEE HIGH SOCKS // UNISEX",
-        description: "Enim consectetur qui qui eu occaecat labore in officia nulla labore sint dolor est. In eiusmod aute dolore exercitation culpa. Aliqua nulla exercitation nisi nisi laborum ipsum culpa deserunt in cupidatat incididunt. Incididunt irure pariatur laboris enim reprehenderit dolore. Dolore eiusmod occaecat ipsum commodo laborum dolore voluptate.",
-        price: 22.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_001.webp?alt=media&token=3f056792-9fde-45c3-9f1f-73eeb17be042",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_002.webp?alt=media&token=7978ddf2-c6ba-42e0-9b31-6a7ab2274c72"
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' BLACK KNEE HIGH SOCKS // UNISEX",
-        description: "Veniam aliqua nisi elit velit qui aute cupidatat pariatur cupidatat tempor velit eiusmod. Ex sit id occaecat id velit nisi culpa. Dolore consectetur fugiat dolor eiusmod adipisicing aute esse nulla aute occaecat. Nulla nostrud consequat ea mollit aliquip eiusmod ad sit aliqua qui consectetur Lorem.",
-        price: 22.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_003.webp?alt=media&token=6877afb5-3d52-4d6f-9a74-ae4e87d60378",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_004.webp?alt=media&token=157edfbd-b489-4f5a-a469-6023fc2a2dea"
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' GREEN MUSTARD SOCKS // UNISEX",
-        description: "Nostrud reprehenderit dolore esse labore eu Lorem ex id non aliqua cupidatat. Excepteur veniam enim commodo est non excepteur cupidatat nisi reprehenderit veniam quis. Ad dolor excepteur adipisicing id ad non irure proident. Laboris reprehenderit ad proident irure consectetur.",
-        price: 20.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_005.webp?alt=media&token=8e4be11a-15e8-4fbd-b581-0629c2812f10",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_006.webp?alt=media&token=649b1837-dec5-4185-84d5-ac1d4e3a76df"
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' WHITE RED BLACK SOCKS // UNISEX",
-        description: "Eiusmod eiusmod velit nostrud sit. Qui ut pariatur ipsum pariatur consectetur Lorem esse nulla sit. Ex minim mollit reprehenderit fugiat aliquip consequat. Velit officia ex adipisicing in.",
-        price: 20.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_007.webp?alt=media&token=f7ae749e-7514-47c2-9578-7eb08ce7da3d",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_008.webp?alt=media&token=7097c4e2-601d-495e-af87-2092cca59fad",    
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' WHITE GREY BLACK SOCKS // UNISEX",
-        description: "Eu magna dolore magna aliquip consequat officia magna deserunt officia veniam. In nostrud eiusmod nostrud commodo. Adipisicing qui Lorem quis est cupidatat commodo laboris officia sunt pariatur commodo ipsum. Laborum occaecat et ullamco pariatur sit. Deserunt do sint ullamco aliquip pariatur qui deserunt esse culpa officia labore velit. Exercitation dolore aliqua exercitation minim cillum do incididunt veniam.",
-        price: 20.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_009.webp?alt=media&token=640b5277-69fd-47be-b797-9219ddda51d4",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_010.webp?alt=media&token=697ec9d8-ebbd-4fe2-9f16-315fa4d15d8b",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Socks",
-        name: "'OWSLA' BLACK WHITE GREY SOCKS // UNISEX",
-        description: "Pariatur minim eu exercitation ex fugiat. Est et laborum excepteur consectetur commodo sint magna eiusmod do amet et minim nisi anim. Officia ex proident excepteur do excepteur dolore in esse occaecat officia fugiat labore ex.",
-        price: 20.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_011.webp?alt=media&token=818b0228-7d90-4906-b9d3-4d4d856d840d",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fsock_012.webp?alt=media&token=4a2d538e-1963-442e-8396-e6bf0cc1572e"
-        ]
-    }
-]
-
-const Headwear = [
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "OWSLA LOGO 5-PANEL CAMPER // BLACK,",
-        description: "Veniam voluptate officia quis aute adipisicing quis enim laborum ullamco labore veniam pariatur non labore. Cillum excepteur do eiusmod ullamco excepteur eiusmod. Aliquip laboris et ullamco exercitation incididunt sint occaecat aliqua ea est occaecat. Enim esse consequat aliquip culpa. Do consectetur reprehenderit mollit sunt amet ullamco consectetur sint voluptate excepteur consectetur nulla aute aute. Id occaecat anim exercitation commodo excepteur.",
         price: 45.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_001.webp?alt=media&token=cd33bdd4-9393-412b-bf75-d1f3d8e6ff95",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_002.webp?alt=media&token=6ca1738c-2560-43e3-9bd9-a45ca83d3aaf",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_001.webp?alt=media&token=b8dfdd93-67cd-4469-94b2-4d2e2caffa53",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_002.webp?alt=media&token=06d9c4f1-afdb-4cb4-92d7-b4d104daaf9e",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "'OWSLA' UNSTRUCTURED HAT // TAN WITH GOLD PIN,",
-        description: "Fugiat veniam fugiat do deserunt aute occaecat mollit elit eiusmod nisi. Officia elit tempor consectetur ut reprehenderit ad. Velit non consequat minim duis adipisicing consequat irure. Sit anim ut id enim nulla fugiat ad ea. Sit nisi dolore deserunt veniam adipisicing dolore excepteur ex. Amet minim nulla aute sit fugiat proident elit ut qui tempor pariatur deserunt. Aute excepteur amet ad exercitation laborum aliqua ea.",
-        price: 45.00,
+        collection: "artists",
+        artists: ["joyryde"],
+        category: "tops",
+        name: "JOYRYDE 'WAREHOUSE' OVERSIZE LONG SLEEVE // FADED BLACK",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 58.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_003.webp?alt=media&token=e541ebd5-cbf3-4744-97e7-a8cf20e9cbb9",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_004.webp?alt=media&token=2b9cd4fb-56c8-4963-a487-a434e7d8972e",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_003.webp?alt=media&token=646809d3-11d3-4a48-993a-497adc163cbc",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_004.webp?alt=media&token=b699c62f-f4e0-4a15-b8bf-ca056a768649",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "'OWSLA' UNSTRUCTURED HAT // GREY WITH SILVER PIN,",
-        description: "Esse duis dolor ad dolore laborum est quis dolor ipsum et. Eiusmod magna eu tempor pariatur magna commodo adipisicing non magna aute. Duis ut aliquip aliquip nostrud ipsum est aliqua do nulla id cillum commodo cillum. Fugiat officia et officia dolor pariatur ullamco est do veniam commodo velit cupidatat. Commodo pariatur ipsum officia Lorem esse deserunt et nostrud.",
-        price: 45.00,
+        collection: "artists",
+        artists: ["joyryde"],
+        category: "tops",
+        name: "JOYRYDE 'WAREHOUSE' CREWNECK",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 68.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_005.webp?alt=media&token=8cc99441-7c30-49cd-8354-864808f68cf8",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_006.webp?alt=media&token=87310f5a-45e7-4fe4-bfb6-c6652d0c241a",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_005.webp?alt=media&token=40ff36c2-c11f-4f69-b97e-b0a419fdd0a2",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_006.webp?alt=media&token=b4dcbb12-08f8-47fe-a864-ce0b6e207452",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "OWSLA BOX LOGO BEANIE // GOLD,",
-        description: "Non aute exercitation ex ipsum minim eiusmod. Cillum deserunt non do aliqua eiusmod commodo laboris mollit sit. Consectetur nostrud fugiat veniam dolore non aliquip duis laboris. Nostrud dolore aute pariatur enim culpa cupidatat aliqua sint amet. Qui elit aliqua reprehenderit et sit cillum Lorem adipisicing sit pariatur amet pariatur duis consectetur. Tempor consequat dolor in nisi enim laboris qui occaecat occaecat dolore ut. Ut anim deserunt ex proident laborum anim nostrud culpa sunt ex.",
-        price: 25.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_007.webp?alt=media&token=ede0b93c-352c-4ec0-aa8b-3d64e1148178",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_008.webp?alt=media&token=3ecb3abb-0d7d-4160-aa3d-610de8fc7d59",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "'OWSLA LOGO' BEANIE // WHITE & BLACK,",
-        description: "Velit duis eu labore ea commodo cupidatat ipsum voluptate. Labore incididunt aliqua proident reprehenderit nulla ut enim. Lorem anim duis commodo sunt tempor ea.",
-        price: 25.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_009.webp?alt=media&token=17addc4a-4b74-4319-b490-52c173265a25",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_010.webp?alt=media&token=7a002007-4d32-45fd-92d3-753afbd41343",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "'OWSLA LOGO' BEANIE // GOLD & WHITE LOGO,",
-        description: "Ipsum ut veniam mollit in ea occaecat. Et fugiat reprehenderit aliquip mollit aute cupidatat cupidatat. Excepteur eiusmod esse ex est ipsum et in sunt officia mollit eiusmod. Ea enim ullamco do est amet ullamco voluptate exercitation.",
-        price: 25.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_011.webp?alt=media&token=a199f1ac-b5b2-4e5c-acdd-b56365dfa2c9",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_012.webp?alt=media&token=faed66c6-161a-4b9c-bf45-3cf991cc2819",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "'COLOR BARS' BEANIE,",
-        description: "Id dolore ad enim incididunt consectetur. Labore est esse minim pariatur sit occaecat qui. Duis voluptate enim est ullamco.",
-        price: 25.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_013.webp?alt=media&token=d15d19ca-4b29-4999-a960-02865793984f",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_014.webp?alt=media&token=7cd3ab3c-512a-40d6-a2fe-70bcca046124",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "SKRILLEX 'ILL' RED LOGO BEANIE // BLACK,",
-        description: "Aliquip quis sit voluptate aliqua. Duis ad non commodo nostrud exercitation reprehenderit officia incididunt nulla. Irure amet voluptate officia esse veniam fugiat occaecat deserunt deserunt occaecat esse labore. Elit pariatur eu est culpa consequat incididunt exercitation eu. Ut adipisicing proident ea nostrud ullamco reprehenderit occaecat officia dolor eiusmod ea cupidatat aliqua. Et veniam Lorem adipisicing pariatur eu aliqua Lorem in consectetur deserunt. Tempor labore consectetur id et est et Lorem ullamco.",
-        price: 25.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_015.webp?alt=media&token=214cbf35-686a-4395-8c1b-6c3d244b6c55",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_016.webp?alt=media&token=d24a3c55-6b71-4ad6-bddd-0e031aa16c2d",
-        ]
-    }
-]
-
-const Accessories = [
-    {
-        collection: "OWSLA Clasics",
-        category: "Accessories",
-        name: "",
-        description: "Nulla enim laborum pariatur ex eiusmod nisi duis velit ut adipisicing pariatur. Laboris exercitation nisi sit qui ad cupidatat deserunt qui elit laborum nisi. Tempor quis ex ut reprehenderit veniam non ullamco consectetur ea laborum in occaecat enim id. Ex voluptate ex nulla laborum fugiat culpa mollit. Aute dolore adipisicing magna veniam. Nulla ad ex est et sunt ex esse.",
-        price: 45.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_001.webp?alt=media&token=cd33bdd4-9393-412b-bf75-d1f3d8e6ff95",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_002.webp?alt=media&token=6ca1738c-2560-43e3-9bd9-a45ca83d3aaf",
-        ]
-    },
-]
-
-
-
-
-/*     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "OWSLA BLACK LOGO CROP TEE - MOCK TWIST",
-        description: "Consequat irure mollit nisi sint irure. Veniam quis aute amet veniam sunt Lorem et aliquip sunt Lorem nostrud sunt ullamco. Et velit adipisicing esse voluptate magna excepteur non eu irure excepteur elit. Incididunt sunt duis ipsum officia aute qui nostrud nulla magna. Minim tempor exercitation in fugiat est cillum enim ex nisi magna.",
+        collection: "artists",
+        artists: ["yogi"],
+        category: "headwear",
+        name: "YOGI 'LOGO' DAD HAT // BLACK WITH GOLD LOGO",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
         price: 32.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_048.webp?alt=media&token=ae1bb26d-9f4c-4889-b9fd-cd10ff67d8fb",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_049.webp?alt=media&token=4dcc4b14-a721-4488-8140-c07928674156",            
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_007.webp?alt=media&token=59fb5e44-ae49-45f4-a811-8aa5c8c32553",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_008.webp?alt=media&token=fdcc62af-2d30-4115-a3f0-bd7902d42c7b",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "OWSLA BLACK LOGO CROP LONGSLEEVE - MOCK TWIST",
-        description: "Magna ipsum excepteur aliqua adipisicing duis Lorem. Aliqua commodo fugiat id labore ullamco excepteur reprehenderit. Ex voluptate cupidatat anim cillum do fugiat exercitation. Amet excepteur id nisi veniam dolor.",
-        price: 36.00,
+        collection: "artists",
+        category: "tops",
+        artists: ["marshmello"],
+        name: "MARSHMELLO 'RITUAL' BLACK T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 25.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_050.webp?alt=media&token=c14f51a4-3509-4765-a859-7d01b4b021bd",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_051.webp?alt=media&token=dcd2d700-9b6e-43cc-a7ba-9cb1da76700d",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_009.webp?alt=media&token=de79914b-4a0e-4328-a136-dd9b9b614050",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_010.webp?alt=media&token=cee65403-6669-4fd1-93ae-9f92fc7e0906",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Ea deserunt et eu consectetur. Amet incididunt nostrud amet ut ipsum exercitation voluptate tempor Lorem tempor. Irure proident culpa ipsum sunt. Ut velit veniam nulla voluptate ipsum dolor sunt ea nisi fugiat irure irure. Excepteur sunt non et mollit occaecat non anim ut.",
-        price: ,
+        collection: "artists",
+        artists: ["marshmello"],
+        category: "top",
+        name: "MARSHMELLO 'RITUAL' WHITE T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 25.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_052.webp?alt=media&token=b0ae27c0-b63f-43e1-9be1-c04a9f9c3b97",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_053.webp?alt=media&token=f5038b66-768a-4be9-91cc-6e68bd2b1ae4",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_011.webp?alt=media&token=696dcb33-0673-4ada-82d8-bc10a7c7f740",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_012.webp?alt=media&token=c0786bc2-a4de-4d54-a298-5bdfb59f66f5",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Consequat non est commodo magna esse culpa consequat do ut nostrud nisi tempor. Amet ipsum amet dolore commodo officia pariatur do id cillum proident non sint laborum. Laboris magna eiusmod do aute do anim nulla sint sit mollit ut ex. Reprehenderit aute velit eiusmod irure qui exercitation Lorem dolor quis excepteur.",
-        price: ,
+        collection: "artists",
+        artists: ["marshmello"],
+        category: "tops",
+        name: "MARSHMELLO 'RITUAL' HOODIE // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 75.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_054.webp?alt=media&token=8f157b7b-c9fe-44b9-8ba8-3b764973e2e2",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_055.webp?alt=media&token=3bb78747-b595-49c4-a73f-de162030392b",
-            
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_013.webp?alt=media&token=2846c883-4dcc-4771-a527-f42a424b133f",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_014.webp?alt=media&token=89b3153c-37cc-4b80-bce3-40fe240abac5",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Elit Lorem et ut cupidatat cupidatat aliqua Lorem velit consectetur excepteur et qui. Deserunt officia nisi adipisicing duis ullamco cillum laborum veniam irure laboris ex incididunt. Esse adipisicing irure veniam nulla esse amet do magna incididunt sunt non ad. Cillum ex deserunt est exercitation minim voluptate dolore esse Lorem culpa commodo incididunt culpa.",
-        price: ,
+        collection: "artists",
+        artists: ["marshmello"],
+        category: "accessories",
+        name: "MARSHMELLO 'RITUAL' CANDLE",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 30.00,
         stock: 10,
         imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_056.webp?alt=media&token=881ffa6d-318d-4ba0-8ed5-20581a89a947",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_057.webp?alt=media&token=c7c97e59-9f94-4be8-8777-f813767e1364",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_015.webp?alt=media&token=36deed4d-92cc-4386-8aed-de118430d2bb",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_016.webp?alt=media&token=4d28d8e3-144c-4775-a81d-b06a2b8a3fa1",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Consectetur consectetur Lorem veniam labore irure nisi cupidatat et id ea duis occaecat. Culpa deserunt nostrud laborum pariatur do. Sint nisi proident laboris ullamco pariatur dolor voluptate. Adipisicing magna esse elit ullamco incididunt dolore excepteur eu sunt ad veniam.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_058.webp?alt=media&token=1e2596f9-852b-48ff-a404-2f4bb237be09",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_059.webp?alt=media&token=9417d373-50f6-4950-a1f8-e3808e5f37a4",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Occaecat irure aliquip aliquip culpa excepteur voluptate eu sint non. Adipisicing consequat magna reprehenderit adipisicing voluptate laborum reprehenderit fugiat est amet sunt cupidatat. Consectetur voluptate nulla proident deserunt commodo esse sint pariatur amet aliqua tempor consequat consequat nulla. Aute ipsum amet mollit officia officia sit dolore laboris. Amet sint proident sit sit laborum mollit in ea non exercitation id quis. Exercitation Lorem magna voluptate ipsum dolore adipisicing labore anim pariatur deserunt mollit. Esse exercitation nisi aliqua deserunt occaecat excepteur officia excepteur magna enim.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_062.webp?alt=media&token=6bdfec43-1ed0-4336-9b01-a5e747f56add",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_063.webp?alt=media&token=eb8c2075-c18c-4b64-aa82-fb8794401ba3",            
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Commodo consequat culpa magna proident culpa esse in aliqua culpa elit minim irure nostrud. Qui incididunt ad nostrud do elit quis proident incididunt. Exercitation est laborum commodo ullamco dolor proident consequat elit eiusmod. Ut enim labore consequat amet excepteur nostrud ea mollit duis minim exercitation id. Dolore pariatur anim labore Lorem enim ullamco sint consequat et incididunt fugiat esse aliqua excepteur. Consequat incididunt duis ad occaecat eu consectetur pariatur. Ad qui sunt excepteur aliquip incididunt deserunt id fugiat.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_064.webp?alt=media&token=aa054792-33ee-4413-b957-91867a9668aa",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_065.webp?alt=media&token=78007543-b6c7-4e7d-be1f-04775514db81",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Laborum dolore sint consequat non et exercitation aute labore ex tempor elit aute eu et. Quis tempor proident id esse veniam ullamco excepteur sit. Nostrud sunt sunt sunt cupidatat mollit ullamco aute ut reprehenderit. Velit non quis tempor elit pariatur incididunt laborum et veniam occaecat pariatur in dolor officia. Cupidatat sint non consectetur est enim aliqua aliqua culpa minim culpa exercitation. Occaecat anim excepteur cupidatat incididunt nisi proident dolor et. Duis dolor eiusmod dolore anim minim non deserunt esse.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_066.webp?alt=media&token=d05e01b8-e19e-4df3-9c17-73c423c3dc3f",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_067.webp?alt=media&token=b426bd7b-c700-49d3-85d7-8c347c276631",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Magna ad incididunt pariatur nulla ad aute duis id cillum tempor qui. Occaecat tempor do ad nostrud. Eu exercitation deserunt elit occaecat consectetur cillum mollit. Eiusmod adipisicing ipsum amet adipisicing nulla mollit dolore. Ea ad nisi ex dolor eu nulla nulla nostrud dolore labore est. Magna Lorem amet ipsum qui laborum aliqua exercitation cillum in in dolore. Id labore tempor dolor ipsum Lorem adipisicing.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_068.webp?alt=media&token=c076a41f-4420-4e77-9570-32d0dc4c8c9f",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_069.webp?alt=media&token=6075badc-4ee5-42c3-ac16-db3288342eaf",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Amet aliquip amet quis laborum tempor tempor velit cillum ut labore sit do. Culpa veniam officia anim non commodo sint laborum aliquip voluptate id. Aute voluptate est nostrud laboris laboris cupidatat.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_070.webp?alt=media&token=8679c7d6-dea2-4da9-974e-bb18a8c683fe",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_071.webp?alt=media&token=8c43cf3e-6103-4e92-8077-c10db229f841",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Ex anim qui ad cillum laborum sunt incididunt ex do cillum labore eiusmod est. Amet fugiat anim ex minim adipisicing consectetur ex quis nulla voluptate ipsum veniam laboris occaecat. Aute anim duis qui aliqua et consequat. Sit pariatur irure aliquip deserunt aute. Aute fugiat cillum ex in nulla irure esse non sint incididunt. Magna nisi velit cupidatat officia duis et est consectetur consectetur.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_072.webp?alt=media&token=ec85708b-7bdb-40ef-a871-d5801aec865c",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "",
-        description: "Nulla aliqua ut nulla eiusmod ullamco. Cillum aliqua in ut minim occaecat consequat commodo. Eu duis ex est do mollit minim id cillum dolor deserunt dolore.",
-        price: ,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Ftop_073.webp?alt=media&token=d75046f9-f894-4098-bb7f-a9ec1ec8c03b"
-        ]
-    },
-
-] */
-
-
-
-/*
-
-Headwere,
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "SPECTRUM DAD HAT // BLACK,",
-    description: "Velit sit nisi aute irure. Cillum quis excepteur do voluptate ipsum mollit in sunt. Exercitation fugiat in aute in do Lorem. Laboris reprehenderit amet ex voluptate. Amet deserunt nisi ullamco ipsum proident commodo ullamco commodo eu eu id aliqua nulla. Quis deserunt amet incididunt fugiat veniam sunt cillum eu duis.",
-    price: 32.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "FLOATY DAD HAT // BLACK,",
-    description: "Ad pariatur et dolor proident Lorem cillum occaecat id culpa. Dolore nulla exercitation commodo exercitation tempor quis irure laboris nulla in tempor voluptate id. Enim duis nostrud eiusmod occaecat ullamco velit culpa ut amet officia qui duis aliquip. Laborum aute voluptate exercitation dolore minim velit aute consequat velit eu. Sunt velit laborum ea fugiat id laboris do nostrud ad sunt laboris. Consectetur duis magna ut sint labore aute labore duis amet.",
-    price: 32.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "BLOBS ART LOGO DAD HAT // BLACK,",
-    description: "Tempor elit sunt velit ad dolor aliquip et reprehenderit aliquip proident labore sunt tempor deserunt. Commodo anim cillum culpa occaecat cupidatat do culpa ea. Quis dolore dolore labore cupidatat ipsum nisi id minim amet incididunt laboris ullamco et adipisicing. Labore magna excepteur quis aliqua dolore magna veniam enim. Sint amet exercitation occaecat ea dolore in aute ex pariatur velit. Irure laboris adipisicing commodo deserunt fugiat.",
-    price: 32.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "BLOBS ART LOGO DAD HAT // WHITE,",
-        description: "Sunt nisi proident velit Lorem elit enim velit incididunt magna ullamco irure minim commodo. Anim aliqua ad labore incididunt laboris aute tempor id tempor incididunt mollit aute anim exercitation. Ut fugiat ad Lorem ad consequat tempor laboris cillum irure. Cupidatat laborum nostrud ea nostrud nulla eiusmod fugiat mollit aute id cupidatat et veniam. Ea et proident pariatur aliqua minim commodo mollit cillum fugiat quis et minim eiusmod. Dolor nisi eiusmod laborum anim velit.",
-        price: 32.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_003.webp?alt=media&token=e541ebd5-cbf3-4744-97e7-a8cf20e9cbb9",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_004.webp?alt=media&token=2b9cd4fb-56c8-4963-a487-a434e7d8972e",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "BLOBS ART SCRIPT DAD HAT // BLUE,",
-        description: "Dolore laborum et commodo enim qui culpa excepteur incididunt veniam esse est officia. Lorem laborum nostrud aliqua ea velit quis reprehenderit. Irure anim in consectetur nisi ex enim fugiat ut duis do pariatur. Nostrud fugiat id culpa quis cillum sint nisi voluptate incididunt.",
-        price: 32.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_005.webp?alt=media&token=8cc99441-7c30-49cd-8354-864808f68cf8",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_006.webp?alt=media&token=87310f5a-45e7-4fe4-bfb6-c6652d0c241a",
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Headwear",
-        name: "BLOBS ART SCRIPT DAD HAT // YELLOW,",
-        description: "Deserunt ad dolore do aliquip dolor veniam. Non excepteur commodo voluptate nisi elit voluptate anim eiusmod sint occaecat sint veniam. Excepteur nostrud sunt et id consequat exercitation veniam aute. Pariatur occaecat aliqua voluptate magna voluptate veniam nostrud ut commodo velit. Eiusmod sunt ullamco eiusmod elit fugiat consectetur aliquip officia amet nostrud. Ea Lorem Lorem proident proident dolor duis ea laboris tempor nostrud.",
-        price: 32.00,
-        stock: 10,
-        imgs:[
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_007.webp?alt=media&token=ede0b93c-352c-4ec0-aa8b-3d64e1148178",
-            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fheadwear_008.webp?alt=media&token=3ecb3abb-0d7d-4160-aa3d-610de8fc7d59",
-        ]
-    },
-
-
-
-
-
-*/
-
-
-
-
-
-/*
-
-accessorires,
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA LOGO' FLAG // BLACK,",
-    description: "Voluptate ex est elit quis Lorem commodo laboris. Cupidatat nulla commodo et eu duis consectetur mollit nulla adipisicing. Occaecat laborum eiusmod quis velit cillum anim veniam. Qui est elit aliqua consequat. Id Lorem quis laborum do voluptate consectetur labore ex elit tempor consectetur.",
-    price: 40.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA LOGO' FLAG // WHITE,",
-    description: "Eu aliquip occaecat aliquip consequat ad id ipsum est exercitation. Amet eiusmod irure anim fugiat. Non minim ex sunt ex occaecat ea nulla laborum ea consectetur deserunt aliquip deserunt. Lorem fugiat laborum dolore eiusmod laborum voluptate consectetur elit aliquip.",
-    price: 40.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' LOGO TOTE BAG // APRICOT,",
-    description: "Sunt sunt sint adipisicing sunt. Adipisicing tempor aliqua aliquip ullamco. Reprehenderit reprehenderit esse adipisicing in labore proident cillum nulla. Irure nulla cupidatat deserunt id occaecat esse laborum consectetur enim officia cillum consequat labore tempor.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' LOGO TOTE BAG // RED,",
-    description: "Culpa sit id reprehenderit exercitation sunt laboris cupidatat eiusmod esse. Incididunt commodo incididunt proident do elit voluptate magna fugiat sit aliqua Lorem sit occaecat qui. Sunt id id culpa ea dolore eu culpa ex laborum commodo eu eiusmod Lorem. Aliquip laboris aliqua velit ullamco aliqua ullamco dolor aliqua proident. Proident incididunt anim sint dolore pariatur in nulla minim officia cillum. In minim minim enim ea occaecat ex mollit ipsum tempor minim adipisicing.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' LOGO TOTE BAG // SAND,",
-    description: "Aliquip laboris consequat dolore nisi fugiat laboris et occaecat enim elit. Consequat cupidatat commodo ea sint amet anim voluptate culpa ad veniam eu ea laborum. Lorem Lorem ut cillum laboris nisi amet ad sunt nisi. Do est quis laboris esse dolor veniam incididunt aliqua eu nulla amet ut minim qui. Fugiat laboris consectetur reprehenderit eiusmod duis ex nisi.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' LOGO TOTE BAG // MUSTARD,",
-    description: "Et tempor non quis amet fugiat mollit elit Lorem nostrud velit eu id do. Ut consequat magna eu commodo proident dolore amet cupidatat deserunt occaecat ex reprehenderit. Incididunt exercitation aliquip reprehenderit aliquip deserunt velit amet Lorem Lorem. In ullamco aliqua laborum voluptate irure qui adipisicing deserunt nostrud nulla ex anim. Duis laborum incididunt anim laborum excepteur fugiat incididunt voluptate. Voluptate amet aute eu elit ea enim aliqua tempor enim minim consectetur velit.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' LOGO TOTE BAG // BLUE,",
-    description: "Fugiat consequat consequat dolore nostrud elit sunt exercitation aliqua sint do aliqua sit dolor qui. Eiusmod duis elit laborum reprehenderit aliqua aliqua velit quis culpa. Qui consectetur laboris sunt occaecat. Ex nisi mollit nisi irure non culpa laborum reprehenderit elit cupidatat laborum labore est tempor. Eu proident dolore tempor aliquip Lorem aliqua reprehenderit. Aliquip nostrud sit eu cupidatat ut eu sunt eu ad incididunt non. Irure quis officia incididunt ut dolore laboris id quis fugiat magna anim labore id esse.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'FREEWAY' POSTER,",
-    description: "Sint aute cupidatat cillum Lorem Lorem culpa est. In eu cupidatat adipisicing et minim mollit quis non quis deserunt enim consequat aliqua. Non magna officia officia proident. Eu deserunt ad amet cupidatat magna sunt ut.",
-    price: 25.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "PATCH PACK - LARGE VARSITY PATCH,",
-    description: "Lorem in do deserunt mollit commodo ea voluptate laboris tempor esse aliquip duis. Cupidatat cillum mollit elit in cupidatat amet. Consequat fugiat magna enim excepteur dolore aute excepteur amet mollit aliqua ullamco cupidatat cillum. Ipsum sit labore non eiusmod excepteur et. Sint consectetur ea cillum consequat.",
-    price: 35.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "PATCH PACK - FLAME LOGO / SPIDER / GPGT / GOLD,",
-    description: "Officia enim nostrud nisi dolor tempor commodo aliquip minim amet labore irure id aliquip ad. Ullamco reprehenderit mollit incididunt in ut. Deserunt ea reprehenderit non velit. Velit eiusmod dolore eu quis id. Cupidatat mollit amet incididunt tempor irure ex proident cupidatat. Quis et eu amet quis elit in anim. Eu voluptate enim commodo est nostrud mollit esse consectetur reprehenderit anim Lorem adipisicing.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "PATCH PACK - LARGE WHITE LOGO,",
-    description: "In commodo velit elit voluptate veniam magna elit sit. Non Lorem duis ipsum cillum esse nostrud cupidatat cupidatat consequat occaecat in. Id ad culpa mollit ut laborum aliquip laboris minim sunt officia. Proident nostrud labore ipsum occaecat nisi elit. Eu mollit exercitation amet esse elit magna ex. Laboris veniam cupidatat laborum qui ea est nisi veniam esse ad.",
-    price: 30.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "PATCH PACK - SKRILLEX,",
-    description: "Dolor dolore adipisicing reprehenderit labore. Enim consectetur ea sunt laboris deserunt culpa ex. Ipsum velit cillum labore aliquip aliqua Lorem fugiat. In culpa non incididunt labore non exercitation pariatur laborum laborum duis consectetur enim. Elit veniam excepteur magna quis ut. Deserunt ad quis est ad ullamco aute officia eu in aliqua nostrud reprehenderit. In dolor laboris magna veniam amet velit quis aliqua veniam proident incididunt magna amet incididunt.",
-    price: 25.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-},
-{
-    collection: "OWSLA Clasics",
-    category: "Tops",
-    name: "'OWSLA' RED CANVAS KEYCHAIN,",
-    description: "Et dolor culpa ut labore eu. Nostrud esse quis veniam ipsum ad voluptate. Aliquip aliqua duis consequat id minim qui sunt. Irure id ullamco fugiat nisi proident Lorem culpa commodo irure reprehenderit minim aliquip adipisicing. Ipsum tempor cillum ex aliqua sint Lorem. Aliquip aute sit Lorem minim proident consequat id quis magna velit. Fugiat laboris velit tempor pariatur culpa officia exercitation consectetur ex exercitation ullamco.",
-    price: 10.00,
-    stock: 10
-    imgs:[
-    "",
-    ]
-}
-
-*/
-
-
-
-/*
-
-Bottoms
-
-*/
-
-
-/*
-
-Bottoms
-
-*/
-
-/*
-
-Bottoms
-
-*/
-
-/*
- {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "BLOBS ART CREWNECK // BLACK // UNISEX",
-        description: "Esse laboris incididunt id laboris sint ex nostrud nisi do velit est eiusmod dolor ad. Ea officia culpa consequat dolor cupidatat adipisicing incididunt sint eu aliquip excepteur dolore est. Aute sunt nostrud nisi laboris voluptate sunt mollit.",
-        price: 85.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "BLOBS ART LONG SLEEVE // BLACK // UNISEX",
-        description: "Commodo cupidatat pariatur ea commodo consequat voluptate cillum amet mollit anim dolor nostrud. Sint laborum voluptate incididunt qui voluptate reprehenderit ut proident elit tempor excepteur ut. Fugiat proident est occaecat ad velit.",
-        price: 45.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'MODAL' LONG SLEEVE SHIRT BURNT // UNISEX",
-        description: "Est do elit in magna nulla aute. Cupidatat culpa esse ex Lorem tempor mollit. Do cupidatat ad cillum fugiat dolor exercitation amet aute nulla exercitation.",
-        price: 36.40,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'MODAL' LONG SLEEVE SHIRT OLIVE // UNISEX",
-        description: "Voluptate adipisicing culpa amet commodo. Deserunt culpa sit esse est laborum sunt laboris eiusmod ullamco. Ad do officia laborum sit. Laboris velit dolore reprehenderit ea aute cillum commodo aliquip ullamco culpa. Magna elit tempor non culpa dolor culpa nostrud eiusmod dolor pariatur consectetur et amet ut. Ea irure laborum reprehenderit irure elit aute culpa occaecat quis duis excepteur do tempor.",
-        price: 36.40,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'MODAL' LONG SLEEVE SHIRT BLACK // UNISEX",
-        description: "Commodo officia dolore Lorem id ullamco veniam amet ea qui sunt amet. Excepteur velit proident cillum id laboris duis qui minim amet reprehenderit deserunt labore. Eu reprehenderit aliqua veniam incididunt tempor cillum minim. Voluptate veniam proident est ipsum reprehenderit labore laboris nisi ex nostrud occaecat veniam officia velit. Exercitation ea consequat est nisi nostrud aliqua reprehenderit Lorem eu. Reprehenderit enim deserunt cupidatat velit anim ullamco sunt exercitation cupidatat irure aute. Anim et occaecat aliquip labore exercitation anim officia.",
-        price: 36.40,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE OWLSA PATCH TEE BUTTER // UNISEX",
-        description: "Nostrud est pariatur sit ad amet tempor amet in laborum irure sunt adipisicing. Quis non quis aute ad laborum ut. Minim magna deserunt voluptate laboris labore reprehenderit nulla dolore enim amet incididunt eiusmod. Commodo laborum occaecat velit aute officia aute. Ut esse aute aliqua velit ullamco ullamco mollit Lorem aliquip. Mollit excepteur consectetur est quis ullamco laboris adipisicing aliquip non occaecat adipisicing exercitation veniam. Lorem quis labore consectetur consequat ad ipsum dolor eu nulla labore.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE OWSLA PATCH TEE PINK // UNISEX",
-        description: "Esse ex ullamco eiusmod quis laboris adipisicing nostrud. Et occaecat dolore officia quis est dolor mollit aliquip ex sunt aliquip. Nulla voluptate fugiat dolor fugiat incididunt labore labore minim eu ad et. Anim tempor dolore sint voluptate. Quis voluptate occaecat sint laborum ad adipisicing ut. Deserunt ea id cupidatat ullamco laboris sit culpa ipsum ullamco aute pariatur fugiat sit.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE 'BOX LOGO' TEE MOSS // UNISEX",
-        description: "Ullamco velit minim nisi laboris minim esse. Mollit aute laboris cillum laborum. Sunt fugiat eiusmod consectetur cupidatat nulla nulla voluptate consequat eiusmod sunt commodo dolor occaecat. Nisi officia aliquip eu sint enim consequat. Amet esse occaecat reprehenderit enim cillum in sunt commodo dolore eu elit magna elit cillum.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE 'BOX LOGO' TEE APRICOT // UNISEX",
-        description: "Culpa reprehenderit qui sit pariatur proident aliqua culpa voluptate. Officia commodo aliquip et pariatur commodo. Ipsum Lorem fugiat aute dolore sit.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE 'BOX LOGO' TEE BLUE // UNISEX",
-        description: "Qui mollit consectetur quis commodo voluptate. Esse qui in sit laborum duis cupidatat velit ipsum velit mollit. Laboris do cillum dolore labore pariatur nulla. Tempor officia nostrud voluptate consequat dolore magna id dolor tempor ut velit mollit. Fugiat dolore aliqua aliqua nulla nostrud anim dolore ex Lorem labore id tempor laboris. Aute laboris voluptate reprehenderit incididunt eu laboris id ut in occaecat ex proident.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'MODAL' SHORT SLEEVE SHIRT OLIVE // UNISEX",
-        description: "Enim fugiat laboris sint officia eiusmod amet. Commodo reprehenderit velit consectetur nisi officia sint reprehenderit reprehenderit ea laboris. Cupidatat proident enim et do ut aute eu pariatur tempor amet tempor culpa eiusmod voluptate. Veniam dolor ea ullamco ea ad mollit laborum. Consequat aute consequat commodo cillum anim. Sint exercitation fugiat aute eiusmod anim magna labore.",
-        price: 33.60,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'OWSLA LOGO' SCALLOP LONG SLEEVE BLACK // UNISEX",
-        description: "Cillum elit proident eu aliquip occaecat voluptate anim mollit ad ipsum culpa. Consectetur dolore ullamco nisi proident amet tempor ex amet dolore proident labore. Sit exercitation exercitation cillum consectetur pariatur proident laborum id nulla qui culpa aliquip reprehenderit.",
-        price: 45.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-   
-    
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "BLOBS ART T-SHIRT // BLACK // UNISEX",
-        description: "Minim magna ipsum ut sint ullamco mollit cillum aute commodo sit aute. Ipsum ad amet esse excepteur proident. Laboris voluptate sit nostrud voluptate id nostrud esse. Magna deserunt proident deserunt veniam reprehenderit esse commodo elit ullamco veniam Lorem reprehenderit.",
+        collection: "artists",
+        artists: ["anna lunoe"],
+        category: "tops",
+        name: "ANNA LUNOE 'RADIOACTIVE' CLASSIC T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
         price: 35.00,
         stock: 10,
         imgs:[
-            "",
-            ""
-        ]
-    },
-  
-  
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'OWSLA LOGO' RAGLAN HOODIE (COLOR BAR SLEEVE) BLACK // UNISEX",
-        description: "Aliquip quis fugiat id laborum ad id do Lorem dolor. Qui elit culpa minim ullamco deserunt esse in sint veniam sunt aute ad. Aliqua ea amet dolor dolor qui dolore minim anim non cupidatat occaecat veniam.",
-        price: 56.25,
-        stock: 10,
-        imgs:[
-            "",
-            ""
-        ]
-    },
-   
-    {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE 'BOX LOGO' TEE APRICOT // UNISEX",
-        description: "Nulla sint consequat aute non laboris est cupidatat consequat incididunt dolore laborum cupidatat Lorem adipisicing. Aliqua qui labore ea ea in duis esse esse Lorem et esse excepteur et. Id consequat proident laboris consectetur laborum dolor esse veniam eu consectetur pariatur cupidatat fugiat pariatur. Sint culpa ea voluptate mollit in enim pariatur consectetur nulla reprehenderit nostrud nulla commodo deserunt. Laborum incididunt fugiat in sit deserunt officia aliquip.",
-        price: 42.00,
-        stock: 10,
-        imgs:[
-            "",
-            ""
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_017.webp?alt=media&token=8c6b3573-5f6e-4321-9152-5659236b9fb3",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_018.webp?alt=media&token=77369204-0fda-4ca3-ae63-9860f765e185",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "GARMENT DYE 'BOX LOGO' TEE BLUE // UNISEX",
-        description: "Veniam duis in ea adipisicing ex commodo nulla ea ullamco tempor. Aliqua aliquip anim reprehenderit sunt. Irure labore nostrud incididunt sint eiusmod nostrud.",
-        price: 42.00,
+        collection: "artists",
+        artists: ["basecamp"],
+        category: "tops",
+        name: "BASECAMP 'GHOSTOWN' SHORT SLEEVE T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 45.00,
         stock: 10,
         imgs:[
-            "",
-            ""
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_019.webp?alt=media&token=63f848ef-5150-4fef-a94e-abd3414025d4",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_020.webp?alt=media&token=9989a662-f8e4-4494-8197-712f6c9bdae5",
         ]
     },
     {
-        collection: "OWSLA Clasics",
-        category: "Tops",
-        name: "'OWSLA LOGO' FRENCH TERRY T-SHIRT BLACK // UNISEX",
-        description: "Ut duis ut eiusmod ullamco eiusmod. Cupidatat velit anim reprehenderit non exercitation enim consectetur quis. Ut laboris et pariatur culpa pariatur officia ipsum mollit sunt cillum aliquip aute aliquip duis.",
-        price: 48.75,
+        collection: "artists",
+        artists: ["basecamp"],
+        category: "tops",
+        name: "BASECAMP 'IN STONE' LONG SLEEVE T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 50.00,
         stock: 10,
         imgs:[
-            "",
-            ""
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_021.webp?alt=media&token=ef61750c-81cf-436f-a0fc-16bc9fb06464",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_022.webp?alt=media&token=645539fa-7117-4643-a570-1fa9affe5e0c",
         ]
     },
-
-*/
-
-
-
-
-
-
+    {
+        collection: "artists",
+        artists: ["basecamp"],
+        category: "headwear",
+        name: "BASECAMP 'ON MY HEELS' HAT",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 32.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_023.webp?alt=media&token=175eff60-9b97-42bf-89e1-1eb35f713f0c",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_024.webp?alt=media&token=0288425b-f6ce-425c-a0c6-f016bfdd0a3f",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["josh pan"],
+        category: "tops",
+        name: "JOSH PAN 'PLATINUM' T-SHIRT BLACK // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 45.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_025.webp?alt=media&token=21597450-fbbe-4133-953b-c55bf3f5ae93",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_026.webp?alt=media&token=6134a965-967e-494c-ba83-60f36156d19e",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["josh pan"],
+        category: "tops",
+        name: "JOSH PAN PULLOVER HOODIE // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 85.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_027.webp?alt=media&token=7c42c81b-6952-422d-b366-a8873a259b0c",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_028.webp?alt=media&token=3392ec93-8b37-4b61-9442-57f6c0cc652c",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["valentino"],
+        category: "tops",
+        name: "VALENTINO KHAN'S 'DEEP DOWN' TANK TOP // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 20.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_029.webp?alt=media&token=687c4125-2594-4e2c-81dc-0e20ed239658",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_030.webp?alt=media&token=e3ed1cc5-00b6-4937-ae04-83ca2be65e08",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["wiwek"],
+        category: "tops",
+        name: "WIWEK 'FREE AND REBELLIOUS LONG SLEEVE // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 45.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_031.webp?alt=media&token=88f1f6d8-d479-422c-a2e1-ba1ce9887abb",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_032.webp?alt=media&token=78904747-9fed-4720-8ca4-9ad29576ba60",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["wiwek"],
+        category: "tops",
+        name: "WIWEK 'FREE AND REBELLIOUS T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 35.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_033.webp?alt=media&token=ed967139-7b7b-4b3d-99c8-5fa256281d98",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_034.webp?alt=media&token=e718fb0f-30ab-45f5-8b3f-53fcc82e2de1",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["wiwek"],
+        category: "accessories",
+        name: "WIWEK FESTIVAL POUCH",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 40.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_035.webp?alt=media&token=1ec009f2-cd62-4dd1-bc98-7e60cec2fe71",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_036.webp?alt=media&token=51262bf3-8041-4ba2-ab36-d2f92e4ad5d8",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["wiwek","skrillex", "ellephant"],
+        category: "tops",
+        name: "WIWEK X SKRILLEX X ELLIPHANT 'KILLA (SLUSHII RMX)' T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_037.webp?alt=media&token=b85641aa-4492-4ad5-a756-12265f503b07",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_038.webp?alt=media&token=4a4f0fb3-2386-461c-be57-78c00c005746",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["dj sliink"],
+        category: "headwear",
+        name: "DJ SLIINK 'MIDDLE FINGERS UP' SLIINK SNAPBACK",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 28.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_039.webp?alt=media&token=210e539a-895d-45ca-afd5-668eb36e694f",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_040.webp?alt=media&token=99c2f8c2-6b56-4551-91d2-09b293c9ab4d",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["skrillex"],
+        category: "tops",
+        name: "SKRILLEX 'SKRILL' SHORT SLEEVE RAGLAN HOODIE // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 55.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_041.webp?alt=media&token=4a99e4ac-6f31-4872-bf2e-5e5a81940594",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_042.webp?alt=media&token=e15687de-e6b3-4fa6-a896-8cf83ea2cd75",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["skrillex"],
+        category: "tops",
+        name: "SKRILLEX 'ALIEN SUB' T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 24.50,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_043.webp?alt=media&token=476bfccf-39b5-4b78-b513-33ae53d36004",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_044.webp?alt=media&token=d9b437b9-4499-405d-a1b6-7d51f2834004",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["skrillex"],
+        category: "tops",
+        name: "SKRILLEX 'SQUAD' T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 27.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_045.webp?alt=media&token=39b859be-89f6-429a-a123-a1f82cc37fe7",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_046.webp?alt=media&token=3d7d42f5-0f36-4f00-ab4d-3b86001e482a",
+        ]
+    },
+    {
+        collection: "artists",
+        artists: ["skrillex"],
+        category: "tops",
+        name: "SKRILLEX 'STAGESHOT' T-SHIRT // UNISEX",
+        description: "Consectetur exercitation minim aliquip dolor exercitation culpa pariatur sint. Enim qui veniam velit irure. Minim sint sint ad minim ad aliqua sunt et excepteur. Dolor nulla reprehenderit voluptate excepteur magna sunt incididunt laborum nulla exercitation eiusmod ut eu deserunt. Sunt nisi sint laborum id et eu nostrud dolore. Officia enim mollit duis reprehenderit proident.",
+        price: 25.00,
+        stock: 10,
+        imgs:[
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_047.webp?alt=media&token=65472bbc-9a26-4929-a422-2b015a07bf21",
+            "https://firebasestorage.googleapis.com/v0/b/owslagoods-hq.appspot.com/o/products%2Fartists-apparel%2Fartist_048.webp?alt=media&token=19e353b5-c4f4-4975-a3ae-9e7295997564"
+        ]
+    },
+]
