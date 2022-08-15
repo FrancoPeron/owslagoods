@@ -101,7 +101,7 @@ const HomeContainer = () => {
             </section>
             
             <section className="items-list-box">
-                <p className='items-list-box__title'>dd</p>
+                <p className='items-list-box__title'></p>
                 <ItemList items={products}/>
             </section>
         

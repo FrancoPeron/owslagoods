@@ -1,7 +1,7 @@
 import React, {useState, useEffect , useContext } from 'react'
 import '../style/components/checkout.css'
 
-import PhoneInput from 'react-phone-number-input'
+import Input from 'react-phone-number-input/input'
 
 //Context
 import {cartContexto} from "../context/cartContext";
@@ -18,8 +18,6 @@ import { async } from '@firebase/util';
 const Checkout = ({hideCheckout})=>{
     
     const {items,totalPrice,removeItem,getStock} = useContext(cartContexto);
-
-    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
     const [form, setForm] = useState({});
     const [phoneNum, setPhoneNum] = useState()
@@ -39,6 +37,7 @@ const Checkout = ({hideCheckout})=>{
 
     
     useEffect(()=>{
+        console.log(venta)
         if(venta){
             console.log(form)
             addDoc(collection(db, 'ventas'),{
@@ -65,8 +64,9 @@ const Checkout = ({hideCheckout})=>{
                 <form className='checkout-form' onSubmit={formik.handleSubmit}>
 
                     <div className='checkout-form__item form-first-name'>
-                        <label className='checkout-form__label' htmlFor="firstName">First Name</label>
                         <input
+                            required
+                            placeholder=" "
                             className='checkout-form__input'
                             id="firstName"
                             name="firstName"
@@ -75,10 +75,12 @@ const Checkout = ({hideCheckout})=>{
                             onBlur={formik.handleBlur}
                             value={formik.values.firstName}
                         />
+                        <label className='checkout-form__label' htmlFor="firstName">First Name</label>
                     </div>
                     <div className='checkout-form__item form-last-name'>
-                        <label className='checkout-form__label' htmlFor="lastName">Last Name</label>
                         <input
+                            required
+                            placeholder=" "
                             className='checkout-form__input'
                             id="lastName"
                             name="lastName"
@@ -86,14 +88,12 @@ const Checkout = ({hideCheckout})=>{
                             onChange={formik.handleChange}
                             value={formik.values.lastName}
                         />
+                        <label className='checkout-form__label' htmlFor="lastName">Last Name</label>
                     </div>
-                    <PhoneInput
-                        placeholder="Enter phone number"
-                        value={phoneNum}
-                        onChange={setPhoneNum}/>
                     <div className='checkout-form__item form-email'>
-                        <label className='checkout-form__label' htmlFor="email">Email Address</label>
                         <input
+                            required
+                            placeholder=" "
                             className='checkout-form__input'
                             id="email"
                             name="email"
@@ -101,31 +101,33 @@ const Checkout = ({hideCheckout})=>{
                             onChange={formik.handleChange}
                             value={formik.values.email}
                         />
+                        <label className='checkout-form__label' htmlFor="email">Email Address</label>
+                    </div>
+                    <div className='checkout-form__item form-phone'>
+                        <Input
+                            required
+                            placeholder=" "
+                            className='checkout-form__input'
+                            id="phone"
+                            value={phoneNum}
+                            onChange={setPhoneNum}
+                            />
+                        <label className='checkout-form__label' htmlFor="phone">Telephone</label>
                     </div>
 
-                    <button type="submit" className="btn-ows">
-                        <p className="btn-text">Shipping Address</p>
-                        <svg width="39" height="16" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 11L0.999998 11" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M38 11L28 21" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M38 11L28 1" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
+                    <div className="checkout__btns">
+                        <button onClick={hideCheckout} className="btn-text">Return to cart</button>
+                        <button type="submit" className="btn-ows">
+                            <p className="btn-text">Shipping Address</p>
+                            <svg width="39" height="16" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38 11L0.999998 11" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M38 11L28 21" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M38 11L28 1" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
                 </form>
-
-
-                {/* <div className="checkout__box1-a">
-                    <button onClick={hideCheckout} className="checkout__box1-back">Return to cart</button>
-                    <button className="btn-ows">
-                        <p className="btn-text">Shipping Address</p>
-                        <svg width="39" height="16" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 11L0.999998 11" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M38 11L28 21" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                            <path d="M38 11L28 1" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div> */}
-
             </div>
 
             <svg width="2" height="456" viewBox="0 0 2 456" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +136,6 @@ const Checkout = ({hideCheckout})=>{
 
             <div className='checkout__box2'>
 
-          
                 {
                 items.map( (item) => (
                     <div key={item.id} className="bag-product">

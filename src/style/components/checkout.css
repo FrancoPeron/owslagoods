@@ -18,7 +18,6 @@
     height: 540px;
 }
 
-
 .checkout__box1{
     display: flex;
     flex-direction: column;
@@ -65,22 +64,60 @@
 
 }
 
-.checkout__box1-back{
+
+.checkout-form{
+    display: grid;
+    grid-template-areas:'firstName lastName'
+                        'email email'
+                        'telephone telephone'
+                        'btns btns';
+    width: 100%;
+    gap: 2rem;
+}
+
+.form-first-name{grid-area: firstName;}
+.form-last-name{grid-area: lastName;}
+.form-email{grid-area: email;} 
+.form-phone{grid-area: telephone;} 
+.checkout__btns{grid-area: btns;} 
+
+
+.checkout-form__item{
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 2px solid #4D4D4D;
+}
+
+.checkout-form__input{
+    width: 100%;
+    height: 40px;
     font-family: 'MonumentExtended';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 16px;
     display: flex;
     align-items: center;
-    text-align: center;
-    letter-spacing: 0.08em;
+    padding: 8px;
+}
 
-    color: #3C3C3C;
+.checkout-form__label{
+    position: absolute;
+    color: #4D4D4D;
+    left: 8px;
+    top: -25%;
+    font-size: 12px;
+    transition: all 0.4s;
 }
 
 
-.checkout__box1-a, .checkout__box2-a{
+.checkout-form__item>input[placeholder=" "]:not(:focus):placeholder-shown + .checkout-form__label {
+    top: 25%;
+    transition: all 0.4s;
+}
+
+.checkout__btns, .checkout__box2-a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,3 +152,4 @@
 
 
 }
+

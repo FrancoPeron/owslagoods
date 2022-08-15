@@ -9,7 +9,6 @@ import CartContext from "./context/cartContext";
 
 // Components
 import NavBar from './components/navBar/navBar.jsx'
-import ToolBar from './components/toolBar.jsx'
 
 // Views
 import HomeContainer from './views/homeContainer.jsx'
@@ -22,8 +21,6 @@ function App() {
   return (
     <Router>
       <CartContext>
-
-        <ToolBar  />
 
         <main className="App">
 

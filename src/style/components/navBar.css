@@ -37,7 +37,6 @@
   
       .header__logo-img {
         max-height: 100px;
-        content: url(../../assets/img/owslaLogo.svg); 
       }
   
     .header__nav{

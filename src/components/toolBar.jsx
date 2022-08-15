@@ -7,6 +7,9 @@ import { getStorage, ref, getDownloadURL, listAll} from "firebase/storage";
 
 import { Bottoms, Headwear, Socks, Tops, Accessories, Artists } from "../data";
 
+// import ToolBar from './components/toolBar.jsx'
+// <ToolBar  />
+
 const ToolBar = ()=>{
 
     useEffect(()=>{
@@ -33,7 +36,7 @@ const ToolBar = ()=>{
         let burnForeverRef = ref(productsRef,'burn-forever');
         let audioDestructRef = ref(productsRef,'audio-destruct');
         
-        listAll(bottomsRef)
+        listAll(artistsRef)
         .then(async ({ items }) => {
             const urls = await Promise.all(items.map((item) => getDownloadURL(item)));
             console.log(urls);
@@ -49,13 +52,13 @@ const ToolBar = ()=>{
     //Cargar Datos
     const addDocw = ()=>{
 
-        Bottoms.map((item)=>{
-            addDoc(collection(db, 'products'),{
-                ...item,
-                date: serverTimestamp(),
-            })
+        // Artists.map((item)=>{
+        //     addDoc(collection(db, 'products'),{
+        //         ...item,
+        //         date: serverTimestamp(),
+        //     })
             
-        })
+        // })
     }
 
     return( 

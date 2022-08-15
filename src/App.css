@@ -61,18 +61,28 @@
 .btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #000000;}
 .btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #ffffff;}
 
-.btn-text{
+.btn-text, .btn-inline{
   font-family: 'MonumentExtended';
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 20px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   padding-top: 4px;
+
+}
+
+.btn-text{
+  font-size: 1rem;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.btn-text-inline{
+  font-size: 12px;
+  line-height: 16px;
+  color: #3C3C3C;
 }
 
 
