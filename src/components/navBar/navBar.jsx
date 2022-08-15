@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect } from 'react'
 import '../../style/components/navBar.css'
 
@@ -28,8 +27,6 @@ const NavBar = ()=>{
             }))
         })
         .catch(error => console.log(error))
-
-        
         
     },[])
     
@@ -41,8 +38,8 @@ const NavBar = ()=>{
                 <Link to="/"><img className="header__logo-img" alt="OWSLA Logo" /></Link>
                 <p className="header__logo-text">GOODS</p>
             </div>
-            <div className="header__nav">
 
+            <div className="header__nav">
                 <input type="checkbox" name="burger-btn" id="burger" />
                 <label htmlFor="burger" className="burger-btn">
                     <div className="burger"></div>
@@ -53,7 +50,6 @@ const NavBar = ()=>{
                 </svg>
 
                 <nav className="nav">
-
                     <ul className="nav__list">
                             <li className="nav__item">
                                 <NavLink to="/all" className="nav__link--black" href="">all</NavLink>
@@ -64,15 +60,12 @@ const NavBar = ()=>{
                                     <NavLink to={`/products/${item.name}`} className="nav__link--black" href="">{item.name}</NavLink>
                                 </li>
                             )
-
                         }
 
                     </ul>
-
                 </nav>
 
                 <Link to="/cart"><CartWidget /></Link>
-
             </div>
 
         </header>

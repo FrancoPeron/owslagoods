@@ -7,8 +7,6 @@ import SkeletonItem from "./itemSkeleton.jsx"
 
 
 const ItemList = ({items})=>{
-
-    items.sort((a, b)=>{return a.date - b.date})
     
     return(
         

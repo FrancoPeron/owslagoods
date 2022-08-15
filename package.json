@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "firebase": "^9.9.1",
+    "formik": "^2.2.9",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-phone-number-input": "^3.2.7",
     "react-router-dom": "^6.3.0",
     "vite-plugin-require": "^1.0.0"
   },

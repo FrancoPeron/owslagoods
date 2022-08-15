@@ -7,10 +7,6 @@ import {Link}  from 'react-router-dom'
 import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
 import ItemCount from "../itemCount/itemCount.jsx"
 
-// Data Base
-import {db} from '../../firebase/firebase.config'
-import {collection, doc, onSnapshot} from 'firebase/firestore'
-
 //Context
 import {cartContexto} from "../../context/cartContext";
 
@@ -27,11 +23,6 @@ const ItemDetail = ({item})=>{
     }, [item])
 
     const onAdd = (cant)=>{
-
-       /*  onSnapshot(doc(collection(db, 'products'), item.id), (i) => {
-            console.log(i.data().stock)
-        }) */
-    
 
         if (isInCart(item.id)) {
             updateItemCant({...item, quantity: cant})

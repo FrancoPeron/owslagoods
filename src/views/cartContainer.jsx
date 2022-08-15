@@ -4,11 +4,6 @@ import '../style/views/cartContainer.css'
 //Router
 import {Link}  from 'react-router-dom'
 
-//Data Base
-import {db} from '../firebase/firebase.config'
-import {addDoc, collection, serverTimestamp, doc, onSnapshot,} from 'firebase/firestore'
-import { getStorage, ref, getDownloadURL, listAll} from "firebase/storage";
-
 //Context
 import {cartContexto} from "../context/cartContext";
 
@@ -75,7 +70,7 @@ const cartContainer = ()=>{
                 showChekout
                 ?   <>
                         <span className='checkout__backgound' onClick={hideCheckout}></span>
-                        <Checkout  />
+                        <Checkout hideCheckout={hideCheckout} />
                     </>
                 :   null
             }   
