@@ -102,17 +102,6 @@ const Checkout = ({hideCheckout})=>{
                             value={formik.values.email}
                         />
                     </div>
-                    <div className='checkout-form__item form-confirm-email'>
-                        <label className='checkout-form__label' htmlFor="confirmEmail">Confirm Email Address</label>
-                        <input
-                            className='checkout-form__input'
-                            id="confirmEmail"
-                            name="confirmEmail"
-                            type="email"
-                            onChange={formik.handleChange}
-                            value={formik.values.email}
-                        />
-                    </div>
 
                     <button type="submit" className="btn-ows">
                         <p className="btn-text">Shipping Address</p>
