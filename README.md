@@ -1,47 +1,57 @@
 
-<a name="readme-top"></a>
 
-<!-- PROJECT LOGO -->
-<br />
+
 <div align="center">
-
-  <a href="">
-    <img src="https://i.ibb.co/k6xLBt4/Trazado-41.png" alt="Logo" width="150" height="100%">
-  </a>
-  <h3 align="center">• OWSLAGOODS •</h3>
-
-
+  <p align="center" style="font-size:40px">• OwslaGoods •</p>
   <p align="center">Good Peole Good Times.</p>
 </div>
 
-
----
-
 ![Product Name Screen Shot](https://cdn.dribbble.com/users/5163045/screenshots/19104512/media/d90c12499791722af0655fa93ab0d5ef.png)
 
----
-<!-- ABOUT THE PROJECT -->
-## About The Project 
+<span style="font-size:30px;font-weight: bold;" align="center">
 
+   [www.owslagoods.netlify.app](https://owslagoods.netlify.app/)
+
+</span>
+
+---
+
+<br>
+<p  style="font-size:30px;font-weight: bold;">About The Project</p>
+<p>
+fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
+</p>
 
 ### Built With
-[![Figma][Figma.js]][Figma-url]
-[![Adobe-Ilustrator][Adobe-Ilustrator.js]][Adobe-Ilustrator-url]
-[![Adobe-Photoshop][Adobe-Photoshop.js]][Adobe-Photoshop-url]
 
-[![Vite][Vite.js]][Vite-url]
-[![React][React.js]][React-url]
-[![React-Router][React-Router.js]][React-Router-url]
-[![Firebase][Firebase.js]][Firebase-url]
-[![Netlify][Netlify.js]][Netlify-url]
-[![Formik][Formik.png]][Formik-url]
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [![Figma][Figma.js]][Figma-url]
+* [![Adobe-Ilustrator][Adobe-Ilustrator.js]][Adobe-Ilustrator-url]
+* [![Adobe-Photoshop][Adobe-Photoshop.js]][Adobe-Photoshop-url]
 
----
+* [![Vite][Vite.js]][Vite-url]
+* [![React][React.js]][React-url]
+* [![React-Router][React-Router.js]][React-Router-url]
+* [![Firebase][Firebase.js]][Firebase-url]
+* [![Netlify][Netlify.js]][Netlify-url]
+* [![Formik][Formik.png]][Formik-url]
 
-<!-- GETTING STARTED -->
-## Getting Started
+
+<br>
+<p  style="font-size:30px;font-weight: bold;">Contact</p>
+
+<p>
+fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
+</p>
+
+* [![LinkedIn][Linkedin.js]][Linkedin-url]
+[![Dribbble][Dribbble.js]][Dribbble-url]
+[![Whatsapp][Whatsapp.js]][Whatsapp-url]
+
+
+<br>
+<p  style="font-size:30px;font-weight: bold;">Getting Started</p>
 
 ### Installation
 
@@ -57,14 +67,6 @@
    ```sh
    npm run dev
    ```
-
-
-<!-- CONTACT -->
-## Contact
-
-[![LinkedIn][Linkedin.js]][Linkedin-url]
-[![Dribbble][Dribbble.js]][Dribbble-url]
-[![Whatsapp][Whatsapp.js]][Whatsapp-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
