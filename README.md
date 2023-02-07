@@ -1,17 +1,13 @@
-
-
-
+<a name="readme-top"></a>
 
 <h1 align="center">• OwslaGoods •</h1>
 
 <h3 align="center">
 
-   [www.owslagoods.netlify.app](https://owslagoods.netlify.app/)
+  [www.owslagoods.netlify.app](https://owslagoods.netlify.app/)
 </h3>
 
 ![Product Name Screen Shot](https://cdn.dribbble.com/users/5163045/screenshots/19104512/media/d90c12499791722af0655fa93ab0d5ef.png)
-
-
 <br>
 
 ## About The Project
@@ -34,14 +30,13 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 [![Vite][Vite.js]][Vite-url]
 [![React][React.js]][React-url]
+[![Sass][Sass]][Sass-url]
 [![React-Router][React-Router.js]][React-Router-url]
 [![Firebase][Firebase.js]][Firebase-url]
 [![Netlify][Netlify.js]][Netlify-url]
 [![Formik][Formik.png]][Formik-url]
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
-
-<br>
+<p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Installation
 
@@ -58,21 +53,20 @@ This section should list any major frameworks/libraries used to bootstrap your p
    npm run dev
    ```
 
-   <p align="right">(<a href="#readme-top">Back to top</a>)</p>
-
-<br>
+   <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Contact
 
-
 fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
-
 
 [![LinkedIn][Linkedin.js]][Linkedin-url]
 [![Dribbble][Dribbble.js]][Dribbble-url]
 [![Whatsapp][Whatsapp.js]][Whatsapp-url]
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right"><a href="#readme-top">Back to top</a></p>
+
+
+
 
 [Linkedin.js]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://www.figma.com/
@@ -102,3 +96,5 @@ fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
 [Vite-url]: https://vitejs.dev
 [Formik.png]: https://i.ibb.co/BBm0qSZ/FORMIK-1.png
 [Formik-url]: https://formik.org
+[Sass]:	https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Sass-url]: https://vitejs.dev
