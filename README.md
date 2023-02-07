@@ -1,59 +1,49 @@
 
 
 
-<div align="center">
-  <p align="center" style="font-size:40px">• OwslaGoods •</p>
-  <p align="center">Good Peole Good Times.</p>
-</div>
+
+<h1 align="center">• OwslaGoods •</h1>
+
+<h3 align="center">
+
+   [www.owslagoods.netlify.app](https://owslagoods.netlify.app/)
+</h3>
 
 ![Product Name Screen Shot](https://cdn.dribbble.com/users/5163045/screenshots/19104512/media/d90c12499791722af0655fa93ab0d5ef.png)
 
-<span style="font-size:30px;font-weight: bold;" align="center">
-
-   [www.owslagoods.netlify.app](https://owslagoods.netlify.app/)
-
-</span>
-
----
 
 <br>
-<p  style="font-size:30px;font-weight: bold;">About The Project</p>
-<p>
-fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
-</p>
+
+## About The Project
+
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
+
 
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Figma][Figma.js]][Figma-url]
-* [![Adobe-Ilustrator][Adobe-Ilustrator.js]][Adobe-Ilustrator-url]
-* [![Adobe-Photoshop][Adobe-Photoshop.js]][Adobe-Photoshop-url]
+[![Figma][Figma.js]][Figma-url]
+[![Adobe-Ilustrator][Adobe-Ilustrator.js]][Adobe-Ilustrator-url]
+[![Adobe-Photoshop][Adobe-Photoshop.js]][Adobe-Photoshop-url]
 
-* [![Vite][Vite.js]][Vite-url]
-* [![React][React.js]][React-url]
-* [![React-Router][React-Router.js]][React-Router-url]
-* [![Firebase][Firebase.js]][Firebase-url]
-* [![Netlify][Netlify.js]][Netlify-url]
-* [![Formik][Formik.png]][Formik-url]
+[![Vite][Vite.js]][Vite-url]
+[![React][React.js]][React-url]
+[![React-Router][React-Router.js]][React-Router-url]
+[![Firebase][Firebase.js]][Firebase-url]
+[![Netlify][Netlify.js]][Netlify-url]
+[![Formik][Formik.png]][Formik-url]
 
-
-<br>
-<p  style="font-size:30px;font-weight: bold;">Contact</p>
-
-<p>
-fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
-</p>
-
-* [![LinkedIn][Linkedin.js]][Linkedin-url]
-[![Dribbble][Dribbble.js]][Dribbble-url]
-[![Whatsapp][Whatsapp.js]][Whatsapp-url]
-
+<p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
 <br>
-<p  style="font-size:30px;font-weight: bold;">Getting Started</p>
 
-### Installation
+## Installation
 
 1. ´Clone the repo´
    ```sh
@@ -68,8 +58,21 @@ fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
    npm run dev
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
+<br>
+
+## Contact
+
+
+fdsfrrtdhdfghdrthdfgjdfghdrthfghdfh
+
+
+[![LinkedIn][Linkedin.js]][Linkedin-url]
+[![Dribbble][Dribbble.js]][Dribbble-url]
+[![Whatsapp][Whatsapp.js]][Whatsapp-url]
+
+<p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
 [Linkedin.js]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://www.figma.com/
