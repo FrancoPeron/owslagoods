@@ -5,10 +5,10 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Context
-import CartContext from "../context/cartContext";
+import CartContext from "@/context/cartContext";
 
 // Components
-import NavBar from '../components/organism/navBar/navBar.jsx'
+import NavBar from '@/components/organism/navBar/navBar.jsx'
 
 // Views
 import HomeContainer from './content/homeContainer/homeContainer.jsx'
@@ -20,6 +20,7 @@ function App() {
 
   return (
     <Router>
+    
       <CartContext>
 
         <main className="App">
@@ -39,6 +40,7 @@ function App() {
         </main>
 
       </CartContext>
+
     </Router>
 
   )
