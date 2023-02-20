@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from 'react'
-import '../../style/components/itemList.css'
+import './itemList.css'
 
 // Components
-import Item from "./item.jsx";
+import Item from "@/components/molecule/item/item.jsx";
 import SkeletonItem from "./itemSkeleton.jsx"
 
 

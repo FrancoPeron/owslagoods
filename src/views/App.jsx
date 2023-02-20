@@ -1,20 +1,20 @@
 import React, {useState, useEffect } from 'react'
-import './App.css';
+import './App.scss';
 
 // Router
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Context
-import CartContext from "./context/cartContext";
+import CartContext from "../context/cartContext";
 
 // Components
-import NavBar from './components/navBar/navBar.jsx'
+import NavBar from '../components/organism/navBar/navBar.jsx'
 
 // Views
-import HomeContainer from './views/homeContainer.jsx'
-import ItemListContainer from './views/itemListContainer.jsx'
-import ItemDetailContainer from './views/itemDetailContainer.jsx'
-import CartContainer from './views/cartContainer.jsx'
+import HomeContainer from './content/homeContainer/homeContainer.jsx'
+import ItemListContainer from './content/itemListContainer/itemListContainer.jsx'
+import ItemDetailContainer from './content/itemDetailContainer/itemDetailContainer.jsx'
+import CartContainer from './content/cartContainer/cartContainer.jsx'
 
 function App() {
 

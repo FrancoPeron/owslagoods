@@ -1,13 +1,13 @@
 import React, {useState, useEffect , useContext } from 'react'
-import '../style/components/checkout.css'
+import './checkout.css'
 
 import Input from 'react-phone-number-input/input'
 
 //Context
-import {cartContexto} from "../context/cartContext";
+import {cartContexto} from "@/context/cartContext.jsx";
 
 //Data Base
-import {db} from '../firebase/firebase.config'
+import {db} from '@/database/firebase.config'
 import {addDoc, collection, serverTimestamp,} from 'firebase/firestore'
 
 

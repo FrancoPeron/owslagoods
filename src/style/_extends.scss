@@ -1,0 +1,111 @@
+/* ---------- Container ---------- */
+
+%container-center {
+  width: 100%;
+  max-width: calc(1100px + 2rem);
+  padding: 0 1rem;
+  justify-self: center;
+}
+
+%container-full {
+  width: 100%;
+  padding: 0 1.2rem;
+
+  @include respond(xl) {
+    width: 80%;
+    min-width: 1440px;
+  }
+}
+
+/* ---------- Background Position ---------- */
+
+%backgrounds-pos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, transparent);
+  }
+}
+
+/* ---------- Shadow ---------- */
+
+%shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+/* ---------- Formulario ---------- */
+
+%formulario__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+
+  @include respond(sm){
+    flex-direction: row;
+  }
+}
+
+@mixin formulario__input($input-color:cW,$input-type:email) {
+
+  $iColor: (
+    cB: $cBlack,
+    cW: $cWhite,
+  );
+
+  @include font(fb2, w500, MonumentE, lsWidest);
+  color: map-get($iColor,$input-color);
+
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 0.75rem 1.2rem 0.5rem;
+  border: 2px solid map-get($iColor,$input-color);
+
+  background: rgba(255, 255, 255, 0.062);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+
+  &::placeholder {
+    color: map-get($iColor,$input-color);
+    opacity: 0.9;
+  }
+
+
+  @if($input-type == "file"){
+
+    cursor: pointer;
+    align-self: center;
+    position: relative;
+    letter-spacing: 0.05em;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    &::before {
+      content: 'Select files | ';
+      position: absolute;
+      top: -2px;
+      border: 0;
+      line-height: 3.6;
+      min-height: 52px;
+    }
+  }
+
+  @if($input-type == "textarea") {
+    @include formulario__input($input-color);
+    padding: 0.6rem;
+    min-height: 202px;
+  }
+}

@@ -1,15 +1,15 @@
 import React, {useState, useEffect } from 'react'
-import '../../style/components/navBar.css'
+import './navBar.css'
 
 // Router
 import {Link, NavLink }  from 'react-router-dom'
 
 // Data Base
-import {db} from '../../firebase/firebase.config'
+import {db} from '@/database/firebase.config'
 import {getDocs, collection, query, orderBy, where} from 'firebase/firestore'
 
 // Components
-import CartWidget from './cartWitget.jsx'
+import CartWidget from '@/components/atoms/cartWitget/cartWitget.jsx'
 
 const NavBar = ()=>{
 

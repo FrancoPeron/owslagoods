@@ -1,15 +1,15 @@
 import React, {useState, useEffect } from 'react'
-import '../style/views/homeContainer.css'
+import './homeContainer.css'
 
 // Router
 import { Link } from "react-router-dom";
 
 // Data Base
-import {db} from '../firebase/firebase.config'
+import {db} from '@/database/firebase.config'
 import {getDocs, collection, query, limit} from 'firebase/firestore'
 
 // Components
-import ItemList from "../components/itemList/itemList.jsx";
+import ItemList from "@/components/organism/itemList/itemList.jsx";
 
 
 const HomeContainer = () => {

@@ -1,14 +1,14 @@
 import React, {useState, useEffect , useContext } from 'react'
-import '../style/views/cartContainer.css'
+import './cartContainer.css'
 
-//Router
+// Router
 import {Link}  from 'react-router-dom'
 
-//Context
-import {cartContexto} from "../context/cartContext";
+// Context
+import {cartContexto} from "@/context/cartContext.jsx";
 
 // Components
-import Checkout from "../components/checkout"
+import Checkout from "@/components/organism/checkout/checkout.jsx"
 
 
 

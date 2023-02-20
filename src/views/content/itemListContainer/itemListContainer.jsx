@@ -1,15 +1,15 @@
 import React, {useState, useEffect } from 'react'
-import '../style/views/itemListContainer.css'
+import './itemListContainer.css'
 
 // Router
 import { Link, useParams } from "react-router-dom";
 
 // Data Base
-import {db} from '../firebase/firebase.config'
+import {db} from '@/database/firebase.config'
 import {getDocs, collection, query, where} from 'firebase/firestore'
 
 // Components
-import ItemList from "../components/itemList/itemList.jsx";
+import ItemList from "@/components/organism/itemList/itemList.jsx";
 
 const ItemListContainer = ()=>{
     const productsCollection = collection(db,'products');

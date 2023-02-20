@@ -1,14 +1,14 @@
 import React, {useState,useEffect, useContext} from 'react'
-import '../../style/components/itemDetail.css'
+import './itemDetail.css'
 
 import {Link}  from 'react-router-dom'
 
 // Components
 import SkeletonItemDetail from "./ItemDetailSkeleton.jsx"
-import ItemCount from "../itemCount/itemCount.jsx"
+import ItemCount from "@/components/atoms/itemCount/itemCount.jsx"
 
 //Context
-import {cartContexto} from "../../context/cartContext";
+import {cartContexto} from "@/context/cartContext.jsx";
 
 const ItemDetail = ({item})=>{
 

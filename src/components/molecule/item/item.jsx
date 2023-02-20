@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link}  from 'react-router-dom'
 
-import '../../style/components/item.css'
+import './item.css'
 
 const Item = ({item})=>{
 

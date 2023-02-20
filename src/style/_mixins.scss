@@ -1,0 +1,184 @@
+/* ---------- Flexbox ---------- */
+
+@mixin flex($dir: row, $wrap: nowrap){
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  @content
+};
+
+/* ---------- Font ---------- */
+//@include font(ft2, w400, MonumentE, lsWidest);
+@mixin font($f-size:fb1,$f-width:w500,$f-family:MontS,$f-letterS:lsNormal) {
+
+	$fFamily: (
+		MontS: 'Montserrat',
+		MonumentE: "MonumentExtended",
+	);
+
+  $fSize: (
+		fbt1: clamp(2rem, 5vw, 4rem), /* 64px */
+    fbt2: clamp(2.5rem, 5vw, 3.5rem), /* 56px */
+    fh1: clamp(1.825rem, 5vw, 2.625rem), /* 42px */
+    fh2: clamp(1.625rem, 5vw, 2.25rem), /* 36px */
+    ft1: clamp(1.5rem, 4vw, 2rem), /* 32px */
+    ft2: clamp(1.225rem, 4vw, 1.5rem), /* 24px */
+    fhl1: clamp(1rem, 3.75vw, 1.3125rem), /* 21px */
+    fhl2: clamp(1rem, 3.75vw, 1.125rem), /* 18px */
+    fb1: 1rem, /* 16px */
+    fb2: 0.875rem, /* 14px */
+    fc: 0.75rem, /* 12px */
+	);
+
+	$fWeights: (
+    w100: 100, /*Thin*/
+    w200: 200, /*Extra Light*/
+    w300: 300, /*Light*/
+    w400: 400, /*Normal*/
+    w500: 500, /*Medium*/
+    w600: 600, /*Semi Bold*/
+    w700: 700, /*Bold*/
+    w800: 800, /*Extra Bold*/
+    w900: 900, /*Ultra Bold*/
+	);
+
+  $fLetterS: (
+    lsTighter : -0.05em,
+    lsTight : -0.025em,
+    lsNormal : 0em,
+    lsWide : 0.025em,
+    lsWider : 0.05em,
+    lsWidest : 0.1em,
+  );
+
+  $fPos: (
+    tLeft : left,
+    tCenter	: center,
+    tRight : right,
+    tJustify: justify,
+  );
+
+	font-family: map-get($fFamily, $f-family), sans-serif;
+  font-size: map-get($fSize, $f-size);
+	font-weight: map-get($fWeights, $f-width);
+  letter-spacing: map-get($fLetterS, $f-letterS);
+  line-height: calc(130%);
+  // text-align: map-get($fPos, $f-pos);
+
+};
+
+/* ---------- Responsive ---------- */
+// @include respond(sm){}
+@mixin respond($breakpoint) {
+  
+  @if($breakpoint == xs)  {
+    @media (min-width: 640px) { @content }
+  };
+  @if($breakpoint == sm)  {
+    @media (min-width: 768px) { @content }
+  };
+  @if($breakpoint == md)  {
+    @media (min-width: 1024px) { @content }
+  };
+  @if($breakpoint == lg)  {
+    @media (min-width: 1280px) { @content }
+  };
+  @if($breakpoint == xl)  {
+    @media (min-width: 1440px) { @content }
+  }
+};
+
+/* ---------- Buttons ---------- */
+//@include btn(cW,bgB,bW);
+@mixin btn($color:cW, $bg-color:bgB, $border:none, $hover:true) {
+  
+  $Color: (
+		cB: $cBlack,
+		cW: $cWhite,
+	);
+
+  $bgColor: (
+		bgB: $cBlack,
+		bgW: $cWhite,
+		bgT: transparent,
+	);
+  $Border: (
+		bB: solid 2px $cBlack,
+		bW: solid 2px $cWhite,
+		bN: none,
+	);
+
+  @include font(fb1, w300, MonumentE);
+  // -webkit-text-stroke: thin;
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: center;
+
+  width: fit-content;
+  height: 52px;
+  padding: 1rem 1.5rem;
+
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+
+  @include flex(row);
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: map-get($bgColor, $bg-color);
+  border: map-get($Border, $border);
+  color: map-get($Color, $color);
+  @if ($color == "cB"){
+    -webkit-text-stroke: 1px $cBlack;
+  }@else{
+    -webkit-text-stroke: 1px $cWhite;
+  }
+
+  @if($hover){
+
+    &:hover {
+
+      @if ($bg-color == "bgW"){
+        background: $cBlack;
+        color: $cWhite;
+        -webkit-text-stroke: 1px $cWhite;
+      }
+      @else{
+        background: $cWhite;
+        color: $cBlack;
+        -webkit-text-stroke: 1px $cBlack;
+      }
+
+      transition: ease-in-out 0.5s;
+    }
+
+  }
+
+};
+
+/* ----------  ---------- */
+
+// @mixin alignment($j:N,$a:N,$p:N){
+
+//   $justify: (
+//     jcStart: "justify-content: flex-start",
+//     jcEnd: flex-end,
+//     jcCenter: "justify-content: center",
+//     jcBetween: space-between,
+//     jcAround: space-around,
+//     jcEvenly: space-evenly,
+    
+//     jsAuto: auto, 
+//     jsStart: start,
+//     jsEnd: end,
+//     jsCenter: center,
+//     jsStretch: space-evenly,
+// 	);
+
+  
+//   @if(map-has-key($justify, $j))  {
+//     map.get($justify, $j);
+//   };
+// };
