@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react'
-import './homeContainer.css'
+import './homeView.css'
 
 // Router
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ import {getDocs, collection, query, limit} from 'firebase/firestore'
 import ItemList from "@/components/organism/itemList/itemList.jsx";
 
 
-const HomeContainer = () => {
+const HomeView = () => {
 
     const [products,setProducts] = useState([])
 
@@ -155,4 +155,4 @@ const HomeContainer = () => {
     )
 }
 
-export default HomeContainer
+export default HomeView

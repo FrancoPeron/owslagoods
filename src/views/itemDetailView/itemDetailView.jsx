@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react'
-import './itemDetailContainer.css'
+import './itemDetailView.css'
 
 // Router
 import { useParams } from "react-router-dom";
@@ -11,11 +11,10 @@ import {getDoc, collection, doc} from 'firebase/firestore'
 // Components
 import ItemDetail from "@/components/organism/itemDetail/itemDetail.jsx";
 
-const ItemDetailContainer = ()=>{
+const ItemDetailView = ()=>{
 
     const {id} = useParams();
     const [product,setProduct] = useState([])
-
 
     useEffect(()=>{
         const productsCollection = collection(db,'products');
@@ -41,4 +40,4 @@ const ItemDetailContainer = ()=>{
     )
 }
 
-export default ItemDetailContainer
+export default ItemDetailView

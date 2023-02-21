@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from 'react'
-import './itemListContainer.css'
+import './itemListView.css'
 
 // Router
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Data Base
 import {db} from '@/database/firebase.config'
@@ -13,7 +13,7 @@ import ItemList from "@/components/organism/itemList/itemList.jsx";
 
 const ItemListContainer = ()=>{
     const productsCollection = collection(db,'products');
-    const collectionsCollection = getDocs(query(collection(db,'collections')))
+    // const collectionsCollection = getDocs(query(collection(db,'collections')))
 
     const {categoryName} = useParams();
 

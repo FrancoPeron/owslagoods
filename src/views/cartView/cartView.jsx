@@ -1,5 +1,5 @@
 import React, {useState, useEffect , useContext } from 'react'
-import './cartContainer.css'
+import './cartView.css'
 
 // Router
 import {Link}  from 'react-router-dom'
@@ -10,9 +10,7 @@ import {cartContexto} from "@/context/cartContext.jsx";
 // Components
 import Checkout from "@/components/organism/checkout/checkout.jsx"
 
-
-
-const cartContainer = ()=>{
+const cartView = ()=>{
     
     const {items,totalPrice,removeItem} = useContext(cartContexto);
 
@@ -80,6 +78,6 @@ const cartContainer = ()=>{
     )
 }
 
-export default cartContainer
+export default cartView
 
 

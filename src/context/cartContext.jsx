@@ -3,7 +3,7 @@ import React, { useState, useEffect, createContext} from 'react'
 export const cartContexto = createContext()
 const { Provider } = cartContexto;
 
-const CartContext = ({children})=>{
+const CartProvider = ({children})=>{
 
     const [items, setItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
@@ -55,4 +55,4 @@ const CartContext = ({children})=>{
     )
 }
 
-export default CartContext;
+export default CartProvider;
