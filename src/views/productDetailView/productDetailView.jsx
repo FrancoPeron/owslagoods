@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react'
-import './itemDetailView.css'
+import './productDetailView.scss'
 
 // Router
 import { useParams } from "react-router-dom";
@@ -9,9 +9,9 @@ import {db} from '@/database/firebase.config'
 import {getDoc, collection, doc} from 'firebase/firestore'
 
 // Components
-import ItemDetail from "@/components/organism/itemDetail/itemDetail.jsx";
+import ProductDetail from "@/components/organisms/productDetail/productDetail.jsx";
 
-const ItemDetailView = ()=>{
+const ProductDetailView = ()=>{
 
     const {id} = useParams();
     const [product,setProduct] = useState([])
@@ -30,14 +30,11 @@ const ItemDetailView = ()=>{
 
     },[id])
 
-
     return(
-        <section className="items-detail-container">
-
-            <ItemDetail item={product}/>
-            
-        </section>
+        <main className="items-detail-container">
+            <ProductDetail item={product}/>
+        </main>
     )
 }
 
-export default ItemDetailView
+export default ProductDetailView

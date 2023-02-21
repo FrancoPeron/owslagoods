@@ -8,8 +8,8 @@ import Admin from '@/layout/admin/admin.jsx'
 
 // Views
 import HomeView from '@/views/homeView/homeView.jsx'
-import ItemListView from '@/views/itemListView/itemListView.jsx'
-import ItemDetailView from '@/views/itemDetailView/itemDetailView.jsx'
+import ProductListView from '@/views/productListView/productListView.jsx'
+import ProductDetailView from '@/views/productDetailView/productDetailView.jsx'
 import CartView from '@/views/cartView/cartView.jsx'
 
 export const router = createBrowserRouter([
@@ -24,15 +24,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/all', 
-        element: <ItemListView />,
+        element: <ProductListView />,
       },
       {
         path: '/products/:categoryName', 
-        element: <ItemListView /> ,
+        element: <ProductListView /> ,
       },
       {
         path: '/item/:id', 
-        element: <ItemDetailView />,
+        element: <ProductDetailView />,
       },
 
       {

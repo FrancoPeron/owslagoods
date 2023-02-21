@@ -1,9 +1,105 @@
-@import 'variables';
+/* ---------- Base Style ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-@import 'mixins';
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px; }
 
-@import 'extends';
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
 
-@import 'animation';
+::-webkit-scrollbar-thumb {
+  background: #000; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ---------- Lists ---------- */
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+ol, ul {
+  padding-left: 0; }
+
+p {
+  margin-bottom: 0; }
+
+a {
+  color: #000000;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+/* ---------- Inputs ---------- */
+input {
+  outline: none;
+  border: none; }
+
+input:focus {
+  outline: 0; }
+
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+input:focus:-moz-placeholder {
+  color: transparent; }
+
+input:focus::-moz-placeholder {
+  color: transparent; }
+
+input:focus:-ms-input-placeholder {
+  color: transparent; }
+
+button {
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+
+button:focus {
+  outline: 0; }
+
+textarea {
+  outline: none;
+  border: none; }
+
+textarea:focus {
+  border-color: transparent; }
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+textarea:focus:-moz-placeholder {
+  color: transparent; }
+
+textarea:focus::-moz-placeholder {
+  color: transparent; }
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent; }
+
+input[type="radio"] {
+  display: none; }
+
+button {
+  background-color: transparent;
+  height: min-content; 
+}
 
 

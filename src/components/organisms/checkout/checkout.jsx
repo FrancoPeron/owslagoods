@@ -1,5 +1,5 @@
 import React, {useState, useEffect , useContext } from 'react'
-import './checkout.css'
+import './checkout.scss'
 
 import Input from 'react-phone-number-input/input'
 

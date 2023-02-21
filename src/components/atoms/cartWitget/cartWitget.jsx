@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import './cartWitget.css'
+import './cartWitget.scss'
 
-// Components
+// Context
 import {cartContexto} from "@/context/cartContext";
 
 const CartWidget = ()=>{

@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import {Link}  from 'react-router-dom'
+import './productItem.scss'
 
-import './item.css'
-
-const Item = ({item})=>{
+const ProductItem = ({item})=>{
 
     return(
         <div className="product">
@@ -17,4 +16,4 @@ const Item = ({item})=>{
     )
 }
 
-export default Item
+export default ProductItem
