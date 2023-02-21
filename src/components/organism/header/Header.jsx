@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react'
-import './navBar.css'
+import './header.scss'
 
 // Router
 import {Link, NavLink }  from 'react-router-dom'
@@ -11,7 +11,7 @@ import {getDocs, collection, query, orderBy, where} from 'firebase/firestore'
 // Components
 import CartWidget from '@/components/atoms/cartWitget/cartWitget.jsx'
 
-const NavBar = ()=>{
+const Header = ()=>{
 
     const categoryCollection = getDocs(query(collection(db,'category'), orderBy("position", "asc")))
     const [category, setCategory] = useState([])
@@ -85,4 +85,4 @@ const NavBar = ()=>{
     )
 }
 
-export default NavBar
+export default Header

@@ -5,17 +5,14 @@ import './owslagoods.scss';
 import { Outlet } from "react-router-dom";
 
 // Components
-import NavBar from '@/components/organism/navBar/navBar.jsx'
+import Header from '@/components/organism/header/Header.jsx'
 
 const OwslaGoods = () => {
 
   return (
     <main className="App">
-
       <span className="default-background"></span>
-
-      <NavBar />
-
+      <Header />
       <Outlet />
 
     </main>

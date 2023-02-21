@@ -28,8 +28,6 @@ const HomeView = () => {
     const imgCol5= "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Faudio-destruct%2Faudio-destruct_021.webp?alt=media&token=07d9f835-cc8e-4dba-8682-859a060a3c4f";
     const imgCol6= "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Faudio-destruct%2Faudio-destruct_018.webp?alt=media&token=5a433694-5ede-45e9-bf79-585d1836561a";
 
-
-
     useEffect(()=>{
 
         const productsCollection = collection(db,'products');
