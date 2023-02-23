@@ -110,73 +110,18 @@
 }
 
 .banner__img{
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
   height: 600px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include respond(md) {
+    display: block;
+  }
 }
 
 
-
-/*====================================================================*/
-
-.artists-apparel {
-  @extend %container-center;
-  display: grid;
-  position: relative;
-  grid-template-areas:
-    "title img1 img2 btn"
-    "title img1 img2 img3";
-  grid-template-rows: min-content 1fr;
-  width: 100%;
-  gap: 52px;
-}
-
-.artists-apparel .box-title-white {
-  grid-area: title;
-}
-
-.artists-apparel .vertical {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  height: fit-content;
-  width: 72px;
-}
-
-.artists-apparel .vertical svg {
-  writing-mode: horizontal-tb;
-  transform: rotate(90deg);
-}
-
-.artists-apparel .btn-swb {
-  grid-area: btn;
-  justify-self: flex-end;
-}
-
-.artists-apparel img {
-  object-fit: cover;
-  border: 4px solid #ffffff;
-}
-
-.artists-apparel img:nth-child(3) {
-  grid-area: img1;
-  width: 350px;
-  height: 500px;
-}
-
-.artists-apparel img:nth-child(4) {
-  margin-top: 52px;
-  grid-area: img2;
-  width: 200px;
-  height: 320px;
-}
-
-.artists-apparel img:nth-child(5) {
-  grid-area: img3;
-  width: 250px;
-  height: 380px;
-}
 
 /*====================================================================*/
 

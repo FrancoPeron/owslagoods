@@ -10,6 +10,7 @@ import { getDocs, collection, query, limit } from 'firebase/firestore'
 
 // Components
 import ItemList from "@/components/loops/itemList/itemList.jsx";
+import ArtistsApparel from "@/components/organisms/artistsApparel/artistsApparel.jsx";
 
 const HomeView = () => {
 
@@ -18,9 +19,6 @@ const HomeView = () => {
   const imgBanner1 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Ffondo-1a.webp?alt=media&token=8e665379-4995-4b4b-aabf-50e42e1aff9b"
   const imgBanner2 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Ffondo-1b.webp?alt=media&token=e5712a03-254c-4e5e-bdab-85f7fdd1d025"
   const imgBanner3 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Fowsla-luke.png?alt=media&token=c0676b94-edf3-44a5-acc0-d45d13598df8"
-  const imgArtists1 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_006.webp?alt=media&token=328f935a-21a2-43b8-8d31-3d445146f9d6";
-  const imgArtists2 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_038.webp?alt=media&token=94188fb0-c64c-4a39-8197-6869de2ba6bc";
-  const imgArtists3 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_022.webp?alt=media&token=8bea83f3-215d-4076-ab22-4c5a19ae0842";
   const imgCol1 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fburn-forever%2Fburn-forever_032.webp?alt=media&token=f90e8849-e552-480a-9dc6-000d64531aaf";
   const imgCol2 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fburn-forever%2Fburn-forever_018.webp?alt=media&token=e02a6f1e-08a4-4e14-afc7-ba458e2aa84a";
   const imgCol3 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fburn-forever%2Fburn-forever_033.webp?alt=media&token=10b1d921-8544-4446-a4f9-a7a045c76eab";
@@ -74,27 +72,7 @@ const HomeView = () => {
         <ItemList items={products} />
       </section>
 
-      <section className='artists-apparel'>
-        <span className="home-background__2"></span>
-
-        <span className='box-title-white vertical'>
-          <svg width="3" height="28" viewBox="0 0 3 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="2.5" x2="2.5" y2="28" strokeWidth="4" />
-          </svg>
-          <p className='box-title-text'>Artists' Apparel</p>
-        </span>
-        <img src={imgArtists1} alt="" />
-        <img src={imgArtists2} alt="" />
-        <img src={imgArtists3} alt="" />
-        <Link className="btn-swb" to="/"><p className='btn-text'>View All</p>
-          <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M26.9 8L0.999993 8" stroke="black" strokeWidth="2" strokeLinecap="round" />
-            <path d="M26.9 8L19.9 15" stroke="black" strokeWidth="2" strokeLinecap="round" />
-            <path d="M26.9 8L19.9 1" stroke="black" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </Link>
-
-      </section>
+      <ArtistsApparel />
 
       <section className="items-list-box">
         <p className='items-list-box__title'>Headwears</p>

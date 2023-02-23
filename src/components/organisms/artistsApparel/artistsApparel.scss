@@ -1,0 +1,82 @@
+
+.artists-apparel {
+  @extend %container-center;
+  display: grid;
+  position: relative;
+  grid-template-areas:
+    "title img1"
+    "img2 img3"
+    "btn btn";
+  grid-template-rows: min-content 1fr;
+  width: 100%;
+  gap: 52px;
+  @include respond(sm){
+    grid-template-areas:
+    "title img1 btn"
+    "title img1 img3";
+    grid-template-rows: min-content 1fr;
+  }
+  @include respond(md) {
+    grid-template-areas:
+    "title img1 img2 btn"
+    "title img1 img2 img3";
+    grid-template-rows: min-content 1fr;
+  }
+  .box-title-white {
+    grid-area: title;
+  }
+  .vertical {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    height: fit-content;
+    width: 72px;
+    svg {
+      writing-mode: horizontal-tb;
+      transform: rotate(90deg);
+    }
+  }
+  .btn-swb {
+    grid-area: btn;
+    justify-self: flex-end;
+  }
+  img {
+    object-fit: cover;
+    border: 4px solid #ffffff;
+  }
+  .artists-apparel__img1{
+    grid-area: img1;
+    width: 100%;
+    height: 500px;
+    justify-self: flex-start;
+    @include respond(md) {
+      display: block;
+    }
+  }
+  .artists-apparel__img2{
+    display: block;
+    grid-area: img2;
+    width: 100%;
+    height: 480px;
+    justify-self: center;
+    @include respond(sm) {
+      display: none;
+      margin-top: 52px;
+      width: 200px;
+      height: 320px;
+    }
+    @include respond(md) {
+      display: block;
+    }
+  }
+  .artists-apparel__img3{
+    grid-area: img3;
+    width: 100%;
+    height: 480px;
+    justify-self: flex-end;
+    @include respond(sm) {
+      width: 200px;
+      height: 380px;
+    }
+  }
+}
+
