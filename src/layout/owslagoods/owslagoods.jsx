@@ -5,7 +5,7 @@ import './owslagoods.scss';
 import { Outlet } from "react-router-dom";
 
 // Components
-import Header from '@/components/organisms/header/Header.jsx'
+import Header from '@/components/organisms/header/header.jsx'
 
 const OwslaGoods = () => {
 
