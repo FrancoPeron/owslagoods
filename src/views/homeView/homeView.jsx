@@ -17,6 +17,7 @@ const HomeView = () => {
 
   const imgBanner1 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Ffondo-1a.webp?alt=media&token=8e665379-4995-4b4b-aabf-50e42e1aff9b"
   const imgBanner2 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Ffondo-1b.webp?alt=media&token=e5712a03-254c-4e5e-bdab-85f7fdd1d025"
+  const imgBanner3 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/banner%2Fowsla-luke.png?alt=media&token=c0676b94-edf3-44a5-acc0-d45d13598df8"
   const imgArtists1 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_006.webp?alt=media&token=328f935a-21a2-43b8-8d31-3d445146f9d6";
   const imgArtists2 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_038.webp?alt=media&token=94188fb0-c64c-4a39-8197-6869de2ba6bc";
   const imgArtists3 = "https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/products%2Fartists%2Fartist_022.webp?alt=media&token=8bea83f3-215d-4076-ab22-4c5a19ae0842";
@@ -47,15 +48,14 @@ const HomeView = () => {
   return (
 
     <main className='home'>
-
-      <span className="home-background__1"></span>
-
       <section className="banner">
-        <div className='banner__box1'>
+        <span className="home-background__1"></span>
+        <div className='banner__box'>
           <h1 className='banner__title'>Lukevicious x OWSLA</h1>
           <p className='banner__subtitle'>Collection</p>
         </div>
-        <Link className='btn-swb' to="/products/artists"><p className='btn-text'>Now Available</p>
+        <Link className='btn-swb' to="/products/artists">
+          <p className='btn-text'>Now Available</p>
           <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M26.9 8L0.999993 8" stroke="black" strokeWidth="2" strokeLinecap="round" />
             <path d="M26.9 8L19.9 15" stroke="black" strokeWidth="2" strokeLinecap="round" />
@@ -66,20 +66,19 @@ const HomeView = () => {
           <img src={imgBanner1} alt="" />
           <img src={imgBanner2} alt="" />
         </div>
-
+        <img className='banner__img' src={imgBanner3} alt="owsla-luke" />
       </section>
 
       <section className="items-list-box">
-        <p className='items-list-box__title'>dd</p>
+        <p className='items-list-box__title'>More Popular</p>
         <ItemList items={products} />
       </section>
 
-      <span className="home-background__2"></span>
-
       <section className='artists-apparel'>
+        <span className="home-background__2"></span>
 
         <span className='box-title-white vertical'>
-          <svg width="5" height="28" viewBox="0 0 5 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="3" height="28" viewBox="0 0 3 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="2.5" x2="2.5" y2="28" strokeWidth="4" />
           </svg>
           <p className='box-title-text'>Artists' Apparel</p>
@@ -98,11 +97,14 @@ const HomeView = () => {
       </section>
 
       <section className="items-list-box">
-        <p className='items-list-box__title'></p>
+        <p className='items-list-box__title'>Headwears</p>
         <ItemList items={products} />
       </section>
 
       <section className='collection'>
+
+        <p className='items-list-box__title'>Collections</p>
+
         <div className='collection-box1'>
           <span className='box-title-black'>
             <svg width="5" height="28" viewBox="0 0 5 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +140,7 @@ const HomeView = () => {
       </section>
 
       <section className="items-list-box">
-        <p className='items-list-box__title'>dd</p>
+        <p className='items-list-box__title'>Accessories</p>
         <ItemList items={products} />
       </section>
 

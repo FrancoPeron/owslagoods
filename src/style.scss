@@ -37,18 +37,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
 }
 
 
-// .w-100 {
-//   width: 100%!important;
-// }
-// .position-relative {
-//   position: relative!important;
-// }
-// .overflow-hidden {
-//   overflow: hidden!important;
-// }
+.w-100 {
+  width: 100%!important;
+}
+.position-relative {
+  position: relative!important;
+}
+.overflow-hidden {
+  overflow: hidden!important;
+}
 
 /*========================================================*/
 
@@ -110,7 +113,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 32px;
-  gap: 32px;
+  gap: 24px;
   height: 72px;
 }
 
@@ -124,10 +127,11 @@ body {
 .box-title-text{
   font-family: 'MonumentExtended';
   font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
+  font-weight: 500;
+  font-size: 24px;
   line-height: 35px;
   text-transform: capitalize;
+  padding-top: 4px;
 
 }
 

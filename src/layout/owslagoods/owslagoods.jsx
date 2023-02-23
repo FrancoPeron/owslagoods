@@ -11,10 +11,8 @@ const OwslaGoods = () => {
 
   return (
     <>
-      <span className="default-background"></span>
       <Header />
       <Outlet />
-
     </>
 
 
