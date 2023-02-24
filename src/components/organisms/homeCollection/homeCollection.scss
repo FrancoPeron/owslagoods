@@ -1,0 +1,124 @@
+.collection {
+  @extend %container-center;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "collection1"
+    "collection2"
+    "btn";
+  justify-items: center;
+  width: 100%;
+
+  .collection__backgound1,
+  .collection__backgound2{
+    grid-area: collection;
+    position: absolute;
+    z-index: -1;
+    width: 82vw;
+    height: 280px;
+  }
+  
+  .collection__backgound1 {
+    top: 76px;
+    right: 0;
+    background: linear-gradient(90deg, rgba(80, 119, 136, 0.98) 1.66%, #d3f4ff 99.99%);
+    box-shadow: inset 0px 4px 93px rgba(0, 209, 255, 0.25);
+  }
+
+  .collection__backgound2 {
+    top: 562px;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(68, 68, 68, 0.98) 1.66%, rgba(210, 210, 210, 0.56) 99.99%);
+    box-shadow: inset 0px 4px 93px rgba(0, 0, 0, 0.25);
+  }
+
+  /*------------------------*/
+
+  .collection__title{
+    grid-area: title;
+    margin-bottom: 84px;
+  }
+
+  .collection__box {
+    grid-area: collection1;
+    display: grid;
+    grid-template-areas:
+      "namebox namebox"
+      "img1 img2"
+      "img3 img4";
+    grid-template-rows: 66px 320px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 84px;
+    width: 100%;
+    gap: 32px;
+    
+    @include respond(sm) {
+      grid-template-areas:
+        "img1 namebox namebox"
+        "img1 img2 img3";
+      grid-template-rows: 66px 300px;
+      grid-template-columns: 300px 1fr 1fr;
+      gap: 48px;
+    }
+
+    @include respond(md) {
+      grid-template-areas:
+        "img1 namebox namebox namebox"
+        "img1 img2 img3 img4";
+      grid-template-rows: 66px 286px;
+      grid-template-columns: 300px 1fr 1fr 1fr;
+    }
+
+    &.reverse{
+      grid-area: collection2;
+      grid-template-areas:
+        "namebox namebox namebox img1"
+        "img4 img3 img2 img1";
+      grid-template-rows: 66px 286px;
+      grid-template-columns: 1fr 1fr 1fr 300px;
+      margin-bottom: 48px;
+
+      .collection__nameBox{
+        flex-direction: row-reverse;
+      }
+
+    }
+
+    .collection__nameBox {
+      grid-area: namebox;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 32px;
+
+      .collection__lines{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+    }
+    .img1{ grid-area: img1; }
+    .img2{ grid-area: img2; }
+    .img3{ grid-area: img3; }
+    .img4{ 
+      grid-area: img4;
+      display: block;
+      @include respond(sm) {
+        display: none;
+      }
+      @include respond(md) {
+        display: block;
+      }
+    } 
+
+  }
+
+  .btn-owb{grid-area: btn;}
+  
+}

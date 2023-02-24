@@ -1,0 +1,109 @@
+$bannerBackground: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-1.webp?alt=media&token=5e08d56b-612d-4a14-8dee-0e1add2e6057);
+
+.banner {
+  @extend %container-center;
+  grid-area: banner;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 70px;
+  @include respond(sm) {
+    align-items: flex-start;
+  }
+
+  .banner__background {
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-position: top;
+    bottom: 700px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100vw;
+    height: 1000px;
+    object-fit: cover;
+    background-image: $bannerBackground;
+
+    @include respond(xs) {
+      bottom: 0;
+    }
+  }
+
+  .banner__box {
+    @include respond(sm) {
+      padding-left: 2rem;
+      border-left: solid 4px #ffffff;
+    }
+    .banner__title,
+    .banner__subtitle {
+      font-family: "MonumentExtended";
+      font-style: normal;
+      color: #ffffff;
+      text-transform: uppercase;
+      max-width: 500px;
+      width: 100%;
+      text-shadow: 0px 4px 2px rgba(12, 12, 12, 0.16);
+      letter-spacing: 0.08em;
+      text-align: center;
+      @include respond(sm) {
+        text-align: start;
+      }
+    }
+    .banner__title {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 125%;
+    }
+    .banner__subtitle {
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 150%;
+    }
+  }
+
+  .banner__imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 2rem;
+    img {
+      aspect-ratio: 16/23;
+      width: 350px;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      @include respond(xs) {
+        width: 260px;
+      }
+      @include respond(sm) {
+        width: 160px;
+      }
+    }
+    @include respond(xs) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .banner__img{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    height: 500px;
+    z-index: -1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    @include respond(sm) {
+      display: block;
+    }
+    @include respond(md) {
+      height: 600px;
+      display: block;
+    }
+  }
+}
+
+
+

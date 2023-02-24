@@ -1,0 +1,112 @@
+$artistsApparelBackground: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-2.webp?alt=media&token=0b7bd60f-f84a-4b79-93fc-c934d2a89f2f);
+
+.artists-apparel {
+  @extend %container-center;
+  display: grid;
+  position: relative;
+  justify-content: center;
+  justify-items: center;
+  grid-template-areas:
+    "title"
+    "img1"
+    "img2"
+    "img3"
+    "btn";
+  grid-template-columns: min-content;
+  width: 100%;
+  row-gap: 32px;
+  column-gap: 52px;
+  @include respond(xs) {
+    grid-template-areas:
+    "title title"
+    "img3 img2"
+    "img1 img2"
+    "btn btn";
+    grid-template-rows: min-content 1fr 1fr min-content;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond(sm) {
+    grid-template-areas:
+    "title img1 btn"
+    "title img1 img3";
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: min-content 1.3fr 1fr;
+    row-gap: 52px;
+    column-gap: 72px;
+  }
+  @include respond(md) {
+    grid-template-areas:
+    "title img1 none btn"
+    "title img1 img2 img3";
+    grid-template-columns: min-content 1.6fr 1fr 1.2fr;
+  }
+
+  .artists-apparel__background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    top: -350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 800px;
+    object-fit: cover;
+    background-image: $artistsApparelBackground;
+  }
+
+  .box-title-white {
+    grid-area: title;
+  }
+  .vertical {
+    @include respond(sm) {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      height: fit-content;
+      width: 72px;
+      svg {
+        writing-mode: horizontal-tb;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 400px;
+    aspect-ratio: 33/50;
+    border: 4px solid #ffffff;
+    @include respond(xs) {
+      width: 100%;
+    }
+  }
+  .artists-apparel__img1 {
+    grid-area: img1;
+  }
+  .artists-apparel__img2 {
+    display: block;
+    grid-area: img2;
+    @include respond(xs) {
+      align-self: center;
+    }
+    @include respond(sm) {
+      display: none;
+      transform: translateY(-52px);
+    }
+    @include respond(md) {
+      align-self: self-start;
+      display: block;
+    }
+  }
+  .artists-apparel__img3 {
+    grid-area: img3;
+  }
+
+  .btn-swb {
+    grid-area: btn;
+    @include respond(sm) {
+      justify-self: flex-end;
+    }
+  }
+}

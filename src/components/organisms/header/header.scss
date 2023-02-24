@@ -36,7 +36,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: #fff;
     width: 100%;
     max-height: 60px;
@@ -64,6 +64,7 @@
         top: 0;
         width: fit-content;
         height: fit-content;
+        overflow: visible;
         background-color: transparent;
         max-height: 100%;
       }
@@ -73,7 +74,6 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin: 1.5rem 0;
         gap: 1.5rem;
         @include respond(md) {
           flex-direction: row;
@@ -136,7 +136,7 @@
   transition: all 0.5s;
 }
 #burger:checked ~ .nav {
-  min-height: calc(100vh - 252px);
+  min-height: calc(100vh - 214px);
   transition: all 1s;
 }
 
@@ -154,12 +154,12 @@
     width: 34px;
   }
   .burger::before {
-    top: -10px;
+    top: -8px;
     width: 22px;
     transition: all 0.5s;
   }
   .burger::after {
-    top: 10px;
+    top: 8px;
     width: 28px;
     transition: all 0.5s;
   }
