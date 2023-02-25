@@ -12,25 +12,6 @@
   width: 100%;
 }
 
-/*============================ Background ============================*/
-:root {
-  --home-background__3: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-3.webp?alt=media&token=da292b82-ba49-4fa5-9fa5-aacc58d591fa);
-}
-
-.home-background__3 {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  background-size: cover;
-  background-position: top;
-  left: 0;
-  bottom: 0;
-  height: 1000px;
-  background-image: var(--home-background__3);
-}
-
 .items-list-box{
   @extend %container-center;
 }
-
-/*====================================================================*/

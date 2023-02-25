@@ -41,25 +41,22 @@ $bannerBackground: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fb
       font-family: "MonumentExtended";
       font-style: normal;
       color: #ffffff;
-      text-transform: uppercase;
-      max-width: 500px;
-      width: 100%;
-      text-shadow: 0px 4px 2px rgba(12, 12, 12, 0.16);
       letter-spacing: 0.08em;
+
       text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 500px;
+      text-shadow: 0px 4px 2px rgba(12, 12, 12, 0.16);
       @include respond(sm) {
         text-align: start;
       }
     }
     .banner__title {
-      font-weight: 400;
-      font-size: 48px;
-      line-height: 125%;
+      @include font(fh1, w400, MonumentE, lsWidest);
     }
     .banner__subtitle {
-      font-weight: 300;
-      font-size: 32px;
-      line-height: 150%;
+      @include font(ft1, w300, MonumentE, lsWidest);
     }
   }
 

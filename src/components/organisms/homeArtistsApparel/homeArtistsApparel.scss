@@ -73,9 +73,9 @@ $artistsApparelBackground: url(https://firebasestorage.googleapis.com/v0/b/owsla
   }
 
   img {
-    object-fit: cover;
-    width: 400px;
+    width: 350px;
     aspect-ratio: 33/50;
+    object-fit: cover;
     border: 4px solid #ffffff;
     @include respond(xs) {
       width: 100%;

@@ -14,8 +14,11 @@
     grid-area: collection;
     position: absolute;
     z-index: -1;
-    width: 82vw;
+    width: 100vw;
     height: 280px;
+    @include respond(sm) {
+      width: 82vw;
+    }
   }
   
   .collection__backgound1 {
@@ -43,15 +46,24 @@
     grid-area: collection1;
     display: grid;
     grid-template-areas:
-      "namebox namebox"
-      "img1 img2"
-      "img3 img4";
-    grid-template-rows: 66px 320px;
-    grid-template-columns: 1fr 1fr;
+      "namebox"
+      "img1"
+      "img2"
+      "img3";
+    grid-template-rows: 66px 320px 320px 320px; 
+    grid-template-columns: 1fr;
+    justify-items: center;
     margin-bottom: 84px;
     width: 100%;
     gap: 32px;
-    
+    @include respond(xs) {
+      grid-template-areas:
+      "namebox namebox"
+      "img1 img2"
+      "img3 img4";
+      grid-template-rows: 66px 320px 320px;
+      grid-template-columns: 1fr 1fr;
+    }
     @include respond(sm) {
       grid-template-areas:
         "img1 namebox namebox"
@@ -60,7 +72,6 @@
       grid-template-columns: 300px 1fr 1fr;
       gap: 48px;
     }
-
     @include respond(md) {
       grid-template-areas:
         "img1 namebox namebox namebox"
@@ -87,9 +98,20 @@
     .collection__nameBox {
       grid-area: namebox;
       display: flex;
+      justify-content: center;
       align-items: center;
       width: 100%;
       gap: 32px;
+
+      &>svg{
+        display: none;
+      }
+
+      @include respond(xs) {
+        &>svg{
+          display: flex;
+        }
+      }
 
       .collection__lines{
         width: 100%;
@@ -98,17 +120,23 @@
     }
 
     img {
-      width: 100%;
       height: 100%;
+      width: 350px;
       object-fit: cover;
-      border: 3px solid #ffffff;
+      border: 4px solid #ffffff;
+      @include respond(xs) {
+        width: 100%;
+      }
     }
     .img1{ grid-area: img1; }
     .img2{ grid-area: img2; }
     .img3{ grid-area: img3; }
     .img4{ 
       grid-area: img4;
-      display: block;
+      display: none;
+      @include respond(xs) {
+        display: block;
+      }
       @include respond(sm) {
         display: none;
       }
