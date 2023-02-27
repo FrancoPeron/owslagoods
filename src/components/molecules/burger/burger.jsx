@@ -5,6 +5,13 @@ const Burger = () => {
 
   let burgerChecked = false
   
+  function burger() {
+    let burger = document.querySelector(".burger");
+    (burgerChecked)
+      ? burger.classList.add("burger--active")
+      : burger.classList.remove("burger--active")
+  }
+
   function burgerBox() {
     let burgerbox = document.querySelector(".burger-box");
     (burgerChecked)
@@ -20,6 +27,7 @@ const Burger = () => {
   
   function burgerBtn(){
     burgerChecked = !burgerChecked
+    burger();
     burgerBox();
     overflowHide();
   }
@@ -27,7 +35,7 @@ const Burger = () => {
   return (
     <>
       <div className="burger" htmlFor="burger" onClick={burgerBtn}>
-      <span className="burger__btn"></span>
+        <span className="burger__btn"></span>
       </div>
     </>
   )
