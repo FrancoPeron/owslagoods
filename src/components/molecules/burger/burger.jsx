@@ -1,40 +1,55 @@
 import React, { useState, useEffect } from 'react'
 import './burger.scss'
 
+import { useLocation } from 'react-router-dom';
+
 const Burger = () => {
+
+  let location = useLocation();
+  useEffect(() => {
+    burgerClose()
+  }, [location]);
+
+  window.addEventListener('resize', (e) => {
+    if (window.innerWidth > 1024) {
+      burgerClose()
+    }
+  })
 
   let burgerChecked = false
   
-  function burger() {
-    let burger = document.querySelector(".burger");
+  function burgerActive(classElement, classActive) {
+    let element = document.querySelector(classElement);
     (burgerChecked)
-      ? burger.classList.add("burger--active")
-      : burger.classList.remove("burger--active")
-  }
-
-  function burgerBox() {
-    let burgerbox = document.querySelector(".burger-box");
-    (burgerChecked)
-      ? burgerbox.classList.add("burger-box--active")
-      : burgerbox.classList.remove("burger-box--active")
-  }
+      ? element.classList.add(classActive)
+      : element.classList.remove(classActive)
+  }  
   
   function overflowHide() {
     (burgerChecked) 
       ? document.body.style.overflow = 'hidden'
       : document.body.style.overflow = 'auto'
   }
-  
-  function burgerBtn(){
-    burgerChecked = !burgerChecked
-    burger();
-    burgerBox();
+
+  function activeFunctions() {
+    burgerActive(".burger", "burger--active")
+    burgerActive(".burger-box", "burger-box--active")
     overflowHide();
+  }
+  
+  function burgerToggle() {
+    burgerChecked = !burgerChecked
+    activeFunctions()
+  }
+  
+  function burgerClose() {
+    burgerChecked = false
+    activeFunctions()
   }
 
   return (
     <>
-      <div className="burger" htmlFor="burger" onClick={burgerBtn}>
+      <div className="burger" htmlFor="burger" onClick={burgerToggle}>
         <span className="burger__btn"></span>
       </div>
     </>

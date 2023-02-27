@@ -35,19 +35,20 @@
     @include flex();
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: #fff;
     width: 100%;
     max-height: 60px;
+    
+    background-color: #fff;
     gap: 1rem;
 
-    .header__nav-img{
-      display: flex;
-      max-height: 50px;
-      content: url(@/assets/images/owslaLogoText.svg);
-      @include respond(md){
-        display: none;
-      }
-    }
+    // .header__nav-img{
+    //   display: flex;
+    //   max-height: 50px;
+    //   content: url(@/assets/images/owslaLogoText.svg);
+    //   @include respond(md){
+    //     display: none;
+    //   }
+    // }
 
   }
 }

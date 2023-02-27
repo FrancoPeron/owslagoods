@@ -44,13 +44,13 @@
   }
   &.burger--active > .burger__btn:before {
     top: 0;
-    width: 34px;
+    width: 30px;
     transform: rotate(-45deg);
     transition: all 0.5s;
   }
   &.burger--active > .burger__btn:after {
     top: 0;
-    width: 34px;
+    width: 30px;
     transform: rotate(45deg);
     transition: all 0.5s;
   }
