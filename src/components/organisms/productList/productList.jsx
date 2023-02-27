@@ -10,6 +10,8 @@ import ItemList from "@/components/loops/itemList/itemList.jsx";
 
 const ProductList = (props) => {
 
+  console.log(props.collection);
+
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const ProductList = (props) => {
         
       })
       .catch(error => console.log(error))
-  }, [])
+  }, [props])
 
 
   return (
