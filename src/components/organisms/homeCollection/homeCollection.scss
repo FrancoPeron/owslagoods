@@ -10,17 +10,18 @@
   width: 100%;
 
   .collection__backgound1,
-  .collection__backgound2{
+  .collection__backgound2 {
     grid-area: collection;
     position: absolute;
     z-index: -1;
     width: 100vw;
-    height: 280px;
+    height: 480px;
     @include respond(sm) {
       width: 82vw;
+      height: 280px;
     }
   }
-  
+
   .collection__backgound1 {
     top: 76px;
     right: 0;
@@ -29,15 +30,21 @@
   }
 
   .collection__backgound2 {
-    top: 562px;
+    top: 1532px;
     left: 0;
     background: linear-gradient(-90deg, rgba(68, 68, 68, 0.98) 1.66%, rgba(210, 210, 210, 0.56) 99.99%);
     box-shadow: inset 0px 4px 93px rgba(0, 0, 0, 0.25);
+    @include respond(xs) {
+      top: 1092px;
+    }
+    @include respond(sm) {
+      top: 562px;
+    }
   }
 
   /*------------------------*/
 
-  .collection__title{
+  .collection__title {
     grid-area: title;
     margin-bottom: 84px;
   }
@@ -50,7 +57,7 @@
       "img1"
       "img2"
       "img3";
-    grid-template-rows: 66px 320px 320px 320px; 
+    grid-template-rows: 66px 400px 400px 400px;
     grid-template-columns: 1fr;
     justify-items: center;
     margin-bottom: 84px;
@@ -58,10 +65,10 @@
     gap: 32px;
     @include respond(xs) {
       grid-template-areas:
-      "namebox namebox"
-      "img1 img2"
-      "img3 img4";
-      grid-template-rows: 66px 320px 320px;
+        "namebox namebox"
+        "img1 img2"
+        "img3 img4";
+      grid-template-rows: 66px 400px 400px;
       grid-template-columns: 1fr 1fr;
     }
     @include respond(sm) {
@@ -80,19 +87,28 @@
       grid-template-columns: 300px 1fr 1fr 1fr;
     }
 
-    &.reverse{
+    &.reverse {
       grid-area: collection2;
-      grid-template-areas:
-        "namebox namebox namebox img1"
-        "img4 img3 img2 img1";
-      grid-template-rows: 66px 286px;
-      grid-template-columns: 1fr 1fr 1fr 300px;
+      display: grid;
       margin-bottom: 48px;
-
-      .collection__nameBox{
-        flex-direction: row-reverse;
+      @include respond(sm) {
+        grid-template-areas:
+          "namebox namebox img1"
+          "img3 img2 img1";
+        grid-template-rows: 66px 300px;
+        grid-template-columns: 1fr 1fr 300px;
+      }
+      @include respond(md) {
+        grid-template-areas:
+          "namebox namebox namebox img1"
+          "img4 img3 img2 img1";
+        grid-template-rows: 66px 286px;
+        grid-template-columns: 1fr 1fr 1fr 300px;
       }
 
+      .collection__nameBox {
+        flex-direction: row-reverse;
+      }
     }
 
     .collection__nameBox {
@@ -103,17 +119,17 @@
       width: 100%;
       gap: 32px;
 
-      &>svg{
+      & > svg {
         display: none;
       }
 
       @include respond(xs) {
-        &>svg{
+        & > svg {
           display: flex;
         }
       }
 
-      .collection__lines{
+      .collection__lines {
         width: 100%;
         height: 100%;
       }
@@ -128,10 +144,16 @@
         width: 100%;
       }
     }
-    .img1{ grid-area: img1; }
-    .img2{ grid-area: img2; }
-    .img3{ grid-area: img3; }
-    .img4{ 
+    .img1 {
+      grid-area: img1;
+    }
+    .img2 {
+      grid-area: img2;
+    }
+    .img3 {
+      grid-area: img3;
+    }
+    .img4 {
       grid-area: img4;
       display: none;
       @include respond(xs) {
@@ -143,10 +165,10 @@
       @include respond(md) {
         display: block;
       }
-    } 
-
+    }
   }
 
-  .btn-owb{grid-area: btn;}
-  
+  .btn-owb {
+    grid-area: btn;
+  }
 }

@@ -1,10 +1,29 @@
-/* -------------------- Header -------------------- */
+$headerBackground: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fbf3b.appspot.com/o/backgrounds%2Ffondo-4.webp?alt=media&token=67f88ba8-6d1c-4d8d-a769-8a5b64b26d3b);
+
 .header {
   @include flex(column, nowrap);
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-bottom: 2rem;
+
+  .header__background {
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-position: top;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100vw;
+    height: 600px;
+    object-fit: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),$headerBackground;
+
+    @include respond(xs) {
+      bottom: 0;
+    }
+  }
 
   .header__logo {
     @include flex();

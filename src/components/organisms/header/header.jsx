@@ -17,6 +17,7 @@ const Header = () => {
 
   return (
     <header className="header">
+      <span className="header__background"></span>
 
       <div className="header__logo">
         <p className="header__logo-text">OWSLA</p>

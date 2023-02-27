@@ -44,6 +44,10 @@ const Nav = () => {
                 </li>
               )
             }
+            <li className="nav__item">
+              <a className="nav__link--black" target="_blank" href="https://owslahq.netlify.app">Music</a>
+            </li>
+
           </>
           : null
         }

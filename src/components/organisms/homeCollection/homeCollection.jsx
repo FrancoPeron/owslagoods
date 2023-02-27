@@ -40,7 +40,7 @@ const HomeCollection = () => {
         <img className='img4' src={imgCol4} alt="" />
       </div>
 
-      {/* <div className='collection__box reverse'>
+      <div className='collection__box reverse'>
         <div className='collection__nameBox'>
           <span className='box-title-white'>
             <p className='box-title-text'>Audio Destruct</p>
@@ -57,7 +57,7 @@ const HomeCollection = () => {
         <img className='img2' src={imgCol6} alt="" />
         <img className='img3' src={imgCol7} alt="" />
         <img className='img4' src={imgCol8} alt="" />
-      </div> */}
+      </div>
 
       <Link className="btn-owb" to="/"><p className='btn-text'>View All</p>
         <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">

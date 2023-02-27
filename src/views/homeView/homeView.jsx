@@ -3,61 +3,41 @@ import './homeView.scss'
 
 // Data Base
 import { db } from '@/database/firebase.config'
-import { getDocs, collection, query, limit } from 'firebase/firestore'
+import {collection, query, where, limit } from 'firebase/firestore'
 
 // Components
-import ItemList from "@/components/loops/itemList/itemList.jsx";
+import Footer from "@/components/organisms/footer/footer.jsx";
+import ProductList from "@/components/organisms/productList/productList.jsx";
 import HomeBanner from "@/components/organisms/homeBanner/homeBanner.jsx";
 import HomeArtistsApparel from "@/components/organisms/homeArtistsApparel/homeArtistsApparel.jsx";
 import HomeCollection from "@/components/organisms/homeCollection/homeCollection.jsx";
 
 const HomeView = () => {
 
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-
-    const productsCollection = collection(db, 'products');
-    getDocs(query(productsCollection, limit(8)))
-      .then(result => {
-        const products = result.docs.map(doc => {
-          return {
-            id: doc.id,
-            ...doc.data(),
-          }
-        })
-        setProducts(products)
-      })
-      .catch(error => console.log(error))
-  }, [])
+  const morePopular = {
+    name: "More Popular",
+    collection: query(collection(db, 'products'),limit(8)),
+  }
+  const headwearsCollection = {
+    name: "headwears",
+    collection: query(collection(db, 'products'), where('category', '==', "headwear"),limit(4)),
+  }
+  const accessoriesCollection = {
+    name: "accessories",
+    collection: query(collection(db, 'products'), where('category', '==', "accessories"),limit(4)),
+  }
 
 
   return (
 
     <main className='home'>
-
       <HomeBanner />
-      
-      <section className="items-list-box">
-        <p className='items-list-box__title'>More Popular</p>
-        <ItemList items={products} />
-      </section>
-
+      <ProductList {...morePopular} />
       <HomeArtistsApparel />
-
-      <section className="items-list-box">
-        <p className='items-list-box__title'>Headwears</p>
-        <ItemList items={products} />
-      </section>
-
+      <ProductList {...headwearsCollection} />
       <HomeCollection />
-
-      <section className="items-list-box">
-        <p className='items-list-box__title'>Accessories</p>
-        <ItemList items={products} />
-      </section>
-
-      {/* <span className="home-background__3"></span> */}
+      <ProductList {...accessoriesCollection} />
+      <Footer />
     </main>
 
   )

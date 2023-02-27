@@ -8,10 +8,6 @@
     'products2'
     'collection'
     'products3';
-  grid-row-gap: 148px;
+  grid-row-gap: 132px;
   width: 100%;
-}
-
-.items-list-box{
-  @extend %container-center;
 }
