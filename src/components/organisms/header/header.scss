@@ -1,19 +1,18 @@
 /* -------------------- Header -------------------- */
 .header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  @include flex(column, nowrap);
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin-bottom: 2rem;
 
   .header__logo {
-    display: flex;
-    flex-direction: row;
+    @include flex();
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 1.5rem;
     width: 100%;
+    padding: 1rem; 
+    gap: 2rem;
 
     background: rgba(0, 0, 0, 0.15);
 
@@ -25,179 +24,30 @@
       color: #ffffff;
     }
 
-    .header__logo-img {
-      max-height: 100px;
-      width: clamp(48px, 15vw, 100%);
-      // width: 100%;
+    .header__logo-link{
+      height: clamp(65px, 12vw, 80px);
     }
+
   }
 
   .header__nav {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex();
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: #fff;
     width: 100%;
     max-height: 60px;
+    gap: 1rem;
 
-    /* ---------- Navbar ---------- */
-
-    .nav {
+    .header__nav-img{
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #ffffff;
-      width: 100%;
-      height: 0;
-      min-height: 0;
-      z-index: 1000;
-      transition: all 1s;
-      overflow: hidden;
-
-      @include respond(md) {
-        flex-direction: row;
-        position: relative;
-        top: 0;
-        width: fit-content;
-        height: fit-content;
-        overflow: visible;
-        background-color: transparent;
-        max-height: 100%;
-      }
-
-      .nav__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 1.5rem;
-        @include respond(md) {
-          flex-direction: row;
-          width: fit-content;
-        }
-      }
-      .nav__item {
-        display: flex;
-        width: auto;
-
-        .nav__link--black {
-          position: relative;
-
-          font-size: 0.875rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1rem;
-          font-weight: 500;
-          line-height: calc(150%);
-          -webkit-text-stroke: 0;
-          color: #000000;
-        }
-        .nav__link--black::after {
-          content: "";
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          border-radius: 4px;
-          transition: all 0.5s;
-          background-color: transparent;
-        }
-        .active.nav__link--black::after {
-          background-color: #3c3c3c;
-          width: 100%;
-        }
+      max-height: 50px;
+      content: url(@/assets/images/owslaLogoText.svg);
+      @include respond(md){
+        display: none;
       }
     }
-  }
-}
 
-/*-----------------------------*/
-
-#burger {
-  display: none;
-}
-#burger:checked + .burger-btn > .burger {
-  height: 0;
-}
-#burger:checked + .burger-btn > .burger::before {
-  top: 0;
-  width: 34px;
-  transform: rotate(-45deg);
-  transition: all 0.5s;
-}
-#burger:checked + .burger-btn > .burger::after {
-  top: 0;
-  width: 34px;
-  transform: rotate(45deg);
-  transition: all 0.5s;
-}
-#burger:checked ~ .nav {
-  min-height: calc(100vh - 214px);
-  transition: all 1s;
-}
-
-/*-----------------------------*/
-
-.burger-btn {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  height: 34px;
-  width: 34px;
-  cursor: pointer;
-  .burger {
-    position: relative;
-    width: 34px;
-  }
-  .burger::before {
-    top: -8px;
-    width: 22px;
-    transition: all 0.5s;
-  }
-  .burger::after {
-    top: 8px;
-    width: 28px;
-    transition: all 0.5s;
-  }
-
-  .burger,
-  .burger::before,
-  .burger::after {
-    height: 3px;
-    border-radius: 5px;
-    background-color: #000000;
-  }
-  .burger::before,
-  .burger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  /* -------------------- Header / Navbar -------------------- */
-
-  // .header__logo {
-  //   height: 200px;
-  // }
-  // .header__logo-img {
-  //   max-height: 110px;
-  // }
-
-  // .header__nav {
-  //   max-height: 68px;
-  // }
-  .burger {
-    display: none;
-  }
-  .burger-btn {
-    display: none;
   }
 }
