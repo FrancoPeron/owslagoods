@@ -53,9 +53,9 @@ const ProductDetail = ({ item }) => {
                   : <Link to="/cart" className='btn-sbb'>
                       <p className='btn-text'>Go to Bag</p>
                       <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M38 11L0.999998 11" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-                        <path d="M38 11L28 21" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-                        <path d="M38 11L28 1" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                        <path d="M38 11L0.999998 11" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+                        <path d="M38 11L28 21" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+                        <path d="M38 11L28 1" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     </Link>
                 }

@@ -1,155 +1,191 @@
-.checkout{
+.checkout {
+  @extend %container-center; 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 42px;
-    gap: 62px;
-    background: #FFFFFF;
+  @include flex(column);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 42px;
+  gap: 42px;
+  background: #FFFFFF;
 
-    width: 1440px;
-    height: 540px;
-}
+  width: 100%;
+  height: min-content;
 
-.checkout__box1{
+  @include respond(md) {
+    @include flex();
+  }
+
+  .checkout__box1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 42px;
+    gap: 32px;
     width: 742px;
-}
 
-.checkout__breadcrumb {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+    .checkout__breadcrumb {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-.checkout__breadcrumb button{
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-    margin-right: .8rem;
+      &button {
+        font-family: 'MonumentExtended';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        margin-right: .8rem;
 
-    color: #818181;
-}
+        color: #818181;
+      }
 
-.checkout__breadcrumb .btn-active{
-    color: #000000;;
-}
+      .btn-active {
+        color: #000000;
+        ;
+      }
+    }
 
+    .checkout__title {
+      font-family: 'MonumentExtended';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #000000;
 
-.checkout__title{
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #000000;
+    }
 
-}
+    .checkout-form {
+      display: grid;
+      grid-template-areas: 
+        'firstName lastName'
+        'email email'
+        'telephone telephone'
+        'btns btns';
+      width: 100%;
+      gap: 2rem;
 
+      .checkout-form__item {
+        position: relative;
+        width: 100%;
+        background: #FFFFFF;
+        border-bottom: 2px solid #4D4D4D;
+      }
 
-.checkout-form{
-    display: grid;
-    grid-template-areas:'firstName lastName'
-                        'email email'
-                        'telephone telephone'
-                        'btns btns';
+      .form-first-name {
+        grid-area: firstName;
+      }
+
+      .form-last-name {
+        grid-area: lastName;
+      }
+
+      .form-email {
+        grid-area: email;
+      }
+
+      .form-phone {
+        grid-area: telephone;
+      }
+
+      .checkout-form__input {
+        width: 100%;
+        height: 40px;
+        font-family: 'MonumentExtended';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+      }
+
+      .checkout-form__label {
+        position: absolute;
+        color: #4D4D4D;
+        left: 8px;
+        top: -25%;
+        font-size: 12px;
+        transition: all 0.4s;
+      }
+
+      .checkout-form__item>input[placeholder=" "]:not(:focus):placeholder-shown+.checkout-form__label {
+        top: 25%;
+        transition: all 0.4s;
+      }
+
+      .checkout__btns {
+        grid-area: btns;
+      }
+    }
+  }
+
+  .hr{
+    height: 2px;
     width: 100%;
-    gap: 2rem;
-}
+    @include respond(sm){
+      height: 100%;
+      width: 2px;
+    }
+  }
+  .checkout__box2 {
+    .checkout__img {
+      grid-area: img;
+      width: 70px;
+      border-radius: 0.25rem;
+      object-fit: cover;
+    }
 
-.form-first-name{grid-area: firstName;}
-.form-last-name{grid-area: lastName;}
-.form-email{grid-area: email;} 
-.form-phone{grid-area: telephone;} 
-.checkout__btns{grid-area: btns;} 
+    .checkout__name {
+      font-family: 'MonumentExtended';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #000000;
+
+    }
+
+    .checkout__price {
+      font-family: 'MonumentExtended';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 13px;
+      color: #000000;
 
 
-.checkout-form__item{
-    position: relative;
-    width: 100%;
-    background: #FFFFFF;
-    border-bottom: 2px solid #4D4D4D;
-}
-
-.checkout-form__input{
-    width: 100%;
-    height: 40px;
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-}
-
-.checkout-form__label{
-    position: absolute;
-    color: #4D4D4D;
-    left: 8px;
-    top: -25%;
-    font-size: 12px;
-    transition: all 0.4s;
+    }
+  }
 }
 
 
-.checkout-form__item>input[placeholder=" "]:not(:focus):placeholder-shown + .checkout-form__label {
-    top: 25%;
-    transition: all 0.4s;
+
+
+
+
+
+
+
+
+
+
+.checkout__btns,
+.checkout__box2-a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
-
-.checkout__btns, .checkout__box2-a{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.checkout__img{
-    grid-area: img;
-    width: 70px;
-    border-radius: 0.25rem;
-    object-fit: cover; 
-}
-
-.checkout__name{
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #000000;
-
-}
-
-.checkout__price{
-    font-family: 'MonumentExtended';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 13px;
-    color: #000000;
-
-
-}
-

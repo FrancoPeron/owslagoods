@@ -1,7 +1,7 @@
-.items-detail-container{
-    @include flex(column);
-    align-items: center;
-    width: 100%;
-    gap: 100px;
-    padding-bottom: 2rem;
+.items-detail-container {
+  @include flex(column);
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+  padding-bottom: 2rem;
 }

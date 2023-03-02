@@ -26,6 +26,7 @@
       object-fit: cover;
       @include respond(xs){
         object-fit: contain;
+        aspect-ratio: 11/14;
         height: 420px;
       }
       @include respond(md){

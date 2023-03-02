@@ -37,9 +37,6 @@ const ProductDetailView = () => {
 
   }, [id])
 
-  console.log(similarProducts)
-
-
   return (
     <main className="items-detail-container">
       <ProductDetail item={product} />

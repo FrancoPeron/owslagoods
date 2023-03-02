@@ -27,7 +27,6 @@ const HomeView = () => {
     collection: query(collection(db, 'products'), where('category', '==', "accessories"),limit(4)),
   }
 
-
   return (
 
     <main className='home'>

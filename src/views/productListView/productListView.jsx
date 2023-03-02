@@ -19,9 +19,6 @@ const ItemListContainer = () => {
 
   const [filter, setFilter] = useState(productsCollection)
   const [products, setProducts] = useState([])
-  const [collections, setCollections] = useState([])
-
-  console.log(collections)
 
   useEffect(() => {
 

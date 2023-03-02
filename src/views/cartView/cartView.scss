@@ -1,187 +1,174 @@
-.bag{
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    padding: 2rem;
-    margin: 3rem 0;
-    width: 100%;
-    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.14);
-}
+.bag {
+  @extend %container-center;
+  @include flex(column);
+  background: #ffffff;
+  padding: 2rem;
+  margin: 3rem 0;
+  width: 100%;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.14);
 
-    .bag__header-title{
-        font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-        font-size: clamp(1.5rem, 4vw, 2rem);
-        line-height: calc(150%);
-        font-weight: 500;
-        letter-spacing: 0.1rem;
+  .bag__title {
+    @include font(ft1, w400, MonumentE, lsWidest);
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+  }
+
+  .bag__box {
+    @include flex(column);
+    flex-grow: 1;
+
+    .bag__total {
+      @include flex(column);
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 2rem 0 0 0;
+      border-top: 2px solid #4d4d4d;
+      
+      @include respond(xs){
+        @include flex();
+      }
+
+      .bag__total-price {
+        @include font(fhl1, w400, MonumentE, lsWider);
         color: #000000;
-        text-align: start;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        white-space: nowrap;
+      }
+
+      .bag__total-btn {
+        font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
+        font-size: 1rem;
+        line-height: calc(150%);
         letter-spacing: 0.2rem;
-
-
-    }
-
-    .bag__body {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-
-    }
-
-    .bag-product {
-        display: grid;
-        grid-template-areas:'img title'
-                            'img price'
-                            'img hr'
-                            'img trash';
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto auto 1fr auto;
-        column-gap: 2rem;
-        row-gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-        .hr{
-            border-top: 2px solid #4d4d4d;
-            height: 1px;
-            width: 5%;
-            align-self: center;
-        }
-
-        .bag-product__img {
-            grid-area: img;
-            width: clamp(100px, 30vw, 160px);
-            height: 160px;
-            border-radius: 0.25rem;
-            object-fit: cover; 
-        }
-        .bag-product__title {
-            grid-area: title;
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            font-size: clamp(1rem, 3.75vw, 1.125rem);
-            line-height: calc(140%);
-            font-weight: 500;
-            letter-spacing: 0.05rem;
-            color: #000000;
-            margin: 1rem 0 .5rem 0;
-        }
-        .bag-product__price {
-            grid-area: price;
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            font-size: 1.1rem;
-            align-self: center;
-        }
-
-        .trash__btn{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: .8rem;
-            align-self: end;
-
-
-            background: #ffffff;
-            border: solid #353535 2px ;
-            width: fit-content;
-            padding: .6rem .8rem;
-            cursor: pointer;
-            transition: ease-in-out .5s;
-            margin-bottom: .2rem;
-        }
-
-        .trash__btn-title{
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            font-size: .8rem;
-            color: #000000;
-            line-height: calc(100%);
-            letter-spacing: 0.05rem;
-            font-weight: 500;
-            white-space: nowrap;
-            text-transform: capitalize ;
-            /* text-decoration: underline; */
-            margin-top: .2rem;
-        }
-        
-        .trash__ico {
-            grid-area: trash;
-            height: 19px;
-            width: 19px;
-            cursor: pointer;
-        }
-
-            .trash__ico-a, .trash__ico-b {
-                stroke-width: 3px;
-                fill: none;
-                stroke: rgb(58, 58, 58);
-            }
-            .trash__ico-a {
-                stroke-width: 2px;
-            }
-
-
-        
-    .bag__total{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem 0 0 0;
-        border-top: 2px solid #4d4d4d;
+        font-weight: 300;
+        white-space: nowrap;
+        text-transform: uppercase;
+        -webkit-text-stroke: thin;
+        width: fit-content;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        padding: 1rem 1.5rem;
+        color: #ffffff;
+        background: #000000;
+      }
 
     }
-        .bag__total-price{
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            font-size: clamp(1rem, 3.75vw, 1.125rem);
-            line-height: calc(140%);
-            font-weight: 500;
-            letter-spacing: 0.05rem;
-            color: #000000;
-        }
-        .bag__total-btn{
-            font-family: "MonumentExtended", Helvetica, Roboto, Arial, sans-serif;
-            font-size: 1rem;
-            line-height: calc(150%);
-            letter-spacing: 0.2rem;
-            font-weight: 300;
-            white-space: nowrap;
-            text-transform: uppercase;
-            -webkit-text-stroke: thin;
-            width: fit-content;
-            cursor: pointer;
-            transition: ease-in-out .3s;
-            padding: 1rem 1.5rem;
-            color: #ffffff;
-            background: #000000;
-        }
 
 
+  }
 
-@media screen and (min-width: 1440px) {
-    .bag  {
-        width: 80%;
-        min-width: 1440px; 
-    } 
+}
+
+.bag-product {
+  display: grid;
+  grid-template-areas: 
+    'img title'
+    'img hr'
+    'price trash';
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr min-content auto;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+  @include respond(xs){
+  grid-template-areas: 
+    'img title'
+    'img price'
+    'img hr'
+    'img trash';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  }
+
+  .bag-product__img {
+    grid-area: img;
+    max-width: 140px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    @include respond(xs){
+      max-width: 190px;
+    }
+  }
+
+  .bag-product__title {
+    grid-area: title;
+    @include font(fhl1, w400, MonumentE, lsWidest);
+    color: $cBlack;
+    margin: .5rem 0 .5rem 0;
+  }
+
+  .bag-product__price {
+    grid-area: price;
+    @include font(fhl2, w400, MonumentE, lsWider);
+    align-self: center;
+  }
+}
+
+.trash__btn {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  align-self: end;
+
+
+  background: #ffffff;
+  border: solid #353535 2px;
+  width: fit-content;
+  padding: .6rem .8rem;
+  cursor: pointer;
+  transition: ease-in-out .5s;
+  margin-bottom: .2rem;
+  .trash__btn-title {
+    @include font(fb2, w400, MonumentE, lsWidest);
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: capitalize;
+    /* text-decoration: underline; */
+    margin-top: .2rem;
+  }
+  
+  .trash__ico {
+    grid-area: trash;
+    height: 19px;
+    width: 19px;
+    cursor: pointer;
+  }
+  
+  .trash__ico-a,
+  .trash__ico-b {
+    stroke-width: 3px;
+    fill: none;
+    stroke: rgb(58, 58, 58);
+  }
+  
+  .trash__ico-a {
+    stroke-width: 2px;
+  }
 }
 
 
+/*--------------------------*/
 
-.checkout__backgound{
+.checkout__backgound {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
 
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
-    z-index: 100;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(10px);
 
-    background: rgba(0, 0, 0, 0.32);
-    backdrop-filter: blur(10px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
