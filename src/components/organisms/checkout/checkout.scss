@@ -19,7 +19,7 @@
   height: min-content;
   
   @include respond(md) {
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto 350px;
     grid-template-rows: auto;    
   }
 
@@ -125,51 +125,58 @@
       width: 2px;
     }
   }
+
   .checkout__box2 {
-    .checkout__img {
-      grid-area: img;
+    @include flex(column);
+    justify-content: space-between;
+    height: 100%;
+    .checkout__produtBox{
+      @include flex(column);
       height: 100%;
-      max-height: 90px;
-      aspect-ratio: 1/1;
-      border-radius: 0.25rem;
-      object-fit: cover;
+      max-height: 330px;
+      overflow: auto;
+      gap: 1rem;
+      .checkout__product{
+        display: grid;
+        grid-template-areas: 
+          "img name"
+          "img price";
+        grid-template-columns: min-content auto;
+        grid-template-rows: min-content 1fr;
+        gap: 1rem;
+  
+        .checkout__img {
+          grid-area: img;
+          height: 100%;
+          max-height: 90px;
+          aspect-ratio: 1/1;
+          border-radius: 0.25rem;
+          object-fit: cover;
+        }
+    
+        .checkout__name,
+        .checkout__price {
+          @include font(fb2, w400, MonumentE);
+          color: $cBlack;
+        }
+      }
     }
 
-    .checkout__name {
-      @include font(fb2, w400, MonumentE);
-      color: #000000;
-
+    .checkout__priceBox{
+      @include flex(column);
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      @include respond(sm){
+        @include flex();
+      }
+      .checkout__text,
+      .checkout__price {
+        @include font(fb2, w400, MonumentE);
+        color: $cBlack;
+  
+      }
     }
-
-    .checkout__price {
-      @include font(fb2, w400, MonumentE);
-      color: #000000;
-
-
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.checkout__btns,
-.checkout__box2-a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 1rem;
-  @include respond(xs){
-    flex-direction: row;
   }
 }

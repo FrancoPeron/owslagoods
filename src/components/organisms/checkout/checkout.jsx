@@ -134,19 +134,19 @@ const Checkout = ({ hideCheckout }) => {
 
       <div className='checkout__box2'>
 
-        {items.map((item) => (
-          <div key={item.id} className="bag-product">
-            <img className="checkout__img" src={item.imgs} alt="" />
-            <p className="checkout__name">{item.name}</p>
-            <p className="checkout__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
-          </div>
-        ))}
+        <div className='checkout__produtBox'>
+          {items.map((item) => (
+            <div key={item.id} className="checkout__product">
+              <img className="checkout__img" src={item.imgs} alt="" />
+              <p className="checkout__name">{item.name}</p>
+              <p className="checkout__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
+            </div>
+          ))}
+        </div>
 
-        <span className='hr'></span>
-
-        <div className="checkout__box2-a">
-          <p className="checkout__box2-title mb-0">Total price</p>
-          <p className="checkout__box2-title mb-0">$ {totalPrice.toFixed(2)} USD</p>
+        <div className="checkout__priceBox">
+          <p className="checkout__text">Total price</p>
+          <p className="checkout__price">$ {totalPrice.toFixed(2)} USD</p>
         </div>
 
       </div>
