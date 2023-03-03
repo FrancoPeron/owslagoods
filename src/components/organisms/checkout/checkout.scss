@@ -6,18 +6,21 @@
   transform: translate(-50%, -50%);
   z-index: 1000;
 
-  @include flex(column);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
   justify-content: center;
   align-items: flex-start;
   padding: 42px;
   gap: 42px;
   background: #FFFFFF;
-
+  
   width: 100%;
   height: min-content;
-
+  
   @include respond(md) {
-    @include flex();
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto;    
   }
 
   .checkout__box1 {
@@ -25,41 +28,29 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    width: 742px;
 
     .checkout__breadcrumb {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      gap: .8rem;
       align-items: center;
 
-      &button {
-        font-family: 'MonumentExtended';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 16px;
-        display: flex;
+      button {
+        @include font(fc, w400, MonumentE);
         white-space: nowrap;
         align-items: center;
-        margin-right: .8rem;
-
-        color: #818181;
+        color: $cGrey6;
       }
 
       .btn-active {
         color: #000000;
-        ;
       }
     }
 
     .checkout__title {
-      font-family: 'MonumentExtended';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 30px;
+      @include font(ft2, w400, MonumentE);
       text-align: center;
-      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: #000000;
 
@@ -78,8 +69,7 @@
       .checkout-form__item {
         position: relative;
         width: 100%;
-        background: #FFFFFF;
-        border-bottom: 2px solid #4D4D4D;
+        border-bottom: 2px solid $cGrey6;
       }
 
       .form-first-name {
@@ -101,19 +91,14 @@
       .checkout-form__input {
         width: 100%;
         height: 40px;
-        font-family: 'MonumentExtended';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        display: flex;
-        align-items: center;
+        @include font(fb2, w400, MonumentE);
         padding: 8px;
       }
 
       .checkout-form__label {
         position: absolute;
-        color: #4D4D4D;
+        @include font(fb2, w400, MonumentE);
+        color: $cGrey6;
         left: 8px;
         top: -25%;
         font-size: 12px;
@@ -131,10 +116,11 @@
     }
   }
 
-  .hr{
+  .divider{
     height: 2px;
     width: 100%;
-    @include respond(sm){
+    background-color: $cGrey7;
+    @include respond(md){
       height: 100%;
       width: 2px;
     }
@@ -142,27 +128,21 @@
   .checkout__box2 {
     .checkout__img {
       grid-area: img;
-      width: 70px;
+      height: 100%;
+      max-height: 90px;
+      aspect-ratio: 1/1;
       border-radius: 0.25rem;
       object-fit: cover;
     }
 
     .checkout__name {
-      font-family: 'MonumentExtended';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
+      @include font(fb2, w400, MonumentE);
       color: #000000;
 
     }
 
     .checkout__price {
-      font-family: 'MonumentExtended';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 13px;
+      @include font(fb2, w400, MonumentE);
       color: #000000;
 
 
@@ -184,8 +164,12 @@
 .checkout__btns,
 .checkout__box2-a {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 1rem;
+  @include respond(xs){
+    flex-direction: row;
+  }
 }

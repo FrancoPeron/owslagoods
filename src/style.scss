@@ -67,7 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: fit-content;
-  gap: 24px;
+  gap: 16px;
 }
 
 
@@ -78,7 +78,7 @@ body {
 .btn-swb,.btn-sws,.btn-owb,.btn-ows{  background: #ffffff;}
 
 .btn-sbb,.btn-swb,.btn-obb,.btn-owb{  height: 54px; padding: 0px 32px 0px;}
-.btn-sbs,.btn-sws,.btn-obs,.btn-ows{  height: 42px; padding: 0px 24px 0px;}
+.btn-sbs,.btn-sws,.btn-obs,.btn-ows{  height: 42px; padding: 0px 16px 0px;}
 
 .btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #000000;}
 .btn-sbb .btn-text,.btn-sbs .btn-text,.btn-obb .btn-text,.btn-obs .btn-text{  color: #ffffff;}
@@ -96,7 +96,7 @@ body {
 }
 
 .btn-text{
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
 }

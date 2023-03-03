@@ -118,7 +118,7 @@ const Checkout = ({ hideCheckout }) => {
           <div className="checkout__btns">
             <button onClick={hideCheckout} className="btn-text">Return to cart</button>
             <button type="submit" className="btn-ows">
-              <p className="btn-text">Shipping Address</p>
+              <p className="btn-text">Next Step</p>
               <svg width="39" height="16" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M38 11L0.999998 11" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
                 <path d="M38 11L28 21" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
@@ -130,19 +130,18 @@ const Checkout = ({ hideCheckout }) => {
         </form>
       </div>
 
-      <span className='hr'></span>
+      <span className='divider'></span>
 
       <div className='checkout__box2'>
 
-        {
-          items.map((item) => (
-            <div key={item.id} className="bag-product">
-              <img className="checkout__img" src={item.imgs} alt="" />
-              <p className="checkout__name">{item.name}</p>
-              <p className="checkout__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
-            </div>
-          ))
-        }
+        {items.map((item) => (
+          <div key={item.id} className="bag-product">
+            <img className="checkout__img" src={item.imgs} alt="" />
+            <p className="checkout__name">{item.name}</p>
+            <p className="checkout__price">$ {item.price.toFixed(2)} x {item.quantity}</p>
+          </div>
+        ))}
+
         <span className='hr'></span>
 
         <div className="checkout__box2-a">
