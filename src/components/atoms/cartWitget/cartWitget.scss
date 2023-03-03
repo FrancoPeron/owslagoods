@@ -2,12 +2,13 @@
   position: relative;
   display: flex;
 
-  .cartWitget_bag {
+  .cartWitget_:bag {
     cursor: pointer;
   }
 
-  .cartWitget_count {
+  .cartWitget__count {
     position: absolute;
+    font-family: "MonumentExtended";
     display: flex;
     top: -40%;
     right: -60%;
