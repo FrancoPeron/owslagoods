@@ -10,13 +10,14 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCU7OpEal_DvD-BNXAtUfPAeO9j7fMOokQ",
-  authDomain: "owslagoods-fbf3b.firebaseapp.com",
-  projectId: "owslagoods-fbf3b",
-  storageBucket: "owslagoods-fbf3b.appspot.com",
-  messagingSenderId: "1039513560097",
-  appId: "1:1039513560097:web:f8c047106409b73f26af60",
-  measurementId: "G-8Q1BXBPLBN"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  // databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -25,3 +26,17 @@ const analytics = getAnalytics(app);
 
 export const db = getFirestore(app)
 export const storage = getStorage(app);
+
+/*------------------------------------------ */
+
+export const getData = async (colectionRef) => {
+  const result = await getDocs(colectionRef)
+  const resultDocs = result.docs.map((doc) => {
+    return {
+      id: doc.id,
+      ...doc.data(),
+    }
+  })
+
+  return [result , resultDocs]
+}

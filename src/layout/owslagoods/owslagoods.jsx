@@ -6,6 +6,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 // Components
 import Header from '@/components/organisms/header/header.jsx'
+import ToolBar from '@/components/atoms/toolBar.jsx'
 
 const OwslaGoods = () => {
   const { pathname } = useLocation();
@@ -16,6 +17,7 @@ const OwslaGoods = () => {
 
   return (
     <>
+      {/* <ToolBar  /> */}
       <Header />
       <Outlet />
     </>

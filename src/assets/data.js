@@ -1339,5 +1339,7 @@ export const Artists = [
 ]
 
 
+export const AllProd = [...Tops,...Bottoms,...Headwear,...Socks,...Accessories,...Artists]
+
 
 
