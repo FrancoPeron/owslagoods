@@ -1,5 +1,4 @@
 /* ---------- Container ---------- */
-
 %container-center {
   width: 100%;
   max-width: calc(1100px + 2rem);
@@ -10,11 +9,9 @@
 %container-full {
   width: 100%;
   padding: 0 1.2rem;
-
 }
 
 /* ---------- Background Position ---------- */
-
 %backgrounds-pos {
   position: absolute;
   top: 0;
@@ -30,15 +27,6 @@
     background: linear-gradient(black, transparent);
   }
 }
-
-/* ---------- Shadow ---------- */
-
-%shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-/*---------------------------------------------------------------------------*/
-
 
 /* ---------- Formulario ---------- */
 

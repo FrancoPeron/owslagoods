@@ -1,13 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const SkeletonItem = ()=>{
-    return(
-        <div className="item-skeleton"> 
-            <div className="item-skeleton__img mb-2"></div>
-            <div className="item-skeleton__item-name"></div>
-            <div className="item-skeleton__item-price"></div>
-        </div>
-    )
+const ProductDetailSkeleton = () => {
+  return (
+    <div className="item-skeleton">
+      <div className="item-skeleton__img--rectangle"></div>
+    </div>
+  )
 }
 
-export default SkeletonItem
+export default ProductDetailSkeleton

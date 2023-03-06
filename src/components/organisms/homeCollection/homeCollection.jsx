@@ -19,7 +19,7 @@ const HomeCollection = () => {
       <span className='collection__backgound1'></span>
       <span className='collection__backgound2'></span>
 
-      <p className='collection__title items-list-box__title'>Collections</p>
+      <p className='collection__title'>Collections</p>
 
       <div className='collection__box'>
         <div className='collection__nameBox'>

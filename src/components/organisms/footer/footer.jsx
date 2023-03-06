@@ -18,11 +18,11 @@ const Footer = () => {
       <div className='footer__box'>
         <div className='footer__nav1'>
           <ul className="nav__list">
-            <li className="nav__item"><Link className="nav__link" href="/all">all</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/">Collection</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/">Artists Apparel</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/products/tops">Tops</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/products/bottoms">Bottoms</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/all">all</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/all">Collection</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/all">Artists Apparel</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/tops">Tops</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/bottoms">Bottoms</Link></li>
           </ul>
         </div>
         <div className='footer__logo'>
@@ -32,11 +32,11 @@ const Footer = () => {
         </div>
         <div className='footer__nav2'>
           <ul className="nav__list">
-            <li className="nav__item"><Link className="nav__link" href="/products/socks">Socks</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/products/headwear">Headwear</Link></li>
-            <li className="nav__item"><Link className="nav__link" href="/products/accessories">Accessories</Link></li>
-            <li className="nav__item"><a className="nav__link" href="https://owslahq.netlify.app" target="_blank">Music</a></li>
-            <li className="nav__item"><Link className="nav__link" href="/products/accessories">info</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/socks">Socks</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/headwear">Headwear</Link></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/accessories">Accessories</Link></li>
+            <li className="nav__item"><a className="nav__link" to="https://owslahq.netlify.app" target="_blank">Music</a></li>
+            <li className="nav__item"><Link className="nav__link" to="/products/accessories">info</Link></li>
           </ul>
         </div>
 

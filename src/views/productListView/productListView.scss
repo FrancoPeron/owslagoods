@@ -1,7 +1,22 @@
-.items-list-container {
+.product-list-view {
   @include flex(column);
   align-items: center;
   width: 100%;
   gap: 100px;
   padding-bottom: 2rem;
+
+  .product-listBox{
+    @extend %container-center;
+    @include flex(column);
+    justify-content: center;
+  }
+
+  .product-notFound{
+    @extend %container-center;
+    @include flex(column);
+    align-items: center;
+    background-color: $cWhite;
+    padding: 2rem;
+    height: 70vh;
+  }
 }

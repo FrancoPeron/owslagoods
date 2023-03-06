@@ -9,17 +9,16 @@ import { db } from '@/database/firebase.config'
 import { getDoc, collection, doc, query, where, limit } from 'firebase/firestore'
 
 // Components
-import ProductList from "@/components/organisms/productList/productList.jsx";
 import ProductDetail from "@/components/organisms/productDetail/productDetail.jsx";
+import ProductsListSmall from "@/components/organisms/productsListSmall/productsListSmall.jsx";
 
 const ProductDetailView = () => {
 
   const { id } = useParams();
-  const [product, setProduct] = useState([])
-  const [similarProducts, setSimilarProducts] = useState({
-    name: "similar products",
-    collection: query(collection(db, 'products'), limit(4)),
-  })
+  const [product, setProduct] = useState({})
+  const [similarProducts, setSimilarProducts] = useState({})
+
+  const [resetKey, setResetKey] = useState(0)
 
   useEffect(() => {
     const productsCollection = collection(db, 'products');
@@ -30,17 +29,18 @@ const ProductDetailView = () => {
           ...result.data(),
         }
         setProduct(item)
-        setSimilarProducts({...similarProducts, collection: query(collection(db, 'products'), where('category', '==', item.category), limit(4)) })
-
-      })
+        setSimilarProducts({name: "similar products", collection: query(collection(db, 'products'), where('category', '==', item.category), limit(4)) })
+      })  
       .catch(error => console.log(error))
 
-  }, [id])
+      setResetKey(resetKey + 1)   
+  },[id])
 
   return (
-    <main className="items-detail-container">
-      <ProductDetail item={product} />
-      <ProductList {...similarProducts} />
+
+    <main className="product-detail-view">
+      <ProductDetail item={product} resetKey={resetKey} />
+      <ProductsListSmall {...similarProducts} />
     </main>
   )
 }

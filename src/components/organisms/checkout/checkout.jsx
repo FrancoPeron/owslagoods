@@ -10,14 +10,12 @@ import { cartContexto } from "@/context/cartContext.jsx";
 import { db } from '@/database/firebase.config'
 import { addDoc, collection, serverTimestamp, } from 'firebase/firestore'
 
-
+//Fromik
 import { useFormik } from 'formik';
-import { async } from '@firebase/util';
-
 
 const Checkout = ({ hideCheckout }) => {
 
-  const { items, totalPrice, removeItem, getStock } = useContext(cartContexto);
+  const { items, totalPrice } = useContext(cartContexto);
 
   const [form, setForm] = useState({});
   const [phoneNum, setPhoneNum] = useState()

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './homeView.scss'
 
 // Data Base
@@ -7,7 +7,7 @@ import {collection, query, where, limit } from 'firebase/firestore'
 
 // Components
 import Footer from "@/components/organisms/footer/footer.jsx";
-import ProductList from "@/components/organisms/productList/productList.jsx";
+import ProductsListSmall from "@/components/organisms/productsListSmall/productsListSmall.jsx";
 import HomeBanner from "@/components/organisms/homeBanner/homeBanner.jsx";
 import HomeArtistsApparel from "@/components/organisms/homeArtistsApparel/homeArtistsApparel.jsx";
 import HomeCollection from "@/components/organisms/homeCollection/homeCollection.jsx";
@@ -31,11 +31,11 @@ const HomeView = () => {
 
     <main className='home'>
       <HomeBanner />
-      <ProductList {...morePopular} />
+      <ProductsListSmall {...morePopular} />
       <HomeArtistsApparel />
-      <ProductList {...headwearsCollection} />
+      <ProductsListSmall {...headwearsCollection} />
       <HomeCollection />
-      <ProductList {...accessoriesCollection} />
+      <ProductsListSmall {...accessoriesCollection} />
       <Footer />
     </main>
 

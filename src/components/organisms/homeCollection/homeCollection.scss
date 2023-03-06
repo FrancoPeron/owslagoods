@@ -46,6 +46,11 @@
 
   .collection__title {
     grid-area: title;
+    @include font(ft2, w400, MonumentE,lsWider);
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $cBlack;
     margin-bottom: 84px;
   }
 

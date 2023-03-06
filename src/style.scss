@@ -39,24 +39,6 @@ body {
   flex: 1;
 }
 
-.hr {
-  background-color: #4d4d4d;
-  height: 2px;
-  width: 5%;
-  align-self: center;
-}
-
-
-.w-100 {
-  width: 100%!important;
-}
-.position-relative {
-  position: relative!important;
-}
-.overflow-hidden {
-  overflow: hidden!important;
-}
-
 /*========================================================*/
 
 
@@ -156,7 +138,10 @@ body {
     border-radius: 6px;
     margin-bottom: 1rem;
 
-
+    &--rectangle{
+      width: 100%;
+      aspect-ratio: 2/.7;
+    }
   }
 
   .item-skeleton__item-name{
@@ -174,7 +159,7 @@ body {
   
   }
 
-  .item-skeleton__img, .item-skeleton__item-name, .item-skeleton__item-price{
+  .item-skeleton__img, .item-skeleton__img--rectangle, .item-skeleton__item-name, .item-skeleton__item-price{
     background-color: #e5e5e5;
       background: linear-gradient(110deg , #e5e5e5 15%, #f2f2f2 25%, #e5e5e5 35%);
       background-size: 200% 100%;
@@ -185,27 +170,4 @@ body {
     to {
       background-position-x: -200%;
     }
-}
-
-
-.items-list-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 48px;
-  width: 100%;
-}
-
-.items-list-box__title{
-  font-family: 'MonumentExtended';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 35px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #000000;
 }

@@ -63,7 +63,6 @@
 	font-weight: map-get($fWeights, $f-width);
   letter-spacing: map-get($fLetterS, $f-letterS);
   line-height: calc(130%);
-  // text-align: map-get($fPos, $f-pos);
 
 };
 

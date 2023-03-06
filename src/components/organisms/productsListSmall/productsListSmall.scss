@@ -1,0 +1,14 @@
+.product-list-small{
+  @extend %container-center;
+  @include flex(column);
+  justify-content: center;
+  gap: 2rem;
+
+  .product-list-small__title{
+    @include font(ft2, w400, MonumentE,lsWider);
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $cBlack;
+  }
+}

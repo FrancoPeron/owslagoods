@@ -1,0 +1,67 @@
+[
+    {
+        "type": "Group",
+        "name": "pages",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "MToifnehHEqFlK1Q",
+        "iconColor": "rgb(255, 165, 0)"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\views",
+        "parent_id": "MToifnehHEqFlK1Q",
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\views",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "elSpZ04VfTBNqcab",
+        "label": null
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\components",
+        "parent_id": "MToifnehHEqFlK1Q",
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\components",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "UM65ko1Ki8A4CzLp"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\layout",
+        "parent_id": "MToifnehHEqFlK1Q",
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\layout",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "IKgP8BUriV1W37NQ",
+        "label": null
+    },
+    {
+        "type": "File",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\main.jsx",
+        "parent_id": "MToifnehHEqFlK1Q",
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\main.jsx",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "KYwJ6fp8nRSolqE0"
+    },
+    {
+        "type": "File",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\style.scss",
+        "parent_id": "MToifnehHEqFlK1Q",
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\style.scss",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "6NDJIKXSowh45lTA"
+    },
+    {
+        "type": "Directory",
+        "name": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\styles",
+        "parent_id": null,
+        "fsPath": "d:\\Projectos\\_WebDev\\.React\\owslagoods\\src\\styles",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "gTYO0V6lmpSodznf"
+    }
+]

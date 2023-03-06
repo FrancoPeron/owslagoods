@@ -1,6 +1,4 @@
-import React, { useContext } from 'react'
-import './searchWitget.scss'
-
+import React from 'react'
 
 const SearchWidget = () => {
 

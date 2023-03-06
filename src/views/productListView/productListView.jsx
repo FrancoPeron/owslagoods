@@ -5,68 +5,61 @@ import './productListView.scss'
 import { useParams } from "react-router-dom";
 
 // Data Base
-import { db } from '@/database/firebase.config'
-import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db, getData } from '@/database/firebase.config'
+import { collection, query, where } from 'firebase/firestore'
 
+//Algolia
 import { searchItems } from '@/database/algolia.js'
 
 // Components
-import ItemList from "@/components/loops/itemList/itemList.jsx";
+import ProductList from "@/components/organisms/productList/productList.jsx";
+import Search from "../../components/molecules/search/search.jsx";
 
 const ItemListContainer = () => {
+
   const productsCollection = collection(db, 'products');
-  // const collectionsCollection = getDocs(query(collection(db,'collections')))
+  const [filter, setFilter] = useState(productsCollection)
 
   const { categoryName } = useParams();
 
-  const [filter, setFilter] = useState(productsCollection)
   const [products, setProducts] = useState([])
-  const [filterProd, setFilterProd] = useState(true)
+
+  const [foundState, setFoundState] = useState(true)
+
   const [originalProd, setOriginalProd] = useState([])
 
   useEffect(() => {
-
-    getDocs(categoryName ? query(filter, where('category', '==', categoryName)) : filter)
-      .then(result => {
-        const products = result.docs.map(doc => {
-          return {
-            id: doc.id,
-            ...doc.data(),
-          }
-        })
-        setProducts(products)
-        setOriginalProd(products)
-      })
-      .catch(error => console.log(error))
-
+    getNewData((categoryName ? query(filter, where('category', '==', categoryName)) : filter))
   }, [categoryName, filter])
 
-  const handleChange = async(e) => {
-    const {value} = e.target
-  
-    if(value === ''){
-      setProducts(originalProd)
-      setFilterProd(true)
-    }
-    else{
-      const [results] = await searchItems(value)
-      let filterP = products.filter(c => results.some(s => s.id === c.id))
-      setProducts((filterP.length == 0) ? originalProd : filterP)
-      setFilterProd(!(filterP.length == 0))
-    }
+  const getNewData = async (colectionRef) => {
+    const [result, resultDocs] = await getData(colectionRef)
+    setProducts(resultDocs)
+    setOriginalProd(resultDocs)
   }
 
-  return (
-    <main className="items-list-container">
-    {console.log(filterProd)}
-      <form>
-        <input type="search" name="focus" placeholder="Search" id="search-input" onChange={handleChange} / >
-      </form>
+  const handleData = (results, is_found) => {
+    (is_found)
+      ? setFoundState(is_found)
+      : setFoundState(is_found);
+    (results.length)
+      ? setProducts(originalProd.filter(c => results.some(s => s.id === c.id)))
+      : setProducts(originalProd)
+  }
 
-      {(filterProd)
-      ? <ItemList items={products} />
-      : <p>Not Found</p> 
-      }
+
+  return (
+    <main className="product-list-view">
+
+      <div className='product-listBox'>
+        <Search sendData={handleData} />
+        {(foundState)
+          ? <ProductList items={products} />
+          : <div className='product-notFound'>
+            <p>Not Found</p>
+          </div>
+        }
+      </div>
     </main>
   )
 }

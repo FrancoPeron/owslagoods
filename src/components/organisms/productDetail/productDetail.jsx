@@ -4,22 +4,28 @@ import './productDetail.scss'
 import { Link } from 'react-router-dom'
 
 // Components
-import SkeletonItemDetail from "./productDetailSkeleton.jsx"
+import ProductDetailSkeleton from "./productDetailSkeleton.jsx"
 import ItemCount from "@/components/molecules/itemCount/itemCount.jsx"
 
 //Context
 import { cartContexto } from "@/context/cartContext.jsx";
 
-const ProductDetail = ({ item }) => {
+const ProductDetail = ({ item , resetKey }) => {
 
   const { addItem, isInCart, updateItemCant } = useContext(cartContexto);
-  const [show, setShow] = useState([true])
+
+  // const [show, setShow] = useState([true])
+  const [show, setShow] = useState(true)
   const [showImg, setShowImg] = useState("")
 
   useEffect(() => {
-
-
+    setShow(true);
+    if(!isEmpty(item)){setShowImg(item.imgs[item.imgs.length-1])}
   }, [item])
+
+  const isEmpty = (obj) => {
+    return Object.keys(obj).length === 0;
+  }
 
   const onAdd = (cant) => {
     if (isInCart(item.id)) {
@@ -31,11 +37,15 @@ const ProductDetail = ({ item }) => {
   }
 
   return (
+
     <>
-      {(item.length != 0)
-        ? <section className='product-detail'>
+      {!(isEmpty(item))
+        ? <section key={resetKey} className='product-detail'>
+
           <div className='product-detail__imgsbox'>
-            <div className='product-detail__imgBox--show'><img className='product-detail__img--show' src={showImg ? showImg : item.imgs[1]} alt="" /></div>
+            <div className='product-detail__imgBox--show'>
+              <img  className='product-detail__img--show' src={showImg} alt="" />
+            </div>
             <div className='product-detail__imgs'>
               {item.imgs.map((img) => <img className="product-detail__img" src={img} alt={item.name} key={img.toString()} onClick={() => setShowImg(img)} />)}
             </div>
@@ -67,9 +77,7 @@ const ProductDetail = ({ item }) => {
           </div>
 
         </section>
-
-        : <SkeletonItemDetail />
-
+        : <div className='product-detail'><ProductDetailSkeleton /></div>
       }
     </>
   )

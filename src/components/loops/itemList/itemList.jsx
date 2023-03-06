@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './itemList.scss'
 
 // Components
-import ProductItem from "@/components/molecules/productItem/productItem.jsx";
 import SkeletonItem from "./itemSkeleton.jsx"
 
-
-const ItemList = ({ items }) => {
-  items.sort((a, b) => { return b.date - a.date })
+const ItemList = (props) => {
+  props.items.sort((a, b) => { return b.date - a.date })
   return (
-
-    <section className='items-list'>
-      {
-        (items.length != 0)
-          ? items.map((item) => <ProductItem key={item.id} item={item} />)
-          : [...Array(6)].map((e, i) => <SkeletonItem key={i} />)
-
+    <>
+      {(props.items.length != 0)
+        ? props.items.map((item) => {
+            const key = item.id;
+            return props.children({ key, item });
+          })
+        : [...Array(4)].map((e, i) => <SkeletonItem key={i} />)
       }
-    </section>
-
+    </>
   )
 }
 
 export default ItemList
-
 
