@@ -17,11 +17,13 @@ const ProductDetail = ({ item , resetKey }) => {
   // const [show, setShow] = useState([true])
   const [show, setShow] = useState(true)
   const [showImg, setShowImg] = useState("")
+  const [showImg2, setShowImg2] = useState("")
+  const [loadedImg, setLoadedImg] = useState(false);
 
   useEffect(() => {
     setShow(true);
     if(!isEmpty(item)){setShowImg(item.imgs[item.imgs.length-1])}
-  }, [item])
+  }, [item,loadedImg])
 
   const isEmpty = (obj) => {
     return Object.keys(obj).length === 0;
@@ -36,6 +38,10 @@ const ProductDetail = ({ item , resetKey }) => {
     setShow(false)
   }
 
+  const showImgStyle = {
+    display: loadedImg ? 'block' : 'none',
+  }
+
   return (
 
     <>
@@ -44,10 +50,11 @@ const ProductDetail = ({ item , resetKey }) => {
 
           <div className='product-detail__imgsbox'>
             <div className='product-detail__imgBox--show'>
-              <img  className='product-detail__img--show' src={showImg} alt="" />
+            {!loadedImg && <></>}
+              <img className='product-detail__img--show' onLoad={() => setLoadedImg(true)} src={showImg} alt={item.name} style={showImgStyle} />
             </div>
             <div className='product-detail__imgs'>
-              {item.imgs.map((img) => <img className="product-detail__img" src={img} alt={item.name} key={img.toString()} onClick={() => setShowImg(img)} />)}
+              {item.imgs.map((img) => <img className="product-detail__img" onLoad={() => setLoadedImg(true)} src={img} alt={item.name} key={img.toString()} onClick={() => setShowImg(img)}  style={showImgStyle} />)}
             </div>
           </div>
 
