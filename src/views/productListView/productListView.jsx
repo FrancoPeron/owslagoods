@@ -2,35 +2,33 @@ import React, { useState, useEffect } from 'react'
 import './productListView.scss'
 
 // Router
-import { useParams } from "react-router-dom";
+import { useParams , useLocation } from "react-router-dom";
 
 // Data Base
 import { db, getData } from '@/database/firebase.config'
 import { collection, query, where } from 'firebase/firestore'
 
-//Algolia
-import { searchItems } from '@/database/algolia.js'
-
 // Components
 import ProductList from "@/components/organisms/productList/productList.jsx";
 import Search from "../../components/molecules/search/search.jsx";
 
-const ItemListContainer = () => {
 
+const ItemListContainer = () => {
+  const { categoryName } = useParams();
+  const { state } = useLocation();
+  
   const productsCollection = collection(db, 'products');
   const [filter, setFilter] = useState(productsCollection)
-
-  const { categoryName } = useParams();
-
   const [products, setProducts] = useState([])
-
   const [foundState, setFoundState] = useState(true)
-
   const [originalProd, setOriginalProd] = useState([])
+  const [inputPointer, setInputPointer] = useState(state?.inputPointer)
+  console.log(inputPointer)
 
   useEffect(() => {
+    setInputPointer(state?.inputPointer)
     getNewData((categoryName ? query(filter, where('category', '==', categoryName)) : filter))
-  }, [categoryName, filter])
+  }, [categoryName, filter, state])
 
   const getNewData = async (colectionRef) => {
     const [result, resultDocs] = await getData(colectionRef)
@@ -52,7 +50,7 @@ const ItemListContainer = () => {
     <main className="product-list-view">
 
       <div className='product-listBox'>
-        <Search sendData={handleData} />
+        <Search sendData={handleData} pointer={inputPointer} />
         {(foundState)
           ? <ProductList items={products} />
           : <div className='product-notFound'>

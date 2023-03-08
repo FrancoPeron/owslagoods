@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './search.scss'
 
 //Algolia
 import { searchItems } from '@/database/algolia.js'
 
-const Search = ({ sendData }) => {
+// Components
+import SearchWidget from '@/components/atoms/searchWitget/searchWitget.jsx'
 
+const Search = ({ sendData, pointer }) => {
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if(pointer) {
+      // console.log("das")
+      inputRef.current.focus();
+    }
+    const button = document.querySelector('.header__nav button');
+  
+    button.addEventListener('click', function() {
+      inputRef.current.focus();
+    });
+    
+  }, [pointer]);
+  
   const handleChange = async (e) => {
     const { value } = e.target
     if (value === '') {
@@ -19,9 +37,12 @@ const Search = ({ sendData }) => {
   }
 
   return (
-    <form>
-      <input type="search" name="focus" placeholder="Search" id="search-input" onChange={handleChange} />
-    </form>
+    <div className='search-form'>
+      <div className='search-form__item'>
+        <SearchWidget />
+        <input className='search-form__input' ref={inputRef} type="search" name="focus" placeholder="Search by product, artists and price" id="search-input" onChange={handleChange} />
+      </div>
+    </div>
   )
 }
 

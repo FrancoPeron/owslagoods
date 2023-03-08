@@ -5,7 +5,7 @@ import './header.scss'
 import logo from '@/assets/images/owslaLogo.svg';
 
 // Router
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
 
 // Components
 import CartWidget from '@/components/atoms/cartWitget/cartWitget.jsx'
@@ -14,6 +14,11 @@ import Burger from '@/components/molecules/burger/burger.jsx'
 import Nav from '@/components/molecules/nav/nav.jsx'
 
 const Header = () => {
+  
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/all', { state : { inputPointer: true } });
+  }
 
   return (
     <header className="header">
@@ -28,7 +33,7 @@ const Header = () => {
       </div>
 
       <div className="header__nav">
-        <Link to="/all"><SearchWidget /></Link>
+        <button onClick={handleClick}><SearchWidget /></button>
 
         <div className='burger-box' burgerbox="">
           <Nav />
