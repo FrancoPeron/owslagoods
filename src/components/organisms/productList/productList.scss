@@ -1,5 +1,5 @@
 .product-list{
-  @extend %container-center;
+  // @extend %container-center;
   @include flex(column);
   justify-content: center;
   gap: 2rem;

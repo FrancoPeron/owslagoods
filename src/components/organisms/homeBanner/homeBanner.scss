@@ -19,12 +19,16 @@ $bannerBackground: url(https://firebasestorage.googleapis.com/v0/b/owslagoods-fb
     background-size: cover;
     background-position: top;
     bottom: 700px;
-    left: 50%;
-    transform: translate(-50%,0);
+    left: 0;
     width: 100vw;
     height: 1000px;
     object-fit: cover;
     background-image: $bannerBackground;
+
+    @include respond(md) {
+      left: 50%;
+    transform: translate(-50%,0);
+    }
 
     @include respond(xs) {
       bottom: 0;
